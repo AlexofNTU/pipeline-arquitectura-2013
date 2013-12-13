@@ -7,5 +7,18 @@ INFO:sim - Generating component instance 'ROM' of
    n_v6_2\component.xml'.
 Applying current project options...
 Finished applying current project options.
+ERROR:sim - Unable to find D:\Mariano\Universidad\Ing. en Comp\Arquitectura de
+ERROR:sim -    Computadoras\2013\Practico\TPF\rom.coe
+ERROR:sim -    Coregen is looking for D:\Mariano\Universidad\Ing. en
+   Comp\Arquitectura de
+ERROR:sim -    Computadoras\2013\Practico\TPF\rom.coe
+ERROR:sim - Unable to find D:\Mariano\Universidad\Ing. en Comp\Arquitectura de
+ERROR:sim -    Computadoras\2013\Practico\TPF\rom.coe
+ERROR:sim -    Coregen is looking for D:\Mariano\Universidad\Ing. en
+   Comp\Arquitectura de
+ERROR:sim -    Computadoras\2013\Practico\TPF\rom.coe
+ERROR:sim - An invalid core configuration has been detected during
+ERROR:sim -    Customization. Core parameters will be reset to their default
+   values.
 Cancelled executing Tcl generator.
 Wrote CGP file for project 'ROM'.
