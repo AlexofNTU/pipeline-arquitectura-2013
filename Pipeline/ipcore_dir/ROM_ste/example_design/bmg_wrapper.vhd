@@ -67,8 +67,8 @@
 -- Configured Core Parameter Values:
 -- (Refer to the SIM Parameters table in the datasheet for more information on
 -- the these parameters.)
---    C_FAMILY                    :  spartan3e 
---    C_XDEVICEFAMILY             :  spartan3e 
+--    C_FAMILY                    :  spartan6 
+--    C_XDEVICEFAMILY             :  spartan6 
 --    C_INTERFACE_TYPE            :  0 
 --    C_AXI_TYPE                  :  1 
 --    C_AXI_SLAVE_TYPE            :  0 
@@ -79,7 +79,7 @@
 --    C_PRIM_TYPE                 :  1 
 --    C_LOAD_INIT_FILE            :  1 
 --    C_INIT_FILE_NAME            :  ROM.mif 
---    C_USE_DEFAULT_DATA          :  0 
+--    C_USE_DEFAULT_DATA          :  1 
 --    C_DEFAULT_DATA              :  0 
 --    C_RST_TYPE                  :  SYNC 
 --    C_HAS_RSTA                  :  0 

@@ -1,5 +1,5 @@
 ISim log file
-Running: D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\Pipeline Simple\Pipeline\testPipeline_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/Pipeline Simple/Pipeline/testPipeline_isim_beh.wdb 
+Running: D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\testPipeline_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline_isim_beh.wdb 
 ISim O.61xd (signature 0x1cce1bb2)
 ----------------------------------------------------------------------
 WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
@@ -7,13 +7,17 @@ WARNING:Security:42 - Your software subscription period has lapsed. Your current
 
 ----------------------------------------------------------------------
 This is a Full version of ISim.
-WARNING: File "D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/Pipeline Simple/Pipeline/pipeline.v" Line 26.  For instance uut/ROM/, width 10 of formal port direccion is not equal to width 32 of actual signal w2.
-WARNING: File "D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/Pipeline Simple/Pipeline/pipeline.v" Line 28.  For instance uut/RAM/, width 10 of formal port direccion is not equal to width 32 of actual signal w21.
+WARNING: File "D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 26.  For instance uut/memoriaInstrucciones/, width 10 of formal port addra is not equal to width 32 of actual signal w2.
+WARNING: File "D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 28.  For instance uut/memoriaDatos/, width 10 of formal port addra is not equal to width 32 of actual signal w21.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module testPipeline.uut.memoriaInstrucciones.inst.\native_mem_module.blk_mem_gen_v6_2_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator CORE Generator module testPipeline.uut.memoriaDatos.inst.\native_mem_module.blk_mem_gen_v6_2_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
 Finished circuit initialization process.
 ISim O.61xd (signature 0x1cce1bb2)
 ----------------------------------------------------------------------
@@ -22,8 +26,12 @@ WARNING:Security:42 - Your software subscription period has lapsed. Your current
 
 ----------------------------------------------------------------------
 This is a Full version of ISim.
-WARNING: File "D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/Pipeline Simple/Pipeline/pipeline.v" Line 26.  For instance uut/ROM/, width 10 of formal port direccion is not equal to width 32 of actual signal w2.
-WARNING: File "D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/Pipeline Simple/Pipeline/pipeline.v" Line 28.  For instance uut/RAM/, width 10 of formal port direccion is not equal to width 32 of actual signal w21.
+WARNING: File "D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 26.  For instance uut/memoriaInstrucciones/, width 10 of formal port addra is not equal to width 32 of actual signal w2.
+WARNING: File "D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 28.  For instance uut/memoriaDatos/, width 10 of formal port addra is not equal to width 32 of actual signal w21.
 # run 1000 ns
 Simulator is doing circuit initialization process.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module testPipeline.uut.memoriaInstrucciones.inst.\native_mem_module.blk_mem_gen_v6_2_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator CORE Generator module testPipeline.uut.memoriaDatos.inst.\native_mem_module.blk_mem_gen_v6_2_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
 Finished circuit initialization process.

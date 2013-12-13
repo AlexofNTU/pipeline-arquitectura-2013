@@ -22,7 +22,7 @@ cp ../example_design/ROM_top.ucf results/
 cd results
 
 echo 'Running ngdbuild'
-ngdbuild -p xc3s100e-cp132-4 ROM_top
+ngdbuild -p xc6slx16-csg324-3 ROM_top
 
 echo 'Running map'
 map ROM_top -o mapped.ncd -pr i
