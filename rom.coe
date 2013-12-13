@@ -2,31 +2,13 @@
 ; v3.0 or later.
 ;
 ; This .COE file specifies initialization values for a block 
-; memory of depth=16, and width=8. In this case, values are 
+; memory of depth=1024, and width=32. In this case, values are 
 ; specified in hexadecimal format.
 memory_initialization_radix=16;
 memory_initialization_vector=
-00,
-41,
-18,
-20,
-00,
-41,
-20,
-20,
-00,
-41,
-28,
-20,
-00,
-41,
-30,
-20,
-AC,
-03,
-00,
-01,
-8C,
-02,
-00,
-01;
+00411820,
+00412020,
+00412820,
+00413020,
+AC030001,
+8C020001;
