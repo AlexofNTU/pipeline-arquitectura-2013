@@ -1,0 +1,5 @@
+set -tmpdir "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/Datapath Simple/DataPath/xst/projnav.tmp"
+set -xsthdpdir "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/Datapath Simple/DataPath/xst"
+elaborate
+-ifn AluMUX.prj
+-ifmt mixed

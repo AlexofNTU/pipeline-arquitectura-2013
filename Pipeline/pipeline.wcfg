@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/Pipeline Simple/Pipeline/testPipeline_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testPipeline" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="28" />
+   <wvobject fp_name="/testPipeline/salida" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">salida</obj_property>
+      <obj_property name="ObjectShortName">salida</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/IF_ID/nextPcIN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">nextPcIN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">nextPcIN[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/IF_ID/instruccionIN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">instruccionIN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instruccionIN[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/IF_ID/instruccionOUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">instruccionOUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instruccionOUT[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/IF_ID/nextPcOUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">nextPcOUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">nextPcOUT[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/pc/dirEntrada" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dirEntrada[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dirEntrada[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/pc/dirSalida" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dirSalida[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dirSalida[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/ID_EX/nextPcIN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">nextPcIN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">nextPcIN[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/ID_EX/readData1IN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">readData1IN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">readData1IN[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/ID_EX/readData2IN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">readData2IN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">readData2IN[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/ID_EX/signExtIN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">signExtIN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">signExtIN[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/ID_EX/ins20_16IN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ins20_16IN[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ins20_16IN[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/ID_EX/ins15_11IN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ins15_11IN[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ins15_11IN[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/ID_EX/nextPcOUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">nextPcOUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">nextPcOUT[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/ID_EX/readData1OUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">readData1OUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">readData1OUT[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/ID_EX/readData2OUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">readData2OUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">readData2OUT[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/ID_EX/signExtOUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">signExtOUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">signExtOUT[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/ID_EX/ins20_16OUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ins20_16OUT[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ins20_16OUT[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/ID_EX/ins15_11OUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ins15_11OUT[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ins15_11OUT[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/EX_MEM/ALUsaltoIN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ALUsaltoIN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUsaltoIN[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/EX_MEM/ALU_IN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ALU_IN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_IN[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/EX_MEM/readData2IN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">readData2IN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">readData2IN[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/EX_MEM/DestinoIN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">DestinoIN[4:0]</obj_property>
+      <obj_property name="ObjectShortName">DestinoIN[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/EX_MEM/ALUsaltoOUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ALUsaltoOUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUsaltoOUT[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/EX_MEM/ALU_OUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ALU_OUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_OUT[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/EX_MEM/readData2OUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">readData2OUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">readData2OUT[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/EX_MEM/DestinoOUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">DestinoOUT[4:0]</obj_property>
+      <obj_property name="ObjectShortName">DestinoOUT[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Mariano/Desktop/Pipeline Simple/Pipeline/testPipeline_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testPipeline" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="29" />
+   <wvobject fp_name="/testPipeline/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w4[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w5" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w5[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w5[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w6" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w6[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w6[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w7" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w7[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w7[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w8" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w8[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w8[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w9" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w9[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w9[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w11" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w11[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w11[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w12" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w12[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w12[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w13" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w13[4:0]</obj_property>
+      <obj_property name="ObjectShortName">w13[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w14" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w14[4:0]</obj_property>
+      <obj_property name="ObjectShortName">w14[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w17" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w17[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w17[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w18" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w18[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w18[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w19" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w19[4:0]</obj_property>
+      <obj_property name="ObjectShortName">w19[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w24" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w24[4:0]</obj_property>
+      <obj_property name="ObjectShortName">w24[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w20" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w20[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w20[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w21" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w21[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w21[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w22" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w22[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w22[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/c14" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">c14</obj_property>
+      <obj_property name="ObjectShortName">c14</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/c21" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">c21</obj_property>
+      <obj_property name="ObjectShortName">c21</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/c22" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">c22</obj_property>
+      <obj_property name="ObjectShortName">c22</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/c25" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">c25</obj_property>
+      <obj_property name="ObjectShortName">c25</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/c24" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">c24</obj_property>
+      <obj_property name="ObjectShortName">c24</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/c26" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">c26</obj_property>
+      <obj_property name="ObjectShortName">c26</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w25" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w25[4:0]</obj_property>
+      <obj_property name="ObjectShortName">w25[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w26" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w26[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w26[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w27" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w27[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w27[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w28" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w28[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w28[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w29" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w29[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w29[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
