@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/Pipeline Simple/Pipeline/MEM_WB.xst" -ofn "D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/Pipeline Simple/Pipeline/MEM_WB.syr" 
+xst -intstyle ise -ifn "D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/Pipeline Simple/Pipeline/MEM_WB.xst" -ofn "D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/Pipeline Simple/Pipeline/MEM_WB.syr" 
