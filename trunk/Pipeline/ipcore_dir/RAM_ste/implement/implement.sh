@@ -22,7 +22,7 @@ cp ../example_design/RAM_top.ucf results/
 cd results
 
 echo 'Running ngdbuild'
-ngdbuild -p xc3s100e-cp132-4 RAM_top
+ngdbuild -p xc6slx16-csg324-3 RAM_top
 
 echo 'Running map'
 map RAM_top -o mapped.ncd -pr i

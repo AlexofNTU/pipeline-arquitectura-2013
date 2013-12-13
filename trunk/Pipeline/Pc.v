@@ -23,12 +23,13 @@ module Pc(
 		input [31:0] dirEntrada,
 		output reg [31:0]  dirSalida
     );
+
 reg aux;
 initial begin
 aux=1;
 end
 
-always @ (posedge clk)
+always @ (negedge clk)
 	begin
 		if(aux)
 			begin

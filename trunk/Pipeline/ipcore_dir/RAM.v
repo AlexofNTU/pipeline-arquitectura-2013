@@ -64,7 +64,7 @@ output [31 : 0] douta;
     .C_DEFAULT_DATA("0"),
     .C_DISABLE_WARN_BHV_COLL(0),
     .C_DISABLE_WARN_BHV_RANGE(0),
-    .C_FAMILY("spartan3"),
+    .C_FAMILY("spartan6"),
     .C_HAS_AXI_ID(0),
     .C_HAS_ENA(0),
     .C_HAS_ENB(0),
@@ -110,7 +110,7 @@ output [31 : 0] douta;
     .C_WRITE_MODE_B("WRITE_FIRST"),
     .C_WRITE_WIDTH_A(32),
     .C_WRITE_WIDTH_B(32),
-    .C_XDEVICEFAMILY("spartan3e")
+    .C_XDEVICEFAMILY("spartan6")
   )
   inst (
     .CLKA(clka),

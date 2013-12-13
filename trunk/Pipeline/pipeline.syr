@@ -3,32 +3,37 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: pipeline.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
-  2) HDL Compilation
-  3) Design Hierarchy Analysis
-  4) HDL Analysis
-  5) HDL Synthesis
-     5.1) HDL Synthesis Report
-  6) Advanced HDL Synthesis
-     6.1) Advanced HDL Synthesis Report
-  7) Low Level Synthesis
-  8) Partition Report
-  9) Final Report
-	9.1) Device utilization summary
-	9.2) Partition Resource Summary
-	9.3) TIMING REPORT
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
 
 
 =========================================================================
@@ -42,7 +47,7 @@ Ignore Synthesis Constraint File   : NO
 ---- Target Parameters
 Output File Name                   : "pipeline"
 Output Format                      : NGC
-Target Device                      : xc3s100e-4-cp132
+Target Device                      : xc6slx16-3-csg324
 
 ---- Source Options
 Top Module Name                    : pipeline
@@ -53,35 +58,32 @@ FSM Style                          : LUT
 RAM Extraction                     : Yes
 RAM Style                          : Auto
 ROM Extraction                     : Yes
-Mux Style                          : Auto
-Decoder Extraction                 : YES
-Priority Encoder Extraction        : Yes
 Shift Register Extraction          : YES
-Logical Shifter Extraction         : YES
-XOR Collapsing                     : YES
 ROM Style                          : Auto
-Mux Extraction                     : Yes
 Resource Sharing                   : YES
 Asynchronous To Synchronous        : NO
-Multiplier Style                   : Auto
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
 Automatic Register Balancing       : No
 
 ---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
-Add Generic Clock Buffer(BUFG)     : 24
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
 Register Duplication               : YES
-Slice Packing                      : YES
 Optimize Instantiated Primitives   : NO
-Use Clock Enable                   : Yes
-Use Synchronous Set                : Yes
-Use Synchronous Reset              : Yes
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
 Pack IO Registers into IOBs        : Auto
 Equivalent register Removal        : YES
 
 ---- General Options
 Optimization Goal                  : Speed
 Optimization Effort                : 1
+Power Reduction                    : NO
 Keep Hierarchy                     : No
 Netlist Hierarchy                  : As_Optimized
 RTL Output                         : Yes
@@ -94,416 +96,346 @@ Bus Delimiter                      : <>
 Case Specifier                     : Maintain
 Slice Utilization Ratio            : 100
 BRAM Utilization Ratio             : 100
-Verilog 2001                       : YES
+DSP48 Utilization Ratio            : 100
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
-=========================================================================
-
-
-=========================================================================
-*                          HDL Compilation                              *
-=========================================================================
-Compiling verilog file "SumadorPC.v" in library work
-Compiling verilog file "SaltosMUX.v" in library work
-Module <SumadorPC> compiled
-Compiling verilog file "SaltosALU.v" in library work
-Module <SaltosMUX> compiled
-Compiling verilog file "RegistrosMUX.v" in library work
-Module <SaltosALU> compiled
-Compiling verilog file "Registros.v" in library work
-Module <RegistrosMUX> compiled
-Compiling verilog file "Pc.v" in library work
-Module <Registros> compiled
-Compiling verilog file "MEM_WB.v" in library work
-Module <Pc> compiled
-Compiling verilog file "memoriaDeInstrucciones.v" in library work
-Module <MEM_WB> compiled
-Compiling verilog file "MemoriaDeDatos.v" in library work
-Module <memoriaDeInstrucciones> compiled
-Compiling verilog file "IF_ID.v" in library work
-Module <MemoriaDeDatos> compiled
-Compiling verilog file "ID_EX.v" in library work
-Module <IF_ID> compiled
-Compiling verilog file "EX_MEM.v" in library work
-Module <ID_EX> compiled
-Compiling verilog file "ExtensionSigno.v" in library work
-Module <EX_MEM> compiled
-Compiling verilog file "DatosMUX.v" in library work
-Module <ExtensionSigno> compiled
-Compiling verilog file "ControlALU.v" in library work
-Module <DatosMUX> compiled
-Compiling verilog file "Control.v" in library work
-Module <ControlALU> compiled
-Compiling verilog file "Branch.v" in library work
-Module <Control> compiled
-Compiling verilog file "AluMUX.v" in library work
-Module <Branch> compiled
-Compiling verilog file "ALU.v" in library work
-Module <AluMUX> compiled
-Compiling verilog file "pipeline.v" in library work
-Module <ALU> compiled
-Module <pipeline> compiled
-No errors in compilation
-Analysis of file <"pipeline.prj"> succeeded.
- 
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
 
 =========================================================================
-*                     Design Hierarchy Analysis                         *
-=========================================================================
-Analyzing hierarchy for module <pipeline> in library <work>.
-
-Analyzing hierarchy for module <SaltosMUX> in library <work>.
-
-Analyzing hierarchy for module <Pc> in library <work>.
-
-Analyzing hierarchy for module <memoriaDeInstrucciones> in library <work>.
-
-Analyzing hierarchy for module <SumadorPC> in library <work>.
-
-Analyzing hierarchy for module <IF_ID> in library <work>.
-
-Analyzing hierarchy for module <Registros> in library <work>.
-
-Analyzing hierarchy for module <ExtensionSigno> in library <work>.
-
-Analyzing hierarchy for module <Control> in library <work>.
-
-Analyzing hierarchy for module <ID_EX> in library <work>.
-
-Analyzing hierarchy for module <SaltosALU> in library <work>.
-
-Analyzing hierarchy for module <RegistrosMUX> in library <work>.
-
-Analyzing hierarchy for module <AluMUX> in library <work>.
-
-Analyzing hierarchy for module <ALU> in library <work>.
-
-Analyzing hierarchy for module <ControlALU> in library <work>.
-
-Analyzing hierarchy for module <EX_MEM> in library <work>.
-
-Analyzing hierarchy for module <Branch> in library <work>.
-
-Analyzing hierarchy for module <MemoriaDeDatos> in library <work>.
-
-Analyzing hierarchy for module <MEM_WB> in library <work>.
-
-Analyzing hierarchy for module <DatosMUX> in library <work>.
 
 
 =========================================================================
-*                            HDL Analysis                               *
+*                          HDL Parsing                                  *
 =========================================================================
-Analyzing top module <pipeline>.
-Module <pipeline> is correct for synthesis.
- 
-Analyzing module <SaltosMUX> in library <work>.
-Module <SaltosMUX> is correct for synthesis.
- 
-Analyzing module <Pc> in library <work>.
-Module <Pc> is correct for synthesis.
- 
-Analyzing module <memoriaDeInstrucciones> in library <work>.
-Module <memoriaDeInstrucciones> is correct for synthesis.
- 
-Analyzing module <SumadorPC> in library <work>.
-Module <SumadorPC> is correct for synthesis.
- 
-Analyzing module <IF_ID> in library <work>.
-Module <IF_ID> is correct for synthesis.
- 
-Analyzing module <Registros> in library <work>.
-Module <Registros> is correct for synthesis.
- 
-Analyzing module <ExtensionSigno> in library <work>.
-Module <ExtensionSigno> is correct for synthesis.
- 
-Analyzing module <Control> in library <work>.
-Module <Control> is correct for synthesis.
- 
-Analyzing module <ID_EX> in library <work>.
-Module <ID_EX> is correct for synthesis.
- 
-Analyzing module <SaltosALU> in library <work>.
-Module <SaltosALU> is correct for synthesis.
- 
-Analyzing module <RegistrosMUX> in library <work>.
-Module <RegistrosMUX> is correct for synthesis.
- 
-Analyzing module <AluMUX> in library <work>.
-Module <AluMUX> is correct for synthesis.
- 
-Analyzing module <ALU> in library <work>.
-Module <ALU> is correct for synthesis.
- 
-Analyzing module <ControlALU> in library <work>.
-Module <ControlALU> is correct for synthesis.
- 
-Analyzing module <EX_MEM> in library <work>.
-Module <EX_MEM> is correct for synthesis.
- 
-Analyzing module <Branch> in library <work>.
-Module <Branch> is correct for synthesis.
- 
-Analyzing module <MemoriaDeDatos> in library <work>.
-Module <MemoriaDeDatos> is correct for synthesis.
- 
-Analyzing module <MEM_WB> in library <work>.
-Module <MEM_WB> is correct for synthesis.
- 
-Analyzing module <DatosMUX> in library <work>.
-Module <DatosMUX> is correct for synthesis.
- 
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\SumadorPC.v\" into library work
+Parsing module <SumadorPC>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\SaltosMUX.v\" into library work
+Parsing module <SaltosMUX>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\SaltosALU.v\" into library work
+Parsing module <SaltosALU>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\RegistrosMUX.v\" into library work
+Parsing module <RegistrosMUX>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\Registros.v\" into library work
+Parsing module <Registros>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\Pc.v\" into library work
+Parsing module <Pc>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\MEM_WB.v\" into library work
+Parsing module <MEM_WB>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\ipcore_dir\ROM.v\" into library work
+Parsing module <ROM>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\ipcore_dir\RAM.v\" into library work
+Parsing module <RAM>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\IF_ID.v\" into library work
+Parsing module <IF_ID>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\ID_EX.v\" into library work
+Parsing module <ID_EX>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\EX_MEM.v\" into library work
+Parsing module <EX_MEM>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\ExtensionSigno.v\" into library work
+Parsing module <ExtensionSigno>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\DatosMUX.v\" into library work
+Parsing module <DatosMUX>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\ControlALU.v\" into library work
+Parsing module <ControlALU>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\Control.v\" into library work
+Parsing module <Control>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\Branch.v\" into library work
+Parsing module <Branch>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\AluMUX.v\" into library work
+Parsing module <AluMUX>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\ALU.v\" into library work
+Parsing module <ALU>.
+Analyzing Verilog file \"D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\pipeline.v\" into library work
+Parsing module <pipeline>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <pipeline>.
+
+Elaborating module <SaltosMUX>.
+
+Elaborating module <Pc>.
+
+Elaborating module <ROM>.
+WARNING:HDLCompiler:1499 - "D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\ipcore_dir\ROM.v" Line 39: Empty module <ROM> remains a black box.
+WARNING:HDLCompiler:189 - "D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\pipeline.v" Line 62: Size mismatch in connection of port <addra>. Formal port size is 10-bit while actual signal size is 32-bit.
+
+Elaborating module <SumadorPC>.
+
+Elaborating module <IF_ID>.
+
+Elaborating module <Registros>.
+
+Elaborating module <ExtensionSigno>.
+
+Elaborating module <Control>.
+
+Elaborating module <ID_EX>.
+
+Elaborating module <SaltosALU>.
+WARNING:HDLCompiler:1127 - "D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\SaltosALU.v" Line 27: Assignment to aux ignored, since the identifier is never used
+
+Elaborating module <RegistrosMUX>.
+
+Elaborating module <AluMUX>.
+
+Elaborating module <ALU>.
+
+Elaborating module <ControlALU>.
+
+Elaborating module <EX_MEM>.
+WARNING:HDLCompiler:1127 - "D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\pipeline.v" Line 228: Assignment to c21 ignored, since the identifier is never used
+
+Elaborating module <Branch>.
+
+Elaborating module <RAM>.
+WARNING:HDLCompiler:1499 - "D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\ipcore_dir\RAM.v" Line 39: Empty module <RAM> remains a black box.
+WARNING:HDLCompiler:189 - "D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\pipeline.v" Line 265: Size mismatch in connection of port <addra>. Formal port size is 10-bit while actual signal size is 32-bit.
+
+Elaborating module <MEM_WB>.
+
+Elaborating module <DatosMUX>.
+WARNING:HDLCompiler:413 - "D:\Mariano\Universidad\Ing. en Comp\Arquitectura de Computadoras\2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\pipeline.v" Line 310: Result of 32-bit expression is truncated to fit in 1-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
-Performing bidirectional port resolution...
+Synthesizing Unit <pipeline>.
+    Related source file is "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/pipeline.v".
+INFO:Xst:3210 - "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/pipeline.v" line 204: Output port <MemReadOUT> of the instance <EX_MEM> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <pipeline> synthesized.
 
 Synthesizing Unit <SaltosMUX>.
-    Related source file is "SaltosMUX.v".
+    Related source file is "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/saltosmux.v".
+    Summary:
+	inferred   1 Multiplexer(s).
 Unit <SaltosMUX> synthesized.
 
-
 Synthesizing Unit <Pc>.
-    Related source file is "Pc.v".
+    Related source file is "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/pc.v".
     Found 32-bit register for signal <dirSalida>.
     Found 1-bit register for signal <aux>.
     Summary:
 	inferred  33 D-type flip-flop(s).
 Unit <Pc> synthesized.
 
-
-Synthesizing Unit <memoriaDeInstrucciones>.
-    Related source file is "memoriaDeInstrucciones.v".
-WARNING:Xst:1781 - Signal <rom> is used but never assigned. Tied to default value.
-    Found 1024x32-bit ROM for signal <$varindex0000> created at line 44.
-    Found 32-bit register for signal <auxData>.
-    Summary:
-	inferred   1 ROM(s).
-	inferred  32 D-type flip-flop(s).
-Unit <memoriaDeInstrucciones> synthesized.
-
-
 Synthesizing Unit <SumadorPC>.
-    Related source file is "SumadorPC.v".
-    Found 32-bit adder for signal <aux>.
+    Related source file is "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/sumadorpc.v".
+    Found 32-bit adder for signal <aux> created at line 30.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 Unit <SumadorPC> synthesized.
 
-
 Synthesizing Unit <IF_ID>.
-    Related source file is "IF_ID.v".
+    Related source file is "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/if_id.v".
     Found 32-bit register for signal <instruccionOUT>.
     Found 32-bit register for signal <nextPcOUT>.
     Summary:
 	inferred  64 D-type flip-flop(s).
 Unit <IF_ID> synthesized.
 
-
 Synthesizing Unit <Registros>.
-    Related source file is "Registros.v".
-    Found 1024-bit register for signal <RegFile>.
-INFO:Xst:738 - HDL ADVISOR - 1024 flip-flops were inferred for signal <RegFile>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Related source file is "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/registros.v".
+    Found 32x32-bit dual-port RAM <Mram_RegFile> for signal <RegFile>.
     Summary:
-	inferred 1024 D-type flip-flop(s).
-	inferred  64 Multiplexer(s).
+	inferred   2 RAM(s).
 Unit <Registros> synthesized.
 
-
 Synthesizing Unit <ExtensionSigno>.
-    Related source file is "ExtensionSigno.v".
-    Found 32-bit adder for signal <valExtendido$addsub0000> created at line 30.
+    Related source file is "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/extensionsigno.v".
+    Found 32-bit adder for signal <GND_8_o_PWR_8_o_add_1_OUT> created at line 30.
     Summary:
 	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
 Unit <ExtensionSigno> synthesized.
 
-
 Synthesizing Unit <Control>.
-    Related source file is "Control.v".
+    Related source file is "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/control.v".
+    Summary:
+	no macro.
 Unit <Control> synthesized.
 
-
 Synthesizing Unit <ID_EX>.
-    Related source file is "ID_EX.v".
-    Found 1-bit register for signal <MemWriteOUT>.
-    Found 5-bit register for signal <ins20_16OUT>.
-    Found 1-bit register for signal <ALUSrcOUT>.
-    Found 2-bit register for signal <ALUOpOUT>.
-    Found 1-bit register for signal <MemtoRegOUT>.
-    Found 32-bit register for signal <readData1OUT>.
+    Related source file is "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/id_ex.v".
     Found 1-bit register for signal <BranchOUT>.
-    Found 32-bit register for signal <nextPcOUT>.
-    Found 1-bit register for signal <RegWriteOUT>.
-    Found 5-bit register for signal <ins15_11OUT>.
     Found 1-bit register for signal <MemReadOUT>.
-    Found 32-bit register for signal <signExtOUT>.
-    Found 1-bit register for signal <RegDstOUT>.
+    Found 1-bit register for signal <MemtoRegOUT>.
+    Found 1-bit register for signal <MemWriteOUT>.
+    Found 1-bit register for signal <ALUSrcOUT>.
+    Found 1-bit register for signal <RegWriteOUT>.
+    Found 2-bit register for signal <ALUOpOUT>.
+    Found 32-bit register for signal <nextPcOUT>.
+    Found 32-bit register for signal <readData1OUT>.
     Found 32-bit register for signal <readData2OUT>.
+    Found 32-bit register for signal <signExtOUT>.
+    Found 5-bit register for signal <ins20_16OUT>.
+    Found 5-bit register for signal <ins15_11OUT>.
+    Found 1-bit register for signal <RegDstOUT>.
     Summary:
 	inferred 147 D-type flip-flop(s).
 Unit <ID_EX> synthesized.
 
-
 Synthesizing Unit <SaltosALU>.
-    Related source file is "SaltosALU.v".
-WARNING:Xst:646 - Signal <aux> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-    Found 32-bit adder for signal <ALUResult>.
+    Related source file is "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/saltosalu.v".
+WARNING:Xst:647 - Input <ShiftLeft<31:30>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit adder for signal <ALUResult> created at line 30.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 Unit <SaltosALU> synthesized.
 
-
 Synthesizing Unit <RegistrosMUX>.
-    Related source file is "RegistrosMUX.v".
+    Related source file is "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/registrosmux.v".
+    Summary:
+	inferred   1 Multiplexer(s).
 Unit <RegistrosMUX> synthesized.
 
-
 Synthesizing Unit <AluMUX>.
-    Related source file is "AluMUX.v".
+    Related source file is "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/alumux.v".
+    Summary:
+	inferred   1 Multiplexer(s).
 Unit <AluMUX> synthesized.
 
-
 Synthesizing Unit <ALU>.
-    Related source file is "ALU.v".
-    Found 32-bit addsub for signal <ALUOut$addsub0000>.
-    Found 32-bit comparator less for signal <ALUOut$cmp_lt0000> created at line 33.
+    Related source file is "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/alu.v".
+    Found 32-bit subtractor for signal <A[31]_B[31]_sub_4_OUT> created at line 32.
+    Found 32-bit adder for signal <A[31]_B[31]_add_2_OUT> created at line 31.
+    Found 32-bit 7-to-1 multiplexer for signal <_n0037> created at line 23.
+    Found 32-bit comparator greater for signal <A[31]_B[31]_LessThan_5_o> created at line 33
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   1 Comparator(s).
+	inferred  12 Multiplexer(s).
 Unit <ALU> synthesized.
 
-
 Synthesizing Unit <ControlALU>.
-    Related source file is "ControlALU.v".
+    Related source file is "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/controlalu.v".
+    Summary:
+	inferred   6 Multiplexer(s).
 Unit <ControlALU> synthesized.
 
-
 Synthesizing Unit <EX_MEM>.
-    Related source file is "EX_MEM.v".
-    Found 1-bit register for signal <MemWriteOUT>.
-    Found 1-bit register for signal <zeroOUT>.
-    Found 5-bit register for signal <DestinoOUT>.
-    Found 1-bit register for signal <MemtoRegOUT>.
-    Found 1-bit register for signal <BranchOUT>.
-    Found 32-bit register for signal <ALU_OUT>.
-    Found 1-bit register for signal <RegWriteOUT>.
+    Related source file is "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/ex_mem.v".
     Found 1-bit register for signal <MemReadOUT>.
-    Found 32-bit register for signal <readData2OUT>.
+    Found 1-bit register for signal <MemtoRegOUT>.
+    Found 1-bit register for signal <MemWriteOUT>.
+    Found 1-bit register for signal <RegWriteOUT>.
+    Found 1-bit register for signal <zeroOUT>.
     Found 32-bit register for signal <ALUsaltoOUT>.
+    Found 32-bit register for signal <ALU_OUT>.
+    Found 32-bit register for signal <readData2OUT>.
+    Found 5-bit register for signal <DestinoOUT>.
+    Found 1-bit register for signal <BranchOUT>.
     Summary:
 	inferred 107 D-type flip-flop(s).
 Unit <EX_MEM> synthesized.
 
-
 Synthesizing Unit <Branch>.
-    Related source file is "Branch.v".
+    Related source file is "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/branch.v".
+    Summary:
+	no macro.
 Unit <Branch> synthesized.
 
-
-Synthesizing Unit <MemoriaDeDatos>.
-    Related source file is "MemoriaDeDatos.v".
-    Found 1024x32-bit single-port RAM <Mram_ram> for signal <ram>.
-    Found 32-bit register for signal <data>.
-    Summary:
-	inferred   1 RAM(s).
-	inferred  32 D-type flip-flop(s).
-Unit <MemoriaDeDatos> synthesized.
-
-
 Synthesizing Unit <MEM_WB>.
-    Related source file is "MEM_WB.v".
+    Related source file is "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/mem_wb.v".
+    Found 1-bit register for signal <RegWriteOUT>.
+    Found 32-bit register for signal <dataOUT>.
+    Found 32-bit register for signal <ALU_OUT>.
     Found 5-bit register for signal <DestinoOUT>.
     Found 1-bit register for signal <MemtoRegOUT>.
-    Found 32-bit register for signal <ALU_OUT>.
-    Found 32-bit register for signal <dataOUT>.
-    Found 1-bit register for signal <RegWriteOUT>.
     Summary:
 	inferred  71 D-type flip-flop(s).
 Unit <MEM_WB> synthesized.
 
-
 Synthesizing Unit <DatosMUX>.
-    Related source file is "DatosMUX.v".
+    Related source file is "d:/mariano/universidad/ing. en comp/arquitectura de computadoras/2013/practico/tpf/pipeline-arquitectura-2013/pipeline/datosmux.v".
+    Summary:
+	inferred   1 Multiplexer(s).
 Unit <DatosMUX> synthesized.
-
-
-Synthesizing Unit <pipeline>.
-    Related source file is "pipeline.v".
-Unit <pipeline> synthesized.
-
-INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 1
- 1024x32-bit single-port RAM                           : 1
-# ROMs                                                 : 1
- 1024x32-bit ROM                                       : 1
+# RAMs                                                 : 2
+ 32x32-bit dual-port RAM                               : 2
 # Adders/Subtractors                                   : 4
  32-bit adder                                          : 3
  32-bit addsub                                         : 1
-# Registers                                            : 67
+# Registers                                            : 33
  1-bit register                                        : 16
  2-bit register                                        : 1
- 32-bit register                                       : 46
+ 32-bit register                                       : 12
  5-bit register                                        : 4
 # Comparators                                          : 1
- 32-bit comparator less                                : 1
-# Multiplexers                                         : 2
- 32-bit 32-to-1 multiplexer                            : 2
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 23
+ 32-bit 2-to-1 multiplexer                             : 16
+ 4-bit 2-to-1 multiplexer                              : 6
+ 5-bit 2-to-1 multiplexer                              : 1
 
 =========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1426 - The value init of the FF/Latch aux hinder the constant cleaning in the block pc.
-   You should achieve better results by setting this init to 0.
+Reading core <ipcore_dir/ROM.ngc>.
+Reading core <ipcore_dir/RAM.ngc>.
+Loading core <ROM> for timing and area information for instance <memoriaInstrucciones>.
+Loading core <RAM> for timing and area information for instance <memoriaDatos>.
 
 Synthesizing (advanced) Unit <pipeline>.
-INFO:Xst:3225 - The RAM <RAM/Mram_ram> will be implemented as BLOCK RAM
+INFO:Xst:3226 - The RAM <registros/Mram_RegFile1> will be implemented as a BLOCK RAM, absorbing the following register(s): <ID_EX/readData2OUT>
     -----------------------------------------------------------------------
     | ram_type           | Block                               |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 1024-word x 32-bit                  |          |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
     |     mode           | write-first                         |          |
-    |     clkA           | connected to signal <clk>           | rise     |
-    |     weA            | connected to signal <c22>           | high     |
-    |     addrA          | connected to signal <w21>           |          |
-    |     diA            | connected to signal <w22>           |          |
+    |     clkA           | connected to signal <clk>           | fall     |
+    |     weA            | connected to signal <c25>           | high     |
+    |     addrA          | connected to signal <w25>           |          |
+    |     diA            | connected to signal <(w26,salida)>  |          |
     -----------------------------------------------------------------------
     | optimization       | speed                               |          |
     -----------------------------------------------------------------------
     | Port B                                                              |
-    |     aspect ratio   | 1024-word x 32-bit                  |          |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
     |     mode           | write-first                         |          |
     |     clkB           | connected to signal <clk>           | rise     |
-    |     addrB          | connected to signal <w18>           |          |
-    |     doB            | connected to internal node          |          |
+    |     addrB          | connected to signal <w5<20:16>>     |          |
+    |     doB            | connected to signal <w11>           |          |
     -----------------------------------------------------------------------
     | optimization       | speed                               |          |
     -----------------------------------------------------------------------
-INFO:Xst:3044 - The ROM <ROM/Mrom__varindex0000> will be implemented as a read-only BLOCK RAM, absorbing the register: <ROM/auxData>.
-INFO:Xst:3225 - The RAM <ROM/Mrom__varindex0000> will be implemented as BLOCK RAM
+INFO:Xst:3226 - The RAM <registros/Mram_RegFile> will be implemented as a BLOCK RAM, absorbing the following register(s): <ID_EX/readData1OUT>
     -----------------------------------------------------------------------
     | ram_type           | Block                               |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 1024-word x 32-bit                  |          |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
     |     mode           | write-first                         |          |
     |     clkA           | connected to signal <clk>           | fall     |
-    |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <w2>            |          |
-    |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to signal <w3>            |          |
+    |     weA            | connected to signal <c25>           | high     |
+    |     addrA          | connected to signal <w25>           |          |
+    |     diA            | connected to signal <(w26,salida)>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <w5<25:21>>     |          |
+    |     doB            | connected to signal <w10>           |          |
     -----------------------------------------------------------------------
     | optimization       | speed                               |          |
     -----------------------------------------------------------------------
@@ -514,40 +446,83 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 2
- 1024x32-bit dual-port block RAM                       : 1
- 1024x32-bit single-port block RAM                     : 1
+ 32x32-bit dual-port block RAM                         : 2
 # Adders/Subtractors                                   : 4
  32-bit adder                                          : 3
  32-bit addsub                                         : 1
-# Registers                                            : 1478
- Flip-Flops                                            : 1478
+# Registers                                            : 358
+ Flip-Flops                                            : 358
 # Comparators                                          : 1
- 32-bit comparator less                                : 1
-# Multiplexers                                         : 64
- 1-bit 32-to-1 multiplexer                             : 64
+ 32-bit comparator greater                             : 1
+# Multiplexers                                         : 54
+ 1-bit 2-to-1 multiplexer                              : 32
+ 32-bit 2-to-1 multiplexer                             : 15
+ 4-bit 2-to-1 multiplexer                              : 6
+ 5-bit 2-to-1 multiplexer                              : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1426 - The value init of the FF/Latch pc/aux hinder the constant cleaning in the block pipeline.
-   You should achieve better results by setting this init to 0.
-INFO:Xst:2261 - The FF/Latch <MemReadOUT> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <MemtoRegOUT> 
-INFO:Xst:2261 - The FF/Latch <RegDstOUT> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <ALUOpOUT_1> 
-INFO:Xst:2261 - The FF/Latch <BranchOUT> in Unit <ID_EX> is equivalent to the following FF/Latch, which will be removed : <ALUOpOUT_0> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/RegDstOUT> in Unit <pipeline> is equivalent to the following FF/Latch, which will be removed : <ID_EX/ALUOpOUT_1> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/BranchOUT> in Unit <pipeline> is equivalent to the following FF/Latch, which will be removed : <ID_EX/ALUOpOUT_0> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/MemtoRegOUT> in Unit <pipeline> is equivalent to the following FF/Latch, which will be removed : <ID_EX/MemReadOUT> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/ins15_11OUT_0> in Unit <pipeline> is equivalent to the following FF/Latch, which will be removed : <ID_EX/signExtOUT_11> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/ins15_11OUT_1> in Unit <pipeline> is equivalent to the following FF/Latch, which will be removed : <ID_EX/signExtOUT_12> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/ins15_11OUT_2> in Unit <pipeline> is equivalent to the following FF/Latch, which will be removed : <ID_EX/signExtOUT_13> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/ins15_11OUT_3> in Unit <pipeline> is equivalent to the following FF/Latch, which will be removed : <ID_EX/signExtOUT_14> 
+INFO:Xst:2261 - The FF/Latch <ID_EX/ins15_11OUT_4> in Unit <pipeline> is equivalent to the following 17 FFs/Latches, which will be removed : <ID_EX/signExtOUT_15> <ID_EX/signExtOUT_16> <ID_EX/signExtOUT_17> <ID_EX/signExtOUT_18> <ID_EX/signExtOUT_19> <ID_EX/signExtOUT_20> <ID_EX/signExtOUT_21> <ID_EX/signExtOUT_22> <ID_EX/signExtOUT_23> <ID_EX/signExtOUT_24> <ID_EX/signExtOUT_25> <ID_EX/signExtOUT_26> <ID_EX/signExtOUT_27> <ID_EX/signExtOUT_28> <ID_EX/signExtOUT_29> <ID_EX/signExtOUT_30> <ID_EX/signExtOUT_31> 
+
+Optimizing unit <EX_MEM> ...
 
 Optimizing unit <pipeline> ...
 
-Optimizing unit <IF_ID> ...
-
-Optimizing unit <Registros> ...
-
-Optimizing unit <ID_EX> ...
-
 Optimizing unit <ALU> ...
-
-Optimizing unit <MEM_WB> ...
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_10> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_11> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_12> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_13> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_14> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_15> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_16> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_17> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_18> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_19> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_20> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_21> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_22> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_23> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_24> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_25> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_26> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_27> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_28> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_29> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_30> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_31> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_10> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_11> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_12> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_13> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_14> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_15> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_16> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_17> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_18> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_19> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_20> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_21> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_22> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_23> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_24> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_25> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_26> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_27> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_28> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_29> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_30> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_31> of sequential type is unconnected in block <pipeline>.
 WARNING:Xst:2677 - Node <pc/dirSalida_10> of sequential type is unconnected in block <pipeline>.
 WARNING:Xst:2677 - Node <pc/dirSalida_11> of sequential type is unconnected in block <pipeline>.
 WARNING:Xst:2677 - Node <pc/dirSalida_12> of sequential type is unconnected in block <pipeline>.
@@ -570,144 +545,99 @@ WARNING:Xst:2677 - Node <pc/dirSalida_28> of sequential type is unconnected in b
 WARNING:Xst:2677 - Node <pc/dirSalida_29> of sequential type is unconnected in block <pipeline>.
 WARNING:Xst:2677 - Node <pc/dirSalida_30> of sequential type is unconnected in block <pipeline>.
 WARNING:Xst:2677 - Node <pc/dirSalida_31> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_10> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_11> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_12> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_13> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_14> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_15> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_16> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_17> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_18> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_19> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_20> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_21> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_22> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_23> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_24> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_25> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_26> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_27> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_28> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_29> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_30> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/MemReadOUT> of sequential type is unconnected in block <pipeline>.
 WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_31> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_31> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_30> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_29> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_28> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_27> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_26> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_25> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_24> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_23> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_22> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_21> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_20> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_19> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_18> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_17> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_16> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_15> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_14> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_13> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_12> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_11> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <IF_ID/nextPcOUT_10> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_31> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_30> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_29> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_28> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_27> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_26> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_25> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_24> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_23> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_22> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_21> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_20> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_19> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_18> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_17> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_16> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_15> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_14> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_13> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_12> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_11> of sequential type is unconnected in block <pipeline>.
-WARNING:Xst:2677 - Node <ID_EX/nextPcOUT_10> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_30> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_29> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_28> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_27> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_26> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_25> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_24> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_23> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_22> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_21> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_20> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_19> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_18> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_17> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_16> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_15> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_14> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_13> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_12> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_11> of sequential type is unconnected in block <pipeline>.
+WARNING:Xst:2677 - Node <EX_MEM/ALUsaltoOUT_10> of sequential type is unconnected in block <pipeline>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-INFO:Xst:2261 - The FF/Latch <EX_MEM/MemtoRegOUT> in Unit <pipeline> is equivalent to the following FF/Latch, which will be removed : <EX_MEM/MemReadOUT> 
-INFO:Xst:2261 - The FF/Latch <ID_EX/signExtOUT_11> in Unit <pipeline> is equivalent to the following FF/Latch, which will be removed : <ID_EX/ins15_11OUT_0> 
-INFO:Xst:2261 - The FF/Latch <ID_EX/signExtOUT_12> in Unit <pipeline> is equivalent to the following FF/Latch, which will be removed : <ID_EX/ins15_11OUT_1> 
-INFO:Xst:2261 - The FF/Latch <ID_EX/signExtOUT_13> in Unit <pipeline> is equivalent to the following FF/Latch, which will be removed : <ID_EX/ins15_11OUT_2> 
-INFO:Xst:2261 - The FF/Latch <ID_EX/signExtOUT_14> in Unit <pipeline> is equivalent to the following FF/Latch, which will be removed : <ID_EX/ins15_11OUT_3> 
-INFO:Xst:2261 - The FF/Latch <ID_EX/signExtOUT_31> in Unit <pipeline> is equivalent to the following 17 FFs/Latches, which will be removed : <ID_EX/signExtOUT_30> <ID_EX/signExtOUT_29> <ID_EX/signExtOUT_28> <ID_EX/signExtOUT_27> <ID_EX/signExtOUT_26> <ID_EX/signExtOUT_25> <ID_EX/signExtOUT_24> <ID_EX/signExtOUT_23> <ID_EX/signExtOUT_22> <ID_EX/signExtOUT_21> <ID_EX/signExtOUT_20> <ID_EX/signExtOUT_19> <ID_EX/signExtOUT_18> <ID_EX/signExtOUT_17> <ID_EX/signExtOUT_16> <ID_EX/signExtOUT_15> <ID_EX/ins15_11OUT_4> 
-Found area constraint ratio of 100 (+ 5) on block pipeline, actual ratio is 144.
-Optimizing block <pipeline> to meet ratio 100 (+ 5) of 960 slices :
-WARNING:Xst:2254 - Area constraint could not be met for block <pipeline>, final ratio is 144.
-FlipFlop IF_ID/instruccionOUT_16 has been replicated 1 time(s)
-FlipFlop IF_ID/instruccionOUT_21 has been replicated 1 time(s)
+WARNING:Xst:1426 - The value init of the FF/Latch pc/aux hinder the constant cleaning in the block pipeline.
+   You should achieve better results by setting this init to 0.
+Found area constraint ratio of 100 (+ 5) on block pipeline, actual ratio is 4.
 
 Final Macro Processing ...
 
 Processing Unit <pipeline> :
-	Found 3-bit shift register for signal <EX_MEM/ALUsaltoOUT_0>.
-	Found 3-bit shift register for signal <EX_MEM/ALUsaltoOUT_1>.
-	Found 2-bit shift register for signal <ID_EX/signExtOUT_31>.
-	Found 2-bit shift register for signal <ID_EX/signExtOUT_14>.
-	Found 2-bit shift register for signal <ID_EX/signExtOUT_13>.
-	Found 2-bit shift register for signal <ID_EX/signExtOUT_12>.
-	Found 2-bit shift register for signal <ID_EX/signExtOUT_11>.
-	Found 2-bit shift register for signal <ID_EX/signExtOUT_10>.
-	Found 2-bit shift register for signal <ID_EX/signExtOUT_9>.
-	Found 2-bit shift register for signal <ID_EX/signExtOUT_8>.
-	Found 2-bit shift register for signal <ID_EX/signExtOUT_7>.
-	Found 2-bit shift register for signal <ID_EX/signExtOUT_6>.
-	Found 2-bit shift register for signal <ID_EX/signExtOUT_5>.
-	Found 2-bit shift register for signal <ID_EX/signExtOUT_4>.
-	Found 2-bit shift register for signal <ID_EX/signExtOUT_3>.
-	Found 2-bit shift register for signal <ID_EX/signExtOUT_2>.
-	Found 2-bit shift register for signal <ID_EX/signExtOUT_1>.
-	Found 2-bit shift register for signal <ID_EX/signExtOUT_0>.
-	Found 2-bit shift register for signal <ID_EX/nextPcOUT_9>.
-	Found 2-bit shift register for signal <ID_EX/nextPcOUT_8>.
-	Found 2-bit shift register for signal <ID_EX/nextPcOUT_7>.
-	Found 2-bit shift register for signal <ID_EX/nextPcOUT_6>.
-	Found 2-bit shift register for signal <ID_EX/nextPcOUT_5>.
-	Found 2-bit shift register for signal <ID_EX/nextPcOUT_4>.
-	Found 2-bit shift register for signal <ID_EX/nextPcOUT_3>.
-	Found 2-bit shift register for signal <ID_EX/nextPcOUT_2>.
-	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_26>.
-	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_25>.
-	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_24>.
-	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_23>.
-	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_22>.
-	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_21>.
-	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_20>.
-	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_19>.
-	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_18>.
-	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_17>.
-	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_16>.
-	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_15>.
-	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_14>.
-	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_13>.
-	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_12>.
-	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_11>.
-	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_10>.
+	Found 2-bit shift register for signal <MEM_WB/MemtoRegOUT>.
 	Found 2-bit shift register for signal <MEM_WB/RegWriteOUT>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_10>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_11>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_12>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_13>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_14>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_15>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_16>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_17>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_18>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_19>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_20>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_21>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_22>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_23>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_24>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_25>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_26>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_27>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_28>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_29>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_30>.
+	Found 2-bit shift register for signal <MEM_WB/ALU_OUT_31>.
+	Found 2-bit shift register for signal <ID_EX/ins15_11OUT_0>.
+	Found 2-bit shift register for signal <ID_EX/ins15_11OUT_1>.
+	Found 2-bit shift register for signal <ID_EX/ins15_11OUT_2>.
+	Found 2-bit shift register for signal <ID_EX/ins15_11OUT_3>.
+	Found 2-bit shift register for signal <ID_EX/ins15_11OUT_4>.
+	Found 2-bit shift register for signal <ID_EX/signExtOUT_0>.
+	Found 2-bit shift register for signal <ID_EX/signExtOUT_1>.
+	Found 2-bit shift register for signal <ID_EX/signExtOUT_2>.
+	Found 2-bit shift register for signal <ID_EX/signExtOUT_3>.
+	Found 2-bit shift register for signal <ID_EX/signExtOUT_4>.
+	Found 2-bit shift register for signal <ID_EX/signExtOUT_5>.
+	Found 2-bit shift register for signal <ID_EX/signExtOUT_6>.
+	Found 2-bit shift register for signal <ID_EX/signExtOUT_7>.
+	Found 2-bit shift register for signal <ID_EX/signExtOUT_8>.
+	Found 2-bit shift register for signal <ID_EX/signExtOUT_9>.
+	Found 2-bit shift register for signal <ID_EX/signExtOUT_10>.
+	Found 2-bit shift register for signal <ID_EX/nextPcOUT_2>.
+	Found 2-bit shift register for signal <ID_EX/nextPcOUT_3>.
+	Found 2-bit shift register for signal <ID_EX/nextPcOUT_4>.
+	Found 2-bit shift register for signal <ID_EX/nextPcOUT_5>.
+	Found 2-bit shift register for signal <ID_EX/nextPcOUT_6>.
+	Found 2-bit shift register for signal <ID_EX/nextPcOUT_7>.
+	Found 2-bit shift register for signal <ID_EX/nextPcOUT_8>.
+	Found 2-bit shift register for signal <ID_EX/nextPcOUT_9>.
+	Found 3-bit shift register for signal <EX_MEM/ALUsaltoOUT_1>.
+	Found 3-bit shift register for signal <EX_MEM/ALUsaltoOUT_0>.
 Unit <pipeline> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1277
- Flip-Flops                                            : 1277
-# Shift Registers                                      : 44
- 2-bit shift register                                  : 42
+# Registers                                            : 143
+ Flip-Flops                                            : 143
+# Shift Registers                                      : 50
+ 2-bit shift register                                  : 48
  3-bit shift register                                  : 2
 
 =========================================================================
@@ -724,71 +654,68 @@ Partition Implementation Status
 -------------------------------
 
 =========================================================================
-*                            Final Report                               *
+*                            Design Summary                             *
 =========================================================================
-Final Results
-RTL Top Level Output File Name     : pipeline.ngr
-Top Level Output File Name         : pipeline
-Output Format                      : NGC
-Optimization Goal                  : Speed
-Keep Hierarchy                     : No
 
-Design Statistics
-# IOs                              : 2
+Top Level Output File Name         : pipeline.ngc
 
-Cell Usage :
-# BELS                             : 2428
-#      GND                         : 1
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 329
+#      GND                         : 3
 #      INV                         : 2
-#      LUT1                        : 9
-#      LUT2                        : 10
-#      LUT2_D                      : 1
-#      LUT2_L                      : 1
-#      LUT3                        : 1149
-#      LUT3_D                      : 1
-#      LUT3_L                      : 2
-#      LUT4                        : 113
-#      LUT4_D                      : 12
-#      LUT4_L                      : 25
-#      MUXCY                       : 87
-#      MUXF5                       : 516
-#      MUXF6                       : 256
-#      MUXF7                       : 128
-#      MUXF8                       : 64
-#      VCC                         : 1
+#      LUT1                        : 8
+#      LUT2                        : 8
+#      LUT3                        : 71
+#      LUT4                        : 44
+#      LUT5                        : 64
+#      LUT6                        : 13
+#      MUXCY                       : 63
+#      VCC                         : 3
 #      XORCY                       : 50
-# FlipFlops/Latches                : 1321
-#      FD                          : 252
-#      FDE                         : 33
-#      FDE_1                       : 1024
-#      FDR                         : 12
-# RAMS                             : 4
-#      RAMB16_S18                  : 2
-#      RAMB16_S18_S18              : 2
-# Shift Registers                  : 44
-#      SRL16                       : 44
+# FlipFlops/Latches                : 193
+#      FD                          : 132
+#      FD_1                        : 1
+#      FDE                         : 50
+#      FDR_1                       : 10
+# RAMS                             : 6
+#      RAMB16BWER                  : 4
+#      RAMB8BWER                   : 2
+# Shift Registers                  : 50
+#      SRLC16E                     : 50
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 1
 #      OBUF                        : 1
-=========================================================================
 
 Device utilization summary:
 ---------------------------
 
-Selected Device : 3s100ecp132-4 
+Selected Device : 6slx16csg324-3 
 
- Number of Slices:                     1379  out of    960   143% (*) 
- Number of Slice Flip Flops:           1321  out of   1920    68%  
- Number of 4 input LUTs:               1369  out of   1920    71%  
-    Number used as logic:              1325
-    Number used as Shift registers:      44
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             193  out of  18224     1%  
+ Number of Slice LUTs:                  260  out of   9112     2%  
+    Number used as Logic:               210  out of   9112     2%  
+    Number used as Memory:               50  out of   2176     2%  
+       Number used as SRL:               50
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    332
+   Number with an unused Flip Flop:     139  out of    332    41%  
+   Number with an unused LUT:            72  out of    332    21%  
+   Number of fully used LUT-FF pairs:   121  out of    332    36%  
+   Number of unique control sets:         3
+
+IO Utilization: 
  Number of IOs:                           2
- Number of bonded IOBs:                   2  out of     83     2%  
- Number of BRAMs:                         4  out of      4   100%  
- Number of GCLKs:                         1  out of     24     4%  
+ Number of bonded IOBs:                   2  out of    232     0%  
 
-WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                5  out of     32    15%  
+    Number using Block RAM only:          5
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
 
 ---------------------------
 Partition Resource Summary:
@@ -800,7 +727,7 @@ Partition Resource Summary:
 
 
 =========================================================================
-TIMING REPORT
+Timing Report
 
 NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
       FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
@@ -808,11 +735,14 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 1369  |
------------------------------------+------------------------+-------+
+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                                                                         | Load  |
+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+-------+
+clk                                | BUFGP                                                                                                                                         | 251   |
+memoriaInstrucciones/N1            | NONE(memoriaInstrucciones/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM18.ram)| 2     |
+memoriaDatos/N1                    | NONE(memoriaDatos/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SP.SIMPLE_PRIM18.ram)      | 2     |
+-----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -820,64 +750,83 @@ No asynchronous control signals found in this design
 
 Timing Summary:
 ---------------
-Speed Grade: -4
+Speed Grade: -3
 
-   Minimum period: 13.382ns (Maximum Frequency: 74.725MHz)
+   Minimum period: 8.253ns (Maximum Frequency: 121.166MHz)
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 7.267ns
+   Maximum output required time after clock: 5.393ns
    Maximum combinational path delay: No path found
 
-Timing Detail:
---------------
+Timing Details:
+---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 13.382ns (frequency: 74.725MHz)
-  Total number of paths / destination ports: 62643 / 2527
+  Clock period: 8.253ns (frequency: 121.166MHz)
+  Total number of paths / destination ports: 88770 / 424
 -------------------------------------------------------------------------
-Delay:               13.382ns (Levels of Logic = 21)
-  Source:            ID_EX/signExtOUT_2 (FF)
+Delay:               8.253ns (Levels of Logic = 40)
+  Source:            registros/Mram_RegFile1 (RAM)
   Destination:       EX_MEM/zeroOUT (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: ID_EX/signExtOUT_2 to EX_MEM/zeroOUT
+  Data Path: registros/Mram_RegFile1 to EX_MEM/zeroOUT
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               6   0.591   0.844  ID_EX/signExtOUT_2 (ID_EX/signExtOUT_2)
-     LUT4:I0->O            1   0.704   0.424  controlALU/ALUctl<0>41_F_SW0 (N74)
-     LUT4:I3->O            1   0.704   0.000  controlALU/ALUctl<0>41_F (N98)
-     MUXF5:I0->O          77   0.321   1.311  controlALU/ALUctl<0>41 (c27<0>)
-     LUT3:I2->O            4   0.704   0.622  alu/ALUOut_mux00002_1 (alu/ALUOut_mux00002)
-     LUT3:I2->O            1   0.704   0.000  alu/Maddsub_ALUOut_addsub0000_lut<0> (alu/Maddsub_ALUOut_addsub0000_lut<0>)
-     MUXCY:S->O            1   0.464   0.000  alu/Maddsub_ALUOut_addsub0000_cy<0> (alu/Maddsub_ALUOut_addsub0000_cy<0>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Maddsub_ALUOut_addsub0000_cy<1> (alu/Maddsub_ALUOut_addsub0000_cy<1>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Maddsub_ALUOut_addsub0000_cy<2> (alu/Maddsub_ALUOut_addsub0000_cy<2>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Maddsub_ALUOut_addsub0000_cy<3> (alu/Maddsub_ALUOut_addsub0000_cy<3>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Maddsub_ALUOut_addsub0000_cy<4> (alu/Maddsub_ALUOut_addsub0000_cy<4>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Maddsub_ALUOut_addsub0000_cy<5> (alu/Maddsub_ALUOut_addsub0000_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Maddsub_ALUOut_addsub0000_cy<6> (alu/Maddsub_ALUOut_addsub0000_cy<6>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Maddsub_ALUOut_addsub0000_cy<7> (alu/Maddsub_ALUOut_addsub0000_cy<7>)
-     MUXCY:CI->O           1   0.059   0.000  alu/Maddsub_ALUOut_addsub0000_cy<8> (alu/Maddsub_ALUOut_addsub0000_cy<8>)
-     XORCY:CI->O           1   0.804   0.424  alu/Maddsub_ALUOut_addsub0000_xor<9> (alu/ALUOut_addsub0000<9>)
-     LUT4:I3->O            4   0.704   0.591  alu/ALUOut<9> (w18<9>)
-     LUT4:I3->O            1   0.704   0.424  alu/ALUOut<29>_SW1 (N96)
-     LUT4:I3->O            1   0.704   0.000  alu/zero_wg_lut<5> (alu/zero_wg_lut<5>)
-     MUXCY:S->O            1   0.464   0.000  alu/zero_wg_cy<5> (alu/zero_wg_cy<5>)
-     MUXCY:CI->O           1   0.059   0.000  alu/zero_wg_cy<6> (alu/zero_wg_cy<6>)
-     MUXCY:CI->O           1   0.331   0.000  alu/zero_wg_cy<7> (alu/zero_wg_cy<7>)
-     FD:D                      0.308          EX_MEM/zeroOUT
+     RAMB8BWER:CLKAWRCLK->DOADO0    2   1.850   0.617  registros/Mram_RegFile1 (w11<0>)
+     LUT3:I2->O            4   0.205   0.931  mux1101 (w15<0>)
+     LUT4:I0->O            1   0.203   0.000  alu/Mcompar_A[31]_B[31]_LessThan_5_o_lut<0> (alu/Mcompar_A[31]_B[31]_LessThan_5_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<0> (alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<1> (alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<2> (alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<3> (alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<4> (alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<5> (alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<6> (alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<7> (alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<8> (alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<9> (alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<10> (alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<11> (alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<12> (alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<13> (alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<14> (alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<14>)
+     MUXCY:CI->O           2   0.213   0.617  alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<15> (alu/Mcompar_A[31]_B[31]_LessThan_5_o_cy<15>)
+     LUT6:I5->O            1   0.205   0.000  alu/Mmux__n00376_rs_lut<0> (alu/Mmux__n00376_rs_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  alu/Mmux__n00376_rs_cy<0> (alu/Mmux__n00376_rs_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mmux__n00376_rs_cy<1> (alu/Mmux__n00376_rs_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mmux__n00376_rs_cy<2> (alu/Mmux__n00376_rs_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mmux__n00376_rs_cy<3> (alu/Mmux__n00376_rs_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mmux__n00376_rs_cy<4> (alu/Mmux__n00376_rs_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mmux__n00376_rs_cy<5> (alu/Mmux__n00376_rs_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mmux__n00376_rs_cy<6> (alu/Mmux__n00376_rs_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mmux__n00376_rs_cy<7> (alu/Mmux__n00376_rs_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mmux__n00376_rs_cy<8> (alu/Mmux__n00376_rs_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mmux__n00376_rs_cy<9> (alu/Mmux__n00376_rs_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mmux__n00376_rs_cy<10> (alu/Mmux__n00376_rs_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mmux__n00376_rs_cy<11> (alu/Mmux__n00376_rs_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mmux__n00376_rs_cy<12> (alu/Mmux__n00376_rs_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mmux__n00376_rs_cy<13> (alu/Mmux__n00376_rs_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mmux__n00376_rs_cy<14> (alu/Mmux__n00376_rs_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mmux__n00376_rs_cy<15> (alu/Mmux__n00376_rs_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mmux__n00376_rs_cy<16> (alu/Mmux__n00376_rs_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  alu/Mmux__n00376_rs_cy<17> (alu/Mmux__n00376_rs_cy<17>)
+     XORCY:CI->O           2   0.180   0.981  alu/Mmux__n00376_rs_xor<18> (w18<18>)
+     LUT6:I0->O            1   0.203   0.808  alu/zero<31>4 (alu/zero<31>3)
+     LUT6:I3->O            1   0.205   0.000  alu/zero<31>7 (c17)
+     FD:D                      0.102          EX_MEM/zeroOUT
     ----------------------------------------
-    Total                     13.382ns (8.742ns logic, 4.640ns route)
-                                       (65.3% logic, 34.7% route)
+    Total                      8.253ns (4.299ns logic, 3.954ns route)
+                                       (52.1% logic, 47.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 3 / 1
 -------------------------------------------------------------------------
-Offset:              7.267ns (Levels of Logic = 2)
+Offset:              5.393ns (Levels of Logic = 2)
   Source:            MEM_WB/MemtoRegOUT (FF)
   Destination:       salida (PAD)
   Source Clock:      clk rising
@@ -886,24 +835,37 @@ Offset:              7.267ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              32   0.591   1.437  MEM_WB/MemtoRegOUT (MEM_WB/MemtoRegOUT)
-     LUT3:I0->O           33   0.704   1.263  datosMux/resultado<0>1 (salida_OBUF)
-     OBUF:I->O                 3.272          salida_OBUF (salida)
+     FDE:C->Q             32   0.447   1.520  MEM_WB/MemtoRegOUT (MEM_WB/MemtoRegOUT)
+     LUT3:I0->O            3   0.205   0.650  datosMux/Mmux_resultado11 (salida_OBUF)
+     OBUF:I->O                 2.571          salida_OBUF (salida)
     ----------------------------------------
-    Total                      7.267ns (4.567ns logic, 2.700ns route)
-                                       (62.8% logic, 37.2% route)
+    Total                      5.393ns (3.223ns logic, 2.170ns route)
+                                       (59.8% logic, 40.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    8.253|    1.807|    3.122|         |
+---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 53.00 secs
-Total CPU time to Xst completion: 52.83 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 10.77 secs
  
 --> 
 
-Total memory usage is 336160 kilobytes
+Total memory usage is 246004 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   96 (   0 filtered)
-Number of infos    :   14 (   0 filtered)
+Number of warnings :   98 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
 

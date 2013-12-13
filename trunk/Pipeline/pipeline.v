@@ -49,12 +49,19 @@ Pc pc(
 		.dirEntrada(w1),
 		.dirSalida(w2)
 		);
-		
+/*		
 memoriaDeInstrucciones ROM(
 									.clk(clk),
 									.direccion(w2),
 									.instruccion(w3)	
 									);
+*/
+
+		ROM memoriaInstrucciones(
+		  .clka(clk), // input clka
+		  .addra(w2), // input [9 : 0] addra
+		  .douta(w3) // output [31 : 0] douta
+		);
 
 SumadorPC sumadorPC(
 						 .actualPC(w2),
@@ -241,7 +248,7 @@ Branch branch(
 		.salida(c24)
     );
 
-
+/*
 MemoriaDeDatos RAM(
 						.clk(clk),
 						.read(c21),
@@ -250,6 +257,16 @@ MemoriaDeDatos RAM(
 						.direccion(w21),
 						.dout(w23)
 						);
+*/
+
+RAM memoriaDatos (
+					  .clka(clk), // input clka
+					  .wea(c22), // input [0 : 0] wea
+					  .addra(w21), // input [9 : 0] addra
+					  .dina(w22), // input [31 : 0] dina
+					  .douta(w23) // output [31 : 0] douta
+						);
+
 
 // ** Latches MEM/WB **
 
