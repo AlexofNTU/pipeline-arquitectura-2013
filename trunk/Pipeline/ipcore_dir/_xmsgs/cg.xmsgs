@@ -8,5 +8,35 @@
 <msg type="info" file="sim" num="0" delta="new" >Generating component instance &apos;<arg fmt="%s" index="1">ROM</arg>&apos; of &apos;<arg fmt="%s" index="2">xilinx.com:ip:blk_mem_gen:6.2</arg>&apos; from &apos;<arg fmt="%s" index="3">C:\Xilinx\13.2\ISE_DS\ISE\coregen\ip\xilinx\primary\com\xilinx\ip\blk_mem_gen_v6_2\component.xml</arg>&apos;.
 </msg>
 
+<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Unable to find D:\Mariano\Universidad\Ing. en Comp\Arquitectura de</arg>
+</msg>
+
+<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   Computadoras\2013\Practico\TPF\rom.coe</arg>
+</msg>
+
+<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   Coregen is looking for D:\Mariano\Universidad\Ing. en Comp\Arquitectura de</arg>
+</msg>
+
+<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   Computadoras\2013\Practico\TPF\rom.coe</arg>
+</msg>
+
+<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Unable to find D:\Mariano\Universidad\Ing. en Comp\Arquitectura de</arg>
+</msg>
+
+<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   Computadoras\2013\Practico\TPF\rom.coe</arg>
+</msg>
+
+<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   Coregen is looking for D:\Mariano\Universidad\Ing. en Comp\Arquitectura de</arg>
+</msg>
+
+<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   Computadoras\2013\Practico\TPF\rom.coe</arg>
+</msg>
+
+<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">An invalid core configuration has been detected during</arg>
+</msg>
+
+<msg type="error" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">   Customization. Core parameters will be reset to their default values.</arg>
+</msg>
+
 </messages>
 
