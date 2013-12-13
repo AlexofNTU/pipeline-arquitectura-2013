@@ -292,4 +292,5 @@ DatosMUX datosMux(
 
 assign salida = w26;
 
+
 endmodule

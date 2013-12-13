@@ -189,6 +189,10 @@
     <transform xil_pn:end_ts="1386938238" xil_pn:in_ck="2893108954125481888" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1386938238">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="AluMUX.v"/>
       <outfile xil_pn:name="Branch.v"/>
@@ -232,7 +236,11 @@
     <transform xil_pn:end_ts="1386938238" xil_pn:in_ck="2893108954125481888" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1386938238">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="AluMUX.v"/>
       <outfile xil_pn:name="Branch.v"/>
