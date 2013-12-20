@@ -108,7 +108,12 @@ Control control(
 			.RegWrite(c7),
 			.ALUOp(c8)
     );
+SaltosALU saltosALU(
+							.ShiftLeft(w8), 
+							.pc(w4),
+							.ALUResult(w20)
 
+							);
 // ** Latches ID/EX **
 
 ID_EX ID_EX(
@@ -125,7 +130,7 @@ ID_EX ID_EX(
 				.RegWriteIN(c7),
 				.ALUOpIN(c8),
 				// PC
-				.nextPcIN(w4),
+										//.nextPcIN(w4), //este ya no iria al latch
 				//REGISTROS
 				.readData1IN(w6),
 				.readData2IN(w7),
@@ -148,7 +153,7 @@ ID_EX ID_EX(
 				.RegWriteOUT(c10),
 				.ALUOpOUT(c15),
 				// PC
-				.nextPcOUT(w9),
+										//.nextPcOUT(w9), //este ya no iria al latch
 				//REGISTROS
 				.readData1OUT(w10),
 				.readData2OUT(w11),
@@ -163,12 +168,12 @@ ID_EX ID_EX(
 
 //***** ETAPA 3 *****
 				
-SaltosALU saltosALU(
+/*SaltosALU saltosALU(
 							.ShiftLeft(w12), 
 							.pc(w9),
 							.ALUResult(w17)
-
-							);
+//lo pongo en la etapa anterior!!!!!!!
+							);*/
 
 RegistrosMUX registrosMUX( 
 									.rt(w13),
@@ -186,13 +191,19 @@ AluMUX aluMux(
 
 ALU alu(
 			.ALUctl(c27),
-			.A(w10),
+			.A(w10), //poner salida de forA
 			.B(w15), 
 			.ALUOut(w18),
 			.zero(c17)
     );
 	 
-	 
+/*forA  mux3a1(
+		.registro(w10),
+		.forMem(w24),
+		.forWb(w25),
+		.selector(),
+		.valor()
+		);	 */
 ControlALU controlALU(
 			.instruccion(w12[5:0]),
 			.ALUOp(c15),
@@ -212,7 +223,7 @@ EX_MEM EX_MEM(
 				.MemWriteIN(c13),
 				.RegWriteIN(c10),
 				// Salida ALU Salto
-				.ALUsaltoIN(w17),
+												//.ALUsaltoIN(w17), //no iria mas
 				// Salida ALU
 				.zeroIN(c17),
 				.ALU_IN(w18),
@@ -230,7 +241,7 @@ EX_MEM EX_MEM(
 				.MemWriteOUT(c22),
 				.RegWriteOUT(c19),
 				// Salida ALU Salto
-				.ALUsaltoOUT(w20),
+												//.ALUsaltoOUT(w20),//no iria mas
 				// Salida ALU
 				.zeroOUT(c23),
 				.ALU_OUT(w21),

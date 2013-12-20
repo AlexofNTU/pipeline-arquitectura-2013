@@ -1,10 +1,6 @@
-set -tmpdir "xst/projnav.tmp"
-set -xsthdpdir "xst"
-run
--ifn pipeline.prj
--ifmt mixed
--ofn pipeline
--ofmt NGC
+set -tmpdir "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/xst/projnav.tmp"
+set -xsthdpdir "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/xst"
+run -compileonly yes
 -p xc6slx16-3-csg324
 -top pipeline
 -opt_mode Speed
@@ -52,3 +48,5 @@ run
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
+-ifn pipeline.prj
+-ifmt mixed

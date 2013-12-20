@@ -21,10 +21,10 @@
 module EX_MEM(
 			input clk,
 			input BranchIN, MemReadIN, MemtoRegIN, MemWriteIN, RegWriteIN, zeroIN,
-			input [31:0] ALUsaltoIN, ALU_IN, readData2IN,
+			input [31:0] /*ALUsaltoIN,*/ ALU_IN, readData2IN,
 			input [4:0] DestinoIN,
 			output reg BranchOUT, MemReadOUT, MemtoRegOUT, MemWriteOUT, RegWriteOUT, zeroOUT,		
-			output reg [31:0] ALUsaltoOUT, ALU_OUT, readData2OUT,
+			output reg [31:0] /*ALUsaltoOUT,*/ ALU_OUT, readData2OUT,
 			output reg [4:0] DestinoOUT
     );
 
@@ -36,7 +36,7 @@ begin
 	MemWriteOUT <= MemWriteIN;
 	RegWriteOUT <= RegWriteIN;
 	zeroOUT <= zeroIN;
-	ALUsaltoOUT <= ALUsaltoIN;
+	//ALUsaltoOUT <= ALUsaltoIN;
 	ALU_OUT <= ALU_IN;
 	readData2OUT <= readData2IN;
 	DestinoOUT <= DestinoIN;
