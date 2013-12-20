@@ -22,11 +22,11 @@ module ID_EX(
 			input clk,
 			input RegDstIN, BranchIN, MemReadIN, MemtoRegIN, MemWriteIN, ALUSrcIN, RegWriteIN,
 			input [1:0] ALUOpIN,		
-			input [31:0] nextPcIN, readData1IN, readData2IN, signExtIN,
+			input [31:0] /*nextPcIN,*/ readData1IN, readData2IN, signExtIN,
 			input [4:0] ins20_16IN, ins15_11IN,
 			output reg RegDstOUT,BranchOUT, MemReadOUT, MemtoRegOUT, MemWriteOUT, ALUSrcOUT, RegWriteOUT,
 			output reg [1:0] ALUOpOUT,		
-			output reg [31:0] nextPcOUT, readData1OUT, readData2OUT, signExtOUT,
+			output reg [31:0] /*nextPcOUT,*/ readData1OUT, readData2OUT, signExtOUT,
 			output reg [4:0] ins20_16OUT, ins15_11OUT
 					
 	 );
@@ -41,7 +41,7 @@ begin
 	ALUSrcOUT <= ALUSrcIN;
 	RegWriteOUT <= RegWriteIN;
 	ALUOpOUT <= ALUOpIN;
-	nextPcOUT <= nextPcIN;
+	//nextPcOUT <= nextPcIN;
 	readData1OUT <= readData1IN;
 	readData2OUT <= readData2IN;
 	signExtOUT <= signExtIN;
