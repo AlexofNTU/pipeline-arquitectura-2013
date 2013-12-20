@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Cortocircuito(
 				input [4:0] Rt,Rs, //valores de los registros en etapa de Ejecucion
-				input [4:0] RdWb,RdMem, //valores de los registros en Memoria y en Wb
+				input [4:0] RdWb,RdMem, //valores de Rd en Memoria y en Wb
 				output reg [1:0] forA,forB, //
 				input EscWb,EscMem
 				
@@ -28,6 +28,8 @@ module Cortocircuito(
 
 always @*
 begin
+		forB = 2'b00;
+		forA = 2'b00;
 	if( (EscMem==1) && (RdMem == Rt ) && (RdMem != 0))
 		begin
 			forB = 2'b10;

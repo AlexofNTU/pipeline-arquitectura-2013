@@ -1,65 +1,21 @@
-Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline_isim_beh.exe" -prj "D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline_beh.prj" "work.testPipeline" "work.glbl" 
-ISim O.61xd (signature 0x1cce1bb2)
-Number of CPUs detected in this system: 4
-Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testSCU_isim_beh.exe -prj D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testSCU_beh.prj work.testSCU work.glbl 
+ISim O.61xd (signature 0x6dd86d03)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
 Determining compilation order of HDL files
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/SumadorPC.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/SaltosMUX.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/SaltosALU.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/RegistrosMUX.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/Registros.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/Pc.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/MEM_WB.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/ipcore_dir/ROM.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/ipcore_dir/RAM.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/IF_ID.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/ID_EX.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/EX_MEM.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/ExtensionSigno.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/DatosMUX.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/ControlALU.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/Control.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/Branch.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/AluMUX.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/ALU.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v\" into library work
-Analyzing Verilog file \"D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline.v\" into library work
+Analyzing Verilog file \"D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/Cortocircuito.v\" into library work
+Analyzing Verilog file \"D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testSCU.v\" into library work
 Analyzing Verilog file \"C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v\" into library work
 Starting static elaboration
-WARNING:HDLCompiler:189 - "D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 62: Size mismatch in connection of port <addra>. Formal port size is 10-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 265: Size mismatch in connection of port <addra>. Formal port size is 10-bit while actual signal size is 32-bit.
 Completed static elaboration
-Compiling module SaltosMUX
-Compiling module Pc
-Compiling module BLK_MEM_GEN_V6_2_output_stage(C_...
-Compiling module BLK_MEM_GEN_V6_2_softecc_output_...
-Compiling module BLK_MEM_GEN_V6_2_mem_module(C_CO...
-Compiling module BLK_MEM_GEN_V6_2(C_FAMILY="spart...
-Compiling module ROM
-Compiling module SumadorPC
-Compiling module IF_ID
-Compiling module Registros
-Compiling module ExtensionSigno
-Compiling module Control
-Compiling module ID_EX
-Compiling module SaltosALU
-Compiling module RegistrosMUX
-Compiling module AluMUX
-Compiling module ALU
-Compiling module ControlALU
-Compiling module EX_MEM
-Compiling module Branch
-Compiling module BLK_MEM_GEN_V6_2_mem_module(C_CO...
-Compiling module BLK_MEM_GEN_V6_2(C_FAMILY="spart...
-Compiling module RAM
-Compiling module MEM_WB
-Compiling module DatosMUX
-Compiling module pipeline
-Compiling module testPipeline
+Fuse Memory Usage: 98756 KB
+Fuse CPU Usage: 280 ms
+Compiling module Cortocircuito
+Compiling module testSCU
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 21 sub-compilation(s) to finish...
-Compiled 28 Verilog Units
-Built simulation executable D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline_isim_beh.exe
-Fuse Memory Usage: 21996 KB
-Fuse CPU Usage: 452 ms
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 3 Verilog Units
+Built simulation executable D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testSCU_isim_beh.exe
+Fuse Memory Usage: 103348 KB
+Fuse CPU Usage: 343 ms
