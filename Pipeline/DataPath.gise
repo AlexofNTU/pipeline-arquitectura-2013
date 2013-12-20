@@ -192,6 +192,9 @@
     <transform xil_pn:end_ts="1387561664" xil_pn:in_ck="-5825677243611843524" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1387561664">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="AluMUX.v"/>
       <outfile xil_pn:name="Branch.v"/>
@@ -238,6 +241,7 @@
     <transform xil_pn:end_ts="1387561664" xil_pn:in_ck="-5825677243611843524" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1387561664">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="AluMUX.v"/>
       <outfile xil_pn:name="Branch.v"/>
@@ -268,6 +272,7 @@
     <transform xil_pn:end_ts="1387561686" xil_pn:in_ck="-7438724667008800464" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1405702110796097155" xil_pn:start_ts="1387561682">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="testSCU_beh.prj"/>
@@ -277,6 +282,7 @@
     <transform xil_pn:end_ts="1387561687" xil_pn:in_ck="-8390143617429458379" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8947910795984064902" xil_pn:start_ts="1387561686">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="testSCU_isim_beh.wdb"/>
     </transform>
