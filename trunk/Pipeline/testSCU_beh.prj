@@ -1,0 +1,3 @@
+verilog work "Cortocircuito.v"
+verilog work "testSCU.v"
+verilog work "C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v"
