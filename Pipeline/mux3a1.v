@@ -24,18 +24,16 @@ module mux3a1(
 		output reg [31:0] valor
 		);
 		
-always @*
-begin
-	valor = registro;
-	if(selector == 01)
+always@(*)
 		begin
-			valor = forMem;
+			case(selector)
+				2'b00: valor <= registro;
+				2'b01: valor <= forWb;
+				2'b10: valor <= forMem;				
+				default: valor <= registro;
+			endcase
+				
 		end
-	if(selector == 10)
-		begin
-			valor = forWb;
-		end
-end	
 
 
 endmodule

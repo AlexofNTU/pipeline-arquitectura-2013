@@ -1,7 +1,6 @@
 # Output products list for <ROM>
 ROM.asy
 ROM.gise
-ROM.mif
 ROM.ngc
 ROM.sym
 ROM.v

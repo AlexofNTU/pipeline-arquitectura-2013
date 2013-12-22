@@ -10,7 +10,7 @@
 /*  \___\/\___\                                                    */
 /***********************************************************************/
 
-/* This file is designed for use with ISim build 0x1cce1bb2 */
+/* This file is designed for use with ISim build 0x6dd86d03 */
 
 #define XSI_HIDE_SYMBOL_SPEC true
 #include "xsi.h"
@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/Pc.v";
+static const char *ng0 = "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/Pc.v";
 static int ng1[] = {1, 0};
 static int ng2[] = {0, 0};
 
@@ -36,7 +36,7 @@ LAB0:    xsi_set_current_line(28, ng0);
 
 LAB2:    xsi_set_current_line(29, ng0);
     t1 = ((char*)((ng1)));
-    t2 = (t0 + 1768);
+    t2 = (t0 + 1012);
     xsi_vlogvar_assign_value(t2, t1, 0, 0, 1);
 
 LAB1:    return;
@@ -59,7 +59,7 @@ static void Always_32_1(char *t0)
     char *t13;
     char *t14;
 
-LAB0:    t1 = (t0 + 2936U);
+LAB0:    t1 = (t0 + 1680U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
@@ -67,9 +67,9 @@ LAB0:    t1 = (t0 + 2936U);
 LAB3:    goto *t2;
 
 LAB2:    xsi_set_current_line(32, ng0);
-    t2 = (t0 + 3256);
+    t2 = (t0 + 1876);
     *((int *)t2) = 1;
-    t3 = (t0 + 2968);
+    t3 = (t0 + 1708);
     *((char **)t3) = t2;
     *((char **)t1) = &&LAB4;
 
@@ -77,8 +77,8 @@ LAB1:    return;
 LAB4:    xsi_set_current_line(33, ng0);
 
 LAB5:    xsi_set_current_line(34, ng0);
-    t4 = (t0 + 1768);
-    t5 = (t4 + 56U);
+    t4 = (t0 + 1012);
+    t5 = (t4 + 36U);
     t6 = *((char **)t5);
     t7 = (t6 + 4);
     t8 = *((unsigned int *)t7);
@@ -92,9 +92,9 @@ LAB5:    xsi_set_current_line(34, ng0);
 LAB7:    xsi_set_current_line(40, ng0);
 
 LAB10:    xsi_set_current_line(41, ng0);
-    t2 = (t0 + 1208U);
+    t2 = (t0 + 692U);
     t3 = *((char **)t2);
-    t2 = (t0 + 1608);
+    t2 = (t0 + 920);
     xsi_vlogvar_wait_assign_value(t2, t3, 0, 0, 32, 0LL);
 
 LAB8:    goto LAB2;
@@ -103,11 +103,11 @@ LAB6:    xsi_set_current_line(35, ng0);
 
 LAB9:    xsi_set_current_line(36, ng0);
     t13 = ((char*)((ng2)));
-    t14 = (t0 + 1768);
+    t14 = (t0 + 1012);
     xsi_vlogvar_assign_value(t14, t13, 0, 0, 1);
     xsi_set_current_line(37, ng0);
     t2 = ((char*)((ng2)));
-    t3 = (t0 + 1608);
+    t3 = (t0 + 920);
     xsi_vlogvar_wait_assign_value(t3, t2, 0, 0, 32, 0LL);
     goto LAB8;
 

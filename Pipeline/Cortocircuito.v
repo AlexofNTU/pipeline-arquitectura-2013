@@ -28,26 +28,33 @@ module Cortocircuito(
 
 always @*
 begin
-		forB = 2'b00;
-		forA = 2'b00;
-	if( (EscMem==1) && (RdMem == Rt ) && (RdMem != 0))
-		begin
-			forB = 2'b10;
-		end
-
-	if( (EscWb==1) && (RdWb == Rt ) && (RdWb != 0))
+		
+		
+	if( (EscWb==1) && (RdWb == Rt ) && (RdWb != 0) && (RdMem != Rt) && !(EscMem && (RdMem != 0)) )
 		begin
 			forB = 2'b01;
 		end
+	else if( (EscMem==1) && (RdMem == Rt ) && (RdMem != 0) )
+		begin
+			forB = 2'b10;
+		end
+	else
+		begin
+			forB = 2'b00;
+		end
 		
-	if( (EscMem==1) && (RdMem == Rs ) && (RdMem != 0))
+	if( (EscWb==1) && (RdWb == Rs ) && (RdWb != 0) && (RdMem != Rs) && !(EscMem && (RdMem != 0)) )
+		begin
+			forA = 2'b01;
+		end
+
+	else if( (EscMem==1) && (RdMem == Rs ) && (RdMem != 0) )
 		begin
 			forA = 2'b10;
 		end
-
-	if( (EscWb==1) && (RdWb == Rs ) && (RdWb != 0))
+	else
 		begin
-			forA = 2'b01;
+			forA = 2'b00;
 		end
 	
 

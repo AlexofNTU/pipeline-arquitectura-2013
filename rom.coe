@@ -6,9 +6,7 @@
 ; specified in hexadecimal format.
 memory_initialization_radix=16;
 memory_initialization_vector=
-00411820,
-00412020,
-00412820,
-00413020,
-AC030001,
-8C020001;
+00214820,
+01292820,
+00A53020,
+00C63820;
