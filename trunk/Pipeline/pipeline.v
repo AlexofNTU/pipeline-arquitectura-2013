@@ -24,12 +24,12 @@ module pipeline(
     );
 
 wire [31:0] w1, w2, w3, w4, w5, w6, 
-				w7, w8, w9, w10, w11, w12,
+				w7, w8, w10, w11, w12,
 				w15, w17, w18, w20, w21, 
-				w22, w23, w26, w27, w28, w29;
-wire [4:0] w13, w14, w19, w24, w25;
+				w22, w23, w26, w27, w28, w29,w30;
+wire [4:0] w13, w14, w19, w24, w25,w9;
 wire [3:0] c27;
-wire [1:0] c8, c15;
+wire [1:0] c8, c15,c28,c29;
 wire c1, c2, c3, c4, c5, c6,
 	  c7, c9, c10, c11, c12, c13,
 	  c14, c16, c17, c18, c19, c20, 
@@ -49,20 +49,20 @@ Pc pc(
 		.dirEntrada(w1),
 		.dirSalida(w2)
 		);
-/*		
+	
 memoriaDeInstrucciones ROM(
 									.clk(clk),
 									.direccion(w2),
 									.instruccion(w3)	
 									);
-*/
 
-		ROM memoriaInstrucciones(
+
+/*		MemInst memoriaInstrucciones(
 		  .clka(clk), // input clka
 		  .addra(w2), // input [9 : 0] addra
 		  .douta(w3) // output [31 : 0] douta
 		);
-
+*/
 SumadorPC sumadorPC(
 						 .actualPC(w2),
 				       .proximoPC(w29)
@@ -114,6 +114,19 @@ SaltosALU saltosALU(
 							.ALUResult(w20)
 
 							);
+/*Hazard HDU(
+				.pcEnable(),
+				.mux(),
+				.ifEnable(),
+				.Rt(),
+				.Rs(),
+				.Rd(),
+				.isRead()
+    );*/
+	 
+/*
+
+*/
 // ** Latches ID/EX **
 
 ID_EX ID_EX(
@@ -129,8 +142,6 @@ ID_EX ID_EX(
 				.ALUSrcIN(c6),
 				.RegWriteIN(c7),
 				.ALUOpIN(c8),
-				// PC
-										//.nextPcIN(w4), //este ya no iria al latch
 				//REGISTROS
 				.readData1IN(w6),
 				.readData2IN(w7),
@@ -140,6 +151,8 @@ ID_EX ID_EX(
 				.ins20_16IN(w5[20:16]),
 				// instruccion[15-11]
 				.ins15_11IN(w5[15:11]),
+				// instruccion[25-21]
+				.ins25_21IN(w5[25:21]),
 				//
 				//****SALIDAS*****
 				//
@@ -152,8 +165,6 @@ ID_EX ID_EX(
 				.ALUSrcOUT(c16),
 				.RegWriteOUT(c10),
 				.ALUOpOUT(c15),
-				// PC
-										//.nextPcOUT(w9), //este ya no iria al latch
 				//REGISTROS
 				.readData1OUT(w10),
 				.readData2OUT(w11),
@@ -162,19 +173,14 @@ ID_EX ID_EX(
 				// instruccion[20-16]
 				.ins20_16OUT(w13),
 				// instruccion[15-11]
-				.ins15_11OUT(w14)
+				.ins15_11OUT(w14),
+				// instruccion[25-21]
+				.ins25_21OUT(w9)
 				
 				);
 
 //***** ETAPA 3 *****
 				
-/*SaltosALU saltosALU(
-							.ShiftLeft(w12), 
-							.pc(w9),
-							.ALUResult(w17)
-//lo pongo en la etapa anterior!!!!!!!
-							);*/
-
 RegistrosMUX registrosMUX( 
 									.rt(w13),
 									.rd(w14),
@@ -184,26 +190,47 @@ RegistrosMUX registrosMUX(
 
 AluMUX aluMux(	
 					.sigExt(w12),
-					.ReadData2(w11),
+					.ReadData2(w17),
 					.ALUSrc(c16),
 					.resultado(w15)
 				 );	
 
 ALU alu(
 			.ALUctl(c27),
-			.A(w10), //poner salida de forA
+			.A(w30), //poner salida de forA
 			.B(w15), 
 			.ALUOut(w18),
 			.zero(c17)
     );
 	 
-/*forA  mux3a1(
+mux3a1 forA(
 		.registro(w10),
-		.forMem(w24),
-		.forWb(w25),
-		.selector(),
-		.valor()
-		);	 */
+		.forMem(w21),
+		.forWb(w26),
+		.selector(c28),
+		.valor(w30)
+		);	 
+		
+mux3a1 forB(
+		.registro(w11),
+		.forMem(w21),
+		.forWb(w26),
+		.selector(c29),
+		.valor(w17)
+		);	 
+
+Cortocircuito SCU(
+				.Rt(w13),
+				.Rs(w9),
+				.RdWb(w25),
+				.RdMem(w24),
+				.forA(c28),
+				.forB(c29),
+				.EscWb(c25),
+				.EscMem(c19)
+				
+    );
+
 ControlALU controlALU(
 			.instruccion(w12[5:0]),
 			.ALUOp(c15),
@@ -223,12 +250,11 @@ EX_MEM EX_MEM(
 				.MemWriteIN(c13),
 				.RegWriteIN(c10),
 				// Salida ALU Salto
-												//.ALUsaltoIN(w17), //no iria mas
 				// Salida ALU
 				.zeroIN(c17),
 				.ALU_IN(w18),
 				// Dato 2
-				.readData2IN(w11),
+				.readData2IN(w17),
 				// Registro Destino
 				.DestinoIN(w19),
 				//
@@ -241,7 +267,6 @@ EX_MEM EX_MEM(
 				.MemWriteOUT(c22),
 				.RegWriteOUT(c19),
 				// Salida ALU Salto
-												//.ALUsaltoOUT(w20),//no iria mas
 				// Salida ALU
 				.zeroOUT(c23),
 				.ALU_OUT(w21),

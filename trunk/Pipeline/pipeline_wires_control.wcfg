@@ -3,37 +3,45 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="D:/Mariano/Universidad/Ing. en Comp/Arquitectura de Computadoras/2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline_isim_beh.wdb" id="1" type="auto">
+      <db_ref path="D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline_isim_beh.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="glbl" />
             <top_module name="testPipeline" />
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="33" />
+   <WVObjectSize size="51" />
    <wvobject fp_name="/testPipeline/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/w1" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">w1[31:0]</obj_property>
       <obj_property name="ObjectShortName">w1[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">PC</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/w2" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">w2[31:0]</obj_property>
       <obj_property name="ObjectShortName">w2[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">nextPC</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/w3" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">w3[31:0]</obj_property>
       <obj_property name="ObjectShortName">w3[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">Instruccion</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/w29" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">w29[31:0]</obj_property>
       <obj_property name="ObjectShortName">w29[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">Pc+4</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/w4" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">w4[31:0]</obj_property>
@@ -61,19 +69,23 @@
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/w9" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">w9[31:0]</obj_property>
-      <obj_property name="ObjectShortName">w9[31:0]</obj_property>
+      <obj_property name="ElementShortName">w9[4:0]</obj_property>
+      <obj_property name="ObjectShortName">w9[4:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/w11" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">w11[31:0]</obj_property>
       <obj_property name="ObjectShortName">w11[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">Read Data 2</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/w12" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">w12[31:0]</obj_property>
       <obj_property name="ObjectShortName">w12[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">Sign Extend</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/w13" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">w13[4:0]</obj_property>
@@ -85,19 +97,82 @@
       <obj_property name="ObjectShortName">w14[4:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/testPipeline/uut/w17" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">w17[31:0]</obj_property>
-      <obj_property name="ObjectShortName">w17[31:0]</obj_property>
+   <wvobject fp_name="/testPipeline/uut/w15" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w15[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w15[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
+   <wvobject fp_name="divider48" type="divider">
+      <obj_property name="label">ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
    <wvobject fp_name="/testPipeline/uut/w18" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">w18[31:0]</obj_property>
       <obj_property name="ObjectShortName">w18[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">Salida ALU</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w30" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w30[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w30[31:0]</obj_property>
+      <obj_property name="label">Entrada A</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w17" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w17[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w17[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">Entrada B</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/w19" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">w19[4:0]</obj_property>
       <obj_property name="ObjectShortName">w19[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider49" type="divider">
+      <obj_property name="label">Forwarding A</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/forA/registro" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">registro[31:0]</obj_property>
+      <obj_property name="ObjectShortName">registro[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">Registro</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/forA/forMem" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">forMem[31:0]</obj_property>
+      <obj_property name="ObjectShortName">forMem[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">Mem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/forA/forWb" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">forWb[31:0]</obj_property>
+      <obj_property name="ObjectShortName">forWb[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">Wb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/forA/selector" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">selector[1:0]</obj_property>
+      <obj_property name="ObjectShortName">selector[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="label">selector</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/forA/valor" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">valor[31:0]</obj_property>
+      <obj_property name="ObjectShortName">valor[31:0]</obj_property>
+      <obj_property name="label">Salida</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/w24" type="array" db_ref_id="1">
@@ -126,28 +201,40 @@
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/c14" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">c14</obj_property>
       <obj_property name="ObjectShortName">c14</obj_property>
+      <obj_property name="label">RegDest</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/c21" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">c21</obj_property>
       <obj_property name="ObjectShortName">c21</obj_property>
+      <obj_property name="label">MemRead</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/c22" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">c22</obj_property>
       <obj_property name="ObjectShortName">c22</obj_property>
+      <obj_property name="label">MemWrite</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/c25" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">c25</obj_property>
       <obj_property name="ObjectShortName">c25</obj_property>
+      <obj_property name="label">RegWrite</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/c24" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">c24</obj_property>
       <obj_property name="ObjectShortName">c24</obj_property>
+      <obj_property name="label">PcSrc</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/c26" type="logic" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">c26</obj_property>
       <obj_property name="ObjectShortName">c26</obj_property>
+      <obj_property name="label">MemToReg</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/w25" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">w25[4:0]</obj_property>
@@ -168,5 +255,49 @@
       <obj_property name="ElementShortName">w28[31:0]</obj_property>
       <obj_property name="ObjectShortName">w28[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider38" type="divider">
+      <obj_property name="label">Forwarding</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/SCU/forA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">forA[1:0]</obj_property>
+      <obj_property name="ObjectShortName">forA[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/SCU/forB" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">forB[1:0]</obj_property>
+      <obj_property name="ObjectShortName">forB[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/SCU/Rt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Rt[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Rt[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/SCU/Rs" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Rs[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Rs[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/SCU/RdWb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">RdWb[4:0]</obj_property>
+      <obj_property name="ObjectShortName">RdWb[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/SCU/RdMem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">RdMem[4:0]</obj_property>
+      <obj_property name="ObjectShortName">RdMem[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/SCU/EscWb" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">EscWb</obj_property>
+      <obj_property name="ObjectShortName">EscWb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/SCU/EscMem" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">EscMem</obj_property>
+      <obj_property name="ObjectShortName">EscMem</obj_property>
    </wvobject>
 </wave_config>

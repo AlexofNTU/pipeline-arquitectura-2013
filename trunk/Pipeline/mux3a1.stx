@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Parameter xsthdpdir set to D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Reading design: mux3a1.prj
 
@@ -41,16 +41,17 @@ TABLE OF CONTENTS
 =========================================================================
 Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\mux3a1.v\" into library work
 Parsing module <mux3a1>.
-
-
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.77 secs
- 
+ERROR:HDLCompiler:69 - "D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\mux3a1.v" Line 30: <out> is not declared.
+ERROR:HDLCompiler:69 - "D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\mux3a1.v" Line 31: <out> is not declared.
+ERROR:HDLCompiler:69 - "D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\mux3a1.v" Line 32: <out> is not declared.
+ERROR:HDLCompiler:69 - "D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\mux3a1.v" Line 33: <out> is not declared.
+ERROR:HDLCompiler:598 - "D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\mux3a1.v" Line 21: Module <mux3a1> ignored due to previous errors.
+Verilog file D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\mux3a1.v ignored due to errors
 --> 
 
-Total memory usage is 133444 kilobytes
+Total memory usage is 134404 kilobytes
 
-Number of errors   :    0 (   0 filtered)
+Number of errors   :    5 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

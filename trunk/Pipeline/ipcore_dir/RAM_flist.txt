@@ -2,7 +2,6 @@
 RAM.asy
 RAM.gise
 RAM.ngc
-RAM.sym
 RAM.v
 RAM.veo
 RAM.xco
