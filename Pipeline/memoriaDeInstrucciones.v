@@ -31,16 +31,20 @@ module memoriaDeInstrucciones(
 initial begin
 
 
-//00210820,
-//00832820,
-//00231020;
+
+
+
+
+
 
 
 		//rom[0] = 32'b00010000001000000000000000000001; //BEQ r1, r1, 2
-		rom[0] = 32'h00210820; // ADD r3, r2, r1 1 + 7 
-		rom[1] = 32'hAC010001; // ADD r4, r2, r1 
-		rom[2] = 32'h00212020;
-		for (i=3; i < 1024; i = i + 1)  // llenamos la memoria con 0
+		rom[0] = 32'h8C010001; // ADD r3, r2, r1 1 + 7 
+		rom[1] = 32'h00211020; // ADD r4, r2, r1 
+		rom[2] = 32'h00441820;
+		rom[3] = 32'h00622020;
+
+		for (i=4; i < 1024; i = i + 1)  // llenamos la memoria con 0
 			begin
 				rom[i] = 32'b0; //HLT				
 			end

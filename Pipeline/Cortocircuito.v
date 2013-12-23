@@ -43,7 +43,7 @@ begin
 			forB = 2'b00;
 		end
 		
-	if( (EscWb==1) && (RdWb == Rs ) && (RdWb != 0) && (RdMem != Rs))
+	if( (EscWb==1) && (RdWb == Rs ) && (RdWb != 0) && ((RdMem != Rs)|| ((RdMem == Rs) && (EscMem==0))))
 		begin
 			forA = 2'b01;
 		end

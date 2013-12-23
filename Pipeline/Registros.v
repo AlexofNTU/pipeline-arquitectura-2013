@@ -33,8 +33,10 @@ initial begin
   RegFile[1] = 32'b00000000000000000000000000000010; // Cargamos un 2 en r1
   RegFile[2] = 32'b00000000000000000000000000000111;
   RegFile[3] = 32'b00000000000000000000000000000101;
+  RegFile[4] = 32'b00000000000000000000000000000101;
+  RegFile[5] = 32'b00000000000000000000000000000111;
 	
-for (i=4; i < 32; i = i + 1)  // llenamos la memoria con 0
+for (i=6; i < 32; i = i + 1)  // llenamos la memoria con 0
 			begin
 				RegFile[i] = 0;
 			end
