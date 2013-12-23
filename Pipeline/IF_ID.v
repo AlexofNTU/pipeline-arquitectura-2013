@@ -19,15 +19,18 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module IF_ID(
-			input clk,
+			input clk,enable,
 			input [31:0] nextPcIN,instruccionIN,
 			output reg [31:0] nextPcOUT,instruccionOUT
 	 );
 	 
 always @ (posedge clk)
 begin
-	nextPcOUT <= nextPcIN;
-	instruccionOUT <= instruccionIN;
+		if(enable)
+			begin
+				nextPcOUT <= nextPcIN;
+				instruccionOUT <= instruccionIN;
+			end
 end
 
 endmodule

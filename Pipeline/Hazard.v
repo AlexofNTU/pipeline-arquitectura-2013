@@ -19,23 +19,29 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Hazard(
-				output reg pcEnable,mux,ifEnable,
-				input [4:0] Rt,Rs,Rd,
-				input isRead
+				output reg pcEnable,controlEnable,ifEnable,
+				input [4:0] Rt,Rs,RtEx,
+				input isLoad
     );
-	 
+
+initial begin
+pcEnable <= 1;
+controlEnable <= 1;
+ifEnable <= 1;
+end	 
+
 always @*
 begin
-	if( ((Rt == Rs) || (Rt == Rd) ) && (isRead==1) )
+	if( ((Rt == RtEx) || (Rs == RtEx) ) && (isLoad==1) )
 		begin
 			pcEnable <= 0;
-			mux <= 0;
+			controlEnable <= 0;
 			ifEnable <= 0;
 		end
 	else
 		begin
 			pcEnable <= 1;
-			mux <= 1;
+			controlEnable <= 1;
 			ifEnable <= 1;
 		end
 end

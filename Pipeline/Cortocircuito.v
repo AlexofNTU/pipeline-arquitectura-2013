@@ -30,7 +30,7 @@ always @*
 begin
 		
 		
-	if( (EscWb==1) && (RdWb == Rt ) && (RdWb != 0) && (RdMem != Rt) && !(EscMem && (RdMem != 0)) )
+	if( (EscWb==1) && (RdWb == Rt ) && (RdWb != 0) && ((RdMem != Rt)|| ((RdMem == Rt) && (EscMem==0))))
 		begin
 			forB = 2'b01;
 		end
@@ -43,7 +43,7 @@ begin
 			forB = 2'b00;
 		end
 		
-	if( (EscWb==1) && (RdWb == Rs ) && (RdWb != 0) && (RdMem != Rs) && !(EscMem && (RdMem != 0)) )
+	if( (EscWb==1) && (RdWb == Rs ) && (RdWb != 0) && (RdMem != Rs))
 		begin
 			forA = 2'b01;
 		end

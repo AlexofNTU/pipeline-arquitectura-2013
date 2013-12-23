@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Pc(
-		input clk,
+		input clk,enable,
 		input [31:0] dirEntrada,
 		output reg [31:0]  dirSalida
     );
@@ -38,7 +38,10 @@ always @ (negedge clk)
 			end
 		else
 			begin
-		dirSalida <= dirEntrada;
+					if(enable)
+						begin
+							dirSalida <= dirEntrada;
+						end
 			end
 	end
 	
