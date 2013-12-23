@@ -33,7 +33,7 @@ wire [1:0] c8, c15,c28,c29;
 wire c1, c2, c3, c4, c5, c6,
 	  c7, c9, c10, c11, c12, c13,
 	  c14, c16, c17, c18, c19, c20, 
-	  c21, c22, c23, c24, c25;
+	  c21, c22, c23, c24, c25, c26, c30, c31, c32;
 
 //***** ETAPA 1 *****
 
@@ -46,6 +46,7 @@ SaltosMUX saltosMUX(
 
 Pc pc(
 		.clk(clk),
+		.enable(c30),
 		.dirEntrada(w1),
 		.dirSalida(w2)
 		);
@@ -72,6 +73,7 @@ SumadorPC sumadorPC(
 						  
 IF_ID IF_ID(
 				.clk(clk),
+				.enable(c31),
 				.nextPcIN(w29),
 				.instruccionIN(w3), 
 				.nextPcOUT(w4),
@@ -99,6 +101,7 @@ ExtensionSigno extension(
 
 Control control(
 			.instruccion(w5[31:26]),
+			.enable(c32),
 			.RegDst(c1),
 			.Branch(c2),
 			.MemRead(c3),
@@ -112,21 +115,18 @@ SaltosALU saltosALU(
 							.ShiftLeft(w8), 
 							.pc(w4),
 							.ALUResult(w20)
-
-							);
-/*Hazard HDU(
-				.pcEnable(),
-				.mux(),
-				.ifEnable(),
-				.Rt(),
-				.Rs(),
-				.Rd(),
-				.isRead()
-    );*/
+	);
+Hazard HDU(
+				.pcEnable(c30),
+				.controlEnable(c32),
+				.ifEnable(c31),		
+				.Rt(w5[20:16]),	//rt actual
+				.Rs(w5[25:21]), //rs actual
+				.RtEx(w13),		//registro donde cargo el load
+				.isLoad(c12) //indica si voy a leer de la memoria
+    );
 	 
-/*
 
-*/
 // ** Latches ID/EX **
 
 ID_EX ID_EX(
