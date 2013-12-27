@@ -1,4 +1,5 @@
 verilog work "SumadorPC.v"
+verilog work "ShiftSalto.v"
 verilog work "SaltosMUX.v"
 verilog work "SaltosALU.v"
 verilog work "RegistrosMUX.v"
