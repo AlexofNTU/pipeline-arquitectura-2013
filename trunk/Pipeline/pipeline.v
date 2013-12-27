@@ -26,28 +26,36 @@ module pipeline(
 wire [31:0] w1, w2, w3, w4, w5, w6, 
 				w7, w8, w10, w11, w12,
 				w15, w17, w18, w20, w21, 
-				w22, w23, w26, w27, w28, w29,w30;
+				w22, w23, w26, w27, w28, w29,w30,w31,w32;
 wire [4:0] w13, w14, w19, w24, w25,w9;
 wire [3:0] c27;
 wire [1:0] c8, c15,c28,c29;
 wire c1, c2, c3, c4, c5, c6,
 	  c7, c9, c10, c11, c12, c13,
 	  c14, c16, c17, c18, c19, c20, 
-	  c21, c22, c23, c24, c25, c26, c30, c31, c32;
+	  c21, c22, c23, c24, c25, c26, c30, c31, c32,c33;
 
 //***** ETAPA 1 *****
-
+assign c33=0;
 SaltosMUX saltosMUX(
 						  .pc(w29), 
 						  .ALUResult(w20),
 						  .Branch(c24),
-						  .resultado(w1)
+						  .resultado(w1) //este entraria en .pc del siguiente mux w32
+						);
+						
+
+SaltosMUX jump(
+						  .pc(w1),  //branch ==0 Salida del mux anterior
+						  .ALUResult(w31), //branch==1 jump Address
+						  .Branch(c33), //señal de control jump
+						  .resultado(w32) //entra al pc
 						);
 
 Pc pc(
 		.clk(clk),
 		.enable(c30),
-		.dirEntrada(w1),
+		.dirEntrada(w32),
 		.dirSalida(w2)
 		);
 	
@@ -126,6 +134,12 @@ Hazard HDU(
 				.isLoad(c12) //indica si voy a leer de la memoria
     );
 	 
+
+ShiftSalto shiftSalto(
+				.instruccion(w5[25:0]),
+				.pc4(w20[31:28]),
+				.saltoNC(w31)
+						);
 
 // ** Latches ID/EX **
 
