@@ -26,7 +26,7 @@ module IF_ID(
 	 
 always @ (posedge clk)
 begin
-		if(enable)
+		if(enable == 1)
 			begin
 				nextPcOUT <= nextPcIN;
 				instruccionOUT <= instruccionIN;

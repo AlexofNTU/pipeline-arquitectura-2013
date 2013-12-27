@@ -38,7 +38,7 @@ always @ (negedge clk)
 			end
 		else
 			begin
-					if(enable)
+					if(enable==1)
 						begin
 							dirSalida <= dirEntrada;
 						end

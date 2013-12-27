@@ -23,7 +23,7 @@
 #endif
 static const char *ng0 = "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/Registros.v";
 static int ng1[] = {0, 0};
-static unsigned int ng2[] = {2U, 0U};
+static unsigned int ng2[] = {3U, 0U};
 static int ng3[] = {1, 0};
 static unsigned int ng4[] = {7U, 0U};
 static int ng5[] = {2, 0};
@@ -161,7 +161,7 @@ LAB8:    xsi_set_current_line(35, ng0);
         goto LAB9;
 
 LAB10:    xsi_set_current_line(36, ng0);
-    t1 = ((char*)((ng6)));
+    t1 = ((char*)((ng4)));
     t2 = (t0 + 1472);
     t5 = (t0 + 1472);
     t6 = (t5 + 44U);

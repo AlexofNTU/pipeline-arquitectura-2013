@@ -284,7 +284,7 @@ Branch branch(
 		.salida(c24)
     );
 
-/*
+
 MemoriaDeDatos RAM(
 						.clk(clk),
 						.read(c21),
@@ -293,9 +293,9 @@ MemoriaDeDatos RAM(
 						.direccion(w21),
 						.dout(w23)
 						);
-*/
 
-RAM memoriaDatos (
+
+/*RAM memoriaDatos (
 					  .clka(clk), // input clka
 					  .wea(c22), // input [0 : 0] wea
 					  .addra(w21), // input [9 : 0] addra
@@ -303,7 +303,7 @@ RAM memoriaDatos (
 					  .douta(w23) // output [31 : 0] douta
 						);
 
-
+*/
 // ** Latches MEM/WB **
 
 MEM_WB MEM_WB(

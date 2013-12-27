@@ -29,28 +29,27 @@ module memoriaDeInstrucciones(
 	reg [31:0] auxData;
 	
 initial begin
-
-
-
-
-
-
-
-
-
-		//rom[0] = 32'b00010000001000000000000000000001; //BEQ r1, r1, 2
-		rom[0] = 32'h8C010001; // ADD r3, r2, r1 1 + 7 
-		rom[1] = 32'h00211020; // ADD r4, r2, r1 
-		rom[2] = 32'h00441820;
-		rom[3] = 32'h00622020;
-
+		/*
+		//codigo para probar la HDU
+		rom[0] = 32'h8C010001; // LW 1,1(0) 
+		rom[1] = 32'h00231020; // ADD 2,1,3
+		rom[2] = 32'h00441820; // ADD 3,2,4
+		rom[3] = 32'h00622020; // ADD 4,3,2
+		*/
+		
+		//codigo para probar la SCU
+		rom[0] = 32'h00210820; // ADD 1,1,1  
+		rom[1] = 32'h00210820; // ADD 1,1,1  
+		rom[2] = 32'h00210820; // ADD 1,1,1  
+		rom[3] = 32'h00210820; // ADD 1,1,1  
+		
 		for (i=4; i < 1024; i = i + 1)  // llenamos la memoria con 0
 			begin
 				rom[i] = 32'b0; //HLT				
 			end
 end
 
-always @ (negedge clk)
+always @ (posedge clk)
 begin
 		auxData = rom [direccion];
 end
