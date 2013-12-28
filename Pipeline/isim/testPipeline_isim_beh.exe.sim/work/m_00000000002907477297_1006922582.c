@@ -22,13 +22,13 @@
 #define alloca _alloca
 #endif
 static const char *ng0 = "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/memoriaDeInstrucciones.v";
-static unsigned int ng1[] = {2164768U, 0U};
+static unsigned int ng1[] = {2348875777U, 0U};
 static int ng2[] = {0, 0};
-static unsigned int ng3[] = {4395042U, 0U};
+static unsigned int ng3[] = {2297888U, 0U};
 static int ng4[] = {1, 0};
-static unsigned int ng5[] = {272891914U, 0U};
+static unsigned int ng5[] = {4462624U, 0U};
 static int ng6[] = {2, 0};
-static unsigned int ng7[] = {134217728U, 0U};
+static unsigned int ng7[] = {6430752U, 0U};
 static int ng8[] = {3, 0};
 static int ng9[] = {4, 0};
 static int ng10[] = {1024, 0};
@@ -76,7 +76,7 @@ static void Initial_31_0(char *t0)
 
 LAB0:    xsi_set_current_line(31, ng0);
 
-LAB2:    xsi_set_current_line(57, ng0);
+LAB2:    xsi_set_current_line(34, ng0);
     t1 = ((char*)((ng1)));
     t2 = (t0 + 1104);
     t5 = (t0 + 1104);
@@ -97,7 +97,7 @@ LAB2:    xsi_set_current_line(57, ng0);
     if (t18 == 1)
         goto LAB3;
 
-LAB4:    xsi_set_current_line(58, ng0);
+LAB4:    xsi_set_current_line(35, ng0);
     t1 = ((char*)((ng3)));
     t2 = (t0 + 1104);
     t5 = (t0 + 1104);
@@ -118,7 +118,7 @@ LAB4:    xsi_set_current_line(58, ng0);
     if (t18 == 1)
         goto LAB5;
 
-LAB6:    xsi_set_current_line(59, ng0);
+LAB6:    xsi_set_current_line(36, ng0);
     t1 = ((char*)((ng5)));
     t2 = (t0 + 1104);
     t5 = (t0 + 1104);
@@ -139,7 +139,7 @@ LAB6:    xsi_set_current_line(59, ng0);
     if (t18 == 1)
         goto LAB7;
 
-LAB8:    xsi_set_current_line(60, ng0);
+LAB8:    xsi_set_current_line(37, ng0);
     t1 = ((char*)((ng7)));
     t2 = (t0 + 1104);
     t5 = (t0 + 1104);
@@ -160,8 +160,8 @@ LAB8:    xsi_set_current_line(60, ng0);
     if (t18 == 1)
         goto LAB9;
 
-LAB10:    xsi_set_current_line(69, ng0);
-    xsi_set_current_line(69, ng0);
+LAB10:    xsi_set_current_line(62, ng0);
+    xsi_set_current_line(62, ng0);
     t1 = ((char*)((ng9)));
     t2 = (t0 + 1012);
     xsi_vlogvar_assign_value(t2, t1, 0, 0, 32);
@@ -211,9 +211,9 @@ LAB9:    t19 = *((unsigned int *)t3);
     xsi_vlogvar_assign_value(t2, t1, 0, *((unsigned int *)t4), t22);
     goto LAB10;
 
-LAB12:    xsi_set_current_line(70, ng0);
+LAB12:    xsi_set_current_line(63, ng0);
 
-LAB14:    xsi_set_current_line(71, ng0);
+LAB14:    xsi_set_current_line(64, ng0);
     t8 = ((char*)((ng11)));
     t9 = (t0 + 1104);
     t10 = (t0 + 1104);
@@ -236,7 +236,7 @@ LAB14:    xsi_set_current_line(71, ng0);
     if (t18 == 1)
         goto LAB15;
 
-LAB16:    xsi_set_current_line(69, ng0);
+LAB16:    xsi_set_current_line(62, ng0);
     t1 = (t0 + 1012);
     t2 = (t1 + 36U);
     t5 = *((char **)t2);
@@ -256,7 +256,7 @@ LAB15:    t34 = *((unsigned int *)t4);
 
 }
 
-static void Always_75_1(char *t0)
+static void Always_68_1(char *t0)
 {
     char t7[8];
     char *t1;
@@ -281,7 +281,7 @@ LAB0:    t1 = (t0 + 1864U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(75, ng0);
+LAB2:    xsi_set_current_line(68, ng0);
     t2 = (t0 + 2204);
     *((int *)t2) = 1;
     t3 = (t0 + 1892);
@@ -289,9 +289,9 @@ LAB2:    xsi_set_current_line(75, ng0);
     *((char **)t1) = &&LAB4;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(76, ng0);
+LAB4:    xsi_set_current_line(69, ng0);
 
-LAB5:    xsi_set_current_line(77, ng0);
+LAB5:    xsi_set_current_line(70, ng0);
     t4 = (t0 + 1104);
     t5 = (t4 + 36U);
     t6 = *((char **)t5);
@@ -310,7 +310,7 @@ LAB5:    xsi_set_current_line(77, ng0);
 
 }
 
-static void Cont_80_2(char *t0)
+static void Cont_73_2(char *t0)
 {
     char *t1;
     char *t2;
@@ -330,7 +330,7 @@ LAB0:    t1 = (t0 + 2008U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(80, ng0);
+LAB2:    xsi_set_current_line(73, ng0);
     t2 = (t0 + 1196);
     t3 = (t2 + 36U);
     t4 = *((char **)t3);
@@ -350,7 +350,7 @@ LAB1:    return;
 
 extern void work_m_00000000002907477297_1006922582_init()
 {
-	static char *pe[] = {(void *)Initial_31_0,(void *)Always_75_1,(void *)Cont_80_2};
+	static char *pe[] = {(void *)Initial_31_0,(void *)Always_68_1,(void *)Cont_73_2};
 	xsi_register_didat("work_m_00000000002907477297_1006922582", "isim/testPipeline_isim_beh.exe.sim/work/m_00000000002907477297_1006922582.didat");
 	xsi_register_executes(pe);
 }

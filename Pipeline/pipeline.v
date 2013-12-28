@@ -26,14 +26,14 @@ module pipeline(
 wire [31:0] w1, w2, w3, w4, w5, w6, 
 				w7, w8, w10, w11, w12,
 				w15, w17, w18, w20, w21, 
-				w22, w23, w26, w27, w28, w29,w30,w31,w32;
+				w22, w23, w26, w27, w28, w29,w30,w31,w32,w33,w34;
 wire [4:0] w13, w14, w19, w24, w25,w9;
 wire [3:0] c27;
 wire [1:0] c8, c15,c28,c29;
 wire c1, c2, c3, c4, c5, c6,
 	  c7, c9, c10, c11, c12, c13,
 	  c14, c16, c17, c18, c19, c20, 
-	  c21, c22, c23, c24, c25, c26, c30, c31, c32,c33;
+	  c21, c22, c23, c24, c25, c26, c30, c31, c32,c33,c34,c35,c36,c37;
 
 //***** ETAPA 1 *****
 //assign c33=0;
@@ -82,6 +82,7 @@ SumadorPC sumadorPC(
 IF_ID IF_ID(
 				.clk(clk),
 				.enable(c31),
+				.flush(24),
 				.nextPcIN(w29),
 				.instruccionIN(w3), 
 				.nextPcOUT(w4),
@@ -141,6 +142,33 @@ ShiftSalto shiftSalto(
 				.pc4(w20[31:28]),
 				.saltoNC(w31)
 						);
+
+
+comparadorReg comparador(
+					.A(w33),
+					.B(w34),
+					.igual(c37)
+					);
+Branch branch(
+		.Branch(c2),
+		.Zero(c37),
+		.salida(c24)
+    );
+
+MuxReg forRegA(
+			.registro(w6),
+			.forwarding(w18),
+			.selector(c34),
+			.salida(w33)
+			);
+
+
+MuxReg forRegB(
+			.registro(w7),
+			.forwarding(w18),
+			.selector(c35),
+			.salida(w34)
+			);
 
 // ** Latches ID/EX **
 
@@ -237,12 +265,19 @@ mux3a1 forB(
 Cortocircuito SCU(
 				.Rt(w13),
 				.Rs(w9),
+				.RtD(w5[20:16]),
+				.RsD(w5[25:21]),
 				.RdWb(w25),
 				.RdMem(w24),
+				.RdEx(w19),
 				.forA(c28),
 				.forB(c29),
+				.forAD(c34),
+				.forBD(c35),
 				.EscWb(c25),
-				.EscMem(c19)
+				.EscMem(c19),
+				.EscMemEx(c10)
+				
 				
     );
 
@@ -293,12 +328,12 @@ EX_MEM EX_MEM(
 
 //***** ETAPA 4 *****
 
-Branch branch(
+/*Branch branch(
 		.Branch(c20),
 		.Zero(c23),
 		.salida(c24)
     );
-
+*/
 
 MemoriaDeDatos RAM(
 						.clk(clk),

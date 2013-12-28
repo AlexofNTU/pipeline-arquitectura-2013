@@ -20,9 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Cortocircuito(
 				input [4:0] Rt,Rs, //valores de los registros en etapa de Ejecucion
-				input [4:0] RdWb,RdMem, //valores de Rd en Memoria y en Wb
+				input [4:0] RdWb,RdMem,RdEx, //valores de Rd en Memoria y en Wb y Ex
+				input [4:0] RtD,RsD, //valores de los registros en etapa de Decodificacion
 				output reg [1:0] forA,forB, //
-				input EscWb,EscMem
+				output reg forAD,forBD,
+				input EscWb,EscMem,EscMemEx
 				
     );
 
@@ -57,6 +59,23 @@ begin
 			forA = 2'b00;
 		end
 	
+	if( (EscMemEx==1) && (RdEx == RsD ) && (RdEx != 0) )
+		begin
+			forAD = 2'b01;
+		end
+	else
+		begin
+			forAD = 2'b00;
+		end
+		
+	if( (EscMemEx==1) && (RdEx == RtD ) && (RdEx != 0) )
+		begin
+			forBD = 2'b01;
+		end
+	else
+		begin
+			forBD = 2'b00;
+		end
 
 end
 
