@@ -21,7 +21,7 @@
 module Control(
 			input [5:0] instruccion,
 			input enable,
-			output reg RegDst,Branch,MemRead,MemtoReg,MemWrite,ALUSrc,RegWrite,
+			output reg RegDst,Branch,MemRead,MemtoReg,MemWrite,ALUSrc,RegWrite,jump,
 			output reg [1:0] ALUOp
     );
 
@@ -40,6 +40,7 @@ always @*
 								ALUSrc = 0;
 								RegWrite = 1;
 								ALUOp = 2'b10;
+								jump = 0;
 							end
 						6'b100011: //instruccion LW
 							begin
@@ -51,6 +52,7 @@ always @*
 								ALUSrc = 1;
 								RegWrite = 1;
 								ALUOp = 2'b00;
+								jump = 0;
 							end
 						6'b101011: //instruccion SW
 							begin
@@ -62,6 +64,7 @@ always @*
 								ALUSrc = 1;
 								RegWrite = 0;
 								ALUOp = 2'b00;
+								jump = 0;
 							end
 						6'b000100: //instruccion BEQ
 							begin
@@ -73,6 +76,19 @@ always @*
 								ALUSrc = 0;
 								RegWrite = 0;
 								ALUOp = 2'b01;
+								jump = 0;
+							end
+						6'b000010: //instruccion J
+							begin
+								RegDst = 0;
+								Branch = 0;
+								MemRead = 0;
+								MemtoReg = 0;
+								MemWrite = 0;
+								ALUSrc = 0;
+								RegWrite = 0;
+								jump = 1;
+								ALUOp = 2'b00;
 							end
 						default: 
 							begin
@@ -84,12 +100,13 @@ always @*
 								ALUSrc = 0;
 								RegWrite = 0;
 								ALUOp = 2'b00;
+								jump = 0;
 							end				
 					endcase
 			end
 		else
 			begin
-			RegDst = 0;
+								RegDst = 0;
 								Branch = 0;
 								MemRead = 0;
 								MemtoReg = 0;
@@ -97,6 +114,7 @@ always @*
 								ALUSrc = 0;
 								RegWrite = 0;
 								ALUOp = 2'b00;
+								jump = 0;
 			end
 
 	end
