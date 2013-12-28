@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.27 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.27 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: pipeline.prj
 
@@ -53,6 +53,8 @@ Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\
 Parsing module <Registros>.
 Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\Pc.v\" into library work
 Parsing module <Pc>.
+Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\MuxReg.v\" into library work
+Parsing module <MuxReg>.
 Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\mux3a1.v\" into library work
 Parsing module <mux3a1>.
 Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\MEM_WB.v\" into library work
@@ -79,6 +81,8 @@ Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\
 Parsing module <ControlALU>.
 Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\Control.v\" into library work
 Parsing module <Control>.
+Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\comparadorReg.v\" into library work
+Parsing module <comparadorReg>.
 Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\Branch.v\" into library work
 Parsing module <Branch>.
 Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\AluMUX.v\" into library work
@@ -89,12 +93,12 @@ Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\
 Parsing module <pipeline>.
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.04 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.23 secs
  
 --> 
 
-Total memory usage is 134148 kilobytes
+Total memory usage is 133572 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

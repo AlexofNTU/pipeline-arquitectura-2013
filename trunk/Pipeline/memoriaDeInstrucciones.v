@@ -29,13 +29,13 @@ module memoriaDeInstrucciones(
 	reg [31:0] auxData;
 	
 initial begin
-		/*
+		
 		//codigo para probar la HDU
 		rom[0] = 32'h8C010001; // LW 1,1(0) 
 		rom[1] = 32'h00231020; // ADD 2,1,3
 		rom[2] = 32'h00441820; // ADD 3,2,4
 		rom[3] = 32'h00622020; // ADD 4,3,2
-		*/
+		
 		
 		//codigo para probar la SCU y J
 		/*
@@ -53,22 +53,15 @@ initial begin
 		*/
 		
 		//codigo para probar la SCU y J
-		
+		/*
 		rom[0] = 32'h00210820; // ADD 1,1,1  
 		rom[1] = 32'h00431022; // SUB 2,2,3  
-		rom[2] = 32'h1044000A; // BEQ 2,4,0  
-		rom[3] = 32'h08000000; // ADD 1,1,1  
-		
-		
-		
-
-
-
-
-	
-		for (i=4; i < 1024; i = i + 1)  // llenamos la memoria con 0
+		rom[2] = 32'h104400CF; // BEQ 2,4,0  
+		rom[3] = 32'h08000000; // J  
+		*/
+				for (i=4; i < 1024; i = i + 1)  // llenamos la memoria con 0
 			begin
-				rom[i] = 32'b0; //HLT				
+				rom[i] = 32'h00000000; //HLT				
 			end
 end
 
