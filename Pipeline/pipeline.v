@@ -36,7 +36,7 @@ wire c1, c2, c3, c4, c5, c6,
 	  c21, c22, c23, c24, c25, c26, c30, c31, c32,c33;
 
 //***** ETAPA 1 *****
-assign c33=0;
+//assign c33=0;
 SaltosMUX saltosMUX(
 						  .pc(w29), 
 						  .ALUResult(w20),
@@ -117,7 +117,8 @@ Control control(
 			.MemWrite(c5),
 			.ALUSrc(c6),
 			.RegWrite(c7),
-			.ALUOp(c8)
+			.ALUOp(c8),
+			.jump(c33)
     );
 SaltosALU saltosALU(
 							.ShiftLeft(w8), 

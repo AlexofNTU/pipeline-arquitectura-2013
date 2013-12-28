@@ -183,6 +183,10 @@
          <obj_property name="ElementShortName">RegWrite</obj_property>
          <obj_property name="ObjectShortName">RegWrite</obj_property>
       </wvobject>
+      <wvobject fp_name="/testPipeline/uut/control/jump" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">jump</obj_property>
+         <obj_property name="ObjectShortName">jump</obj_property>
+      </wvobject>
       <wvobject fp_name="/testPipeline/uut/control/ALUOp" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">ALUOp[1:0]</obj_property>
          <obj_property name="ObjectShortName">ALUOp[1:0]</obj_property>

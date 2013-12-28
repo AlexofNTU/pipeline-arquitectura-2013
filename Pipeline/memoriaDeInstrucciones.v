@@ -37,12 +37,35 @@ initial begin
 		rom[3] = 32'h00622020; // ADD 4,3,2
 		*/
 		
-		//codigo para probar la SCU
+		//codigo para probar la SCU y J
+		/*
 		rom[0] = 32'h00210820; // ADD 1,1,1  
 		rom[1] = 32'h00210820; // ADD 1,1,1  
 		rom[2] = 32'h00210820; // ADD 1,1,1  
 		rom[3] = 32'h00210820; // ADD 1,1,1  
+		rom[4] = 32'h08000000; // J 0
+		*/
 		
+		//el mismo codigo de arriba pero echo con jump 
+		/*
+		rom[0] = 32'h00210820; // ADD 1,1,1 
+		rom[1] = 32'h08000000; // J 0		
+		*/
+		
+		//codigo para probar la SCU y J
+		
+		rom[0] = 32'h00210820; // ADD 1,1,1  
+		rom[1] = 32'h00431022; // SUB 2,2,3  
+		rom[2] = 32'h1044000A; // BEQ 2,4,0  
+		rom[3] = 32'h08000000; // ADD 1,1,1  
+		
+		
+		
+
+
+
+
+	
 		for (i=4; i < 1024; i = i + 1)  // llenamos la memoria con 0
 			begin
 				rom[i] = 32'b0; //HLT				
