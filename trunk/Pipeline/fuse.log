@@ -1,4 +1,4 @@
-Running: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline_isim_beh.exe -prj D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline_beh.prj work.testPipeline work.glbl 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline_isim_beh.exe" -prj "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline_beh.prj" "work.testPipeline" "work.glbl" 
 ISim O.61xd (signature 0x6dd86d03)
 Number of CPUs detected in this system: 2
 Turning on mult-threading, number of parallel sub-compilation jobs: 4 
@@ -34,10 +34,10 @@ Analyzing Verilog file \"C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v\" into li
 Starting static elaboration
 WARNING:HDLCompiler:189 - "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 64: Size mismatch in connection of port <direccion>. Formal port size is 10-bit while actual signal size is 32-bit.
 WARNING:HDLCompiler:189 - "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 85: Size mismatch in connection of port <flush>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 343: Size mismatch in connection of port <direccion>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 344: Size mismatch in connection of port <direccion>. Formal port size is 10-bit while actual signal size is 32-bit.
 Completed static elaboration
-Fuse Memory Usage: 99204 KB
-Fuse CPU Usage: 482 ms
+Fuse Memory Usage: 99076 KB
+Fuse CPU Usage: 560 ms
 Compiling module SaltosMUX
 Compiling module Pc
 Compiling module memoriaDeInstrucciones
@@ -70,5 +70,5 @@ Time Resolution for simulation is 1ps.
 Waiting for 25 sub-compilation(s) to finish...
 Compiled 28 Verilog Units
 Built simulation executable D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline_isim_beh.exe
-Fuse Memory Usage: 103796 KB
-Fuse CPU Usage: 842 ms
+Fuse Memory Usage: 103668 KB
+Fuse CPU Usage: 826 ms

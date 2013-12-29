@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Control(
-			input [5:0] instruccion,
+			input [5:0] instruccion,funcion,
 			input enable,
 			output reg RegDst,Branch,MemRead,MemtoReg,MemWrite,ALUSrc,RegWrite,jump,
 			output reg [1:0] ALUOp
@@ -39,8 +39,9 @@ always @*
 								MemWrite = 0;
 								ALUSrc = 0;
 								RegWrite = 1;
-								ALUOp = 2'b10;
 								jump = 0;
+								ALUOp = 2'b10;
+								
 							end
 						6'b100011: //instruccion LW
 							begin
@@ -67,6 +68,18 @@ always @*
 								jump = 0;
 							end
 						6'b000100: //instruccion BEQ
+							begin
+								RegDst = 0;
+								Branch = 1;
+								MemRead = 0;
+								MemtoReg = 0;
+								MemWrite = 0;
+								ALUSrc = 0;
+								RegWrite = 0;
+								ALUOp = 2'b01;
+								jump = 0;
+							end
+						6'b000101: //instruccion BEQ
 							begin
 								RegDst = 0;
 								Branch = 1;
