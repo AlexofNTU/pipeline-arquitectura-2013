@@ -202,13 +202,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1388266054" xil_pn:in_ck="-7314423771594063640" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1388266054">
+    <transform xil_pn:end_ts="1388325612" xil_pn:in_ck="-7314423771594063640" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1388325612">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="AluMUX.v"/>
       <outfile xil_pn:name="Branch.v"/>
@@ -249,20 +245,15 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1388266054" xil_pn:in_ck="-6120995065907240981" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-6822671091532532358" xil_pn:start_ts="1388266054">
+    <transform xil_pn:end_ts="1388325613" xil_pn:in_ck="-6120995065907240981" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-6822671091532532358" xil_pn:start_ts="1388325612">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/MemInst.ngc"/>
       <outfile xil_pn:name="ipcore_dir/MemInst.v"/>
     </transform>
-    <transform xil_pn:end_ts="1388266054" xil_pn:in_ck="-7314423771594063640" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1388266054">
+    <transform xil_pn:end_ts="1388325613" xil_pn:in_ck="-7314423771594063640" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1388325613">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="AluMUX.v"/>
       <outfile xil_pn:name="Branch.v"/>
@@ -295,13 +286,10 @@
       <outfile xil_pn:name="testPipeline.v"/>
       <outfile xil_pn:name="testSCU.v"/>
     </transform>
-    <transform xil_pn:end_ts="1388266065" xil_pn:in_ck="-6502321928349594037" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7541864113158236569" xil_pn:start_ts="1388266054">
+    <transform xil_pn:end_ts="1388325623" xil_pn:in_ck="-6502321928349594037" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7541864113158236569" xil_pn:start_ts="1388325613">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
@@ -310,10 +298,9 @@
       <outfile xil_pn:name="testPipeline_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1388266067" xil_pn:in_ck="-8390143617429458379" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2859553143098907428" xil_pn:start_ts="1388266065">
+    <transform xil_pn:end_ts="1388325624" xil_pn:in_ck="-8390143617429458379" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2859553143098907428" xil_pn:start_ts="1388325623">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
