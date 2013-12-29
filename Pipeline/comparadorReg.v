@@ -20,15 +20,30 @@
 //////////////////////////////////////////////////////////////////////////////////
 module comparadorReg(
 			input [31:0] A,B,
-			output reg igual
+			output reg salto,
+			input [5:0] opCode
     );
 
 always @*
 begin
-	if(A == B)
-		igual <= 1;
-	else
-		igual <= 0;
+	case(opCode)
+		
+			6'b000100: //instruccion BEQ
+				begin 
+					if(A == B)
+						salto <= 1;
+					else
+						salto <= 0;
+				end
+			6'b000101: //instruccion BEQ
+				begin 
+					if(A != B)
+						salto <= 1;
+					else
+						salto <= 0;
+				end
+	endcase
+					
 	
 end
 endmodule

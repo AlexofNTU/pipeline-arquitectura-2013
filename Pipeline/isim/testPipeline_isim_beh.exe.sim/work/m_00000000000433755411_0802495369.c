@@ -29,11 +29,10 @@ static unsigned int ng4[] = {7U, 0U};
 static int ng5[] = {2, 0};
 static unsigned int ng6[] = {1U, 0U};
 static int ng7[] = {3, 0};
-static unsigned int ng8[] = {6U, 0U};
-static int ng9[] = {4, 0};
-static int ng10[] = {5, 0};
-static int ng11[] = {6, 0};
-static int ng12[] = {32, 0};
+static int ng8[] = {4, 0};
+static int ng9[] = {5, 0};
+static int ng10[] = {6, 0};
+static int ng11[] = {32, 0};
 
 
 
@@ -162,7 +161,7 @@ LAB8:    xsi_set_current_line(35, ng0);
         goto LAB9;
 
 LAB10:    xsi_set_current_line(36, ng0);
-    t1 = ((char*)((ng8)));
+    t1 = ((char*)((ng6)));
     t2 = (t0 + 1472);
     t5 = (t0 + 1472);
     t6 = (t5 + 44U);
@@ -170,7 +169,7 @@ LAB10:    xsi_set_current_line(36, ng0);
     t8 = (t0 + 1472);
     t9 = (t8 + 40U);
     t10 = *((char **)t9);
-    t11 = ((char*)((ng9)));
+    t11 = ((char*)((ng8)));
     xsi_vlog_generic_convert_array_indices(t3, t4, t7, t10, 2, 1, t11, 32, 1);
     t12 = (t3 + 4);
     t13 = *((unsigned int *)t12);
@@ -191,7 +190,7 @@ LAB12:    xsi_set_current_line(37, ng0);
     t8 = (t0 + 1472);
     t9 = (t8 + 40U);
     t10 = *((char **)t9);
-    t11 = ((char*)((ng10)));
+    t11 = ((char*)((ng9)));
     xsi_vlog_generic_convert_array_indices(t3, t4, t7, t10, 2, 1, t11, 32, 1);
     t12 = (t3 + 4);
     t13 = *((unsigned int *)t12);
@@ -205,14 +204,14 @@ LAB12:    xsi_set_current_line(37, ng0);
 
 LAB14:    xsi_set_current_line(39, ng0);
     xsi_set_current_line(39, ng0);
-    t1 = ((char*)((ng11)));
+    t1 = ((char*)((ng10)));
     t2 = (t0 + 1564);
     xsi_vlogvar_assign_value(t2, t1, 0, 0, 32);
 
 LAB15:    t1 = (t0 + 1564);
     t2 = (t1 + 36U);
     t5 = *((char **)t2);
-    t6 = ((char*)((ng12)));
+    t6 = ((char*)((ng11)));
     memset(t3, 0, 8);
     xsi_vlog_signed_less(t3, 32, t5, 32, t6, 32);
     t7 = (t3 + 4);

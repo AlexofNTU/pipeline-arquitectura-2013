@@ -290,9 +290,14 @@
          <obj_property name="ObjectShortName">B[31:0]</obj_property>
          <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
-      <wvobject fp_name="/testPipeline/uut/comparador/igual" type="logic" db_ref_id="1">
-         <obj_property name="ElementShortName">igual</obj_property>
-         <obj_property name="ObjectShortName">igual</obj_property>
+      <wvobject fp_name="/testPipeline/uut/comparador/salto" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">salto</obj_property>
+         <obj_property name="ObjectShortName">salto</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testPipeline/uut/comparador/opCode" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">opCode[5:0]</obj_property>
+         <obj_property name="ObjectShortName">opCode[5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group169" type="group">

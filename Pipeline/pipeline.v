@@ -110,6 +110,7 @@ ExtensionSigno extension(
 
 Control control(
 			.instruccion(w5[31:26]),
+			.funcion(w5[5:0]),
 			.enable(c32),
 			.RegDst(c1),
 			.Branch(c2),
@@ -147,7 +148,8 @@ ShiftSalto shiftSalto(
 comparadorReg comparador(
 					.A(w33),
 					.B(w34),
-					.igual(c37)
+					.opCode(w5[31:26]),
+					.salto(c37)
 					);
 Branch branch(
 		.Branch(c2),
