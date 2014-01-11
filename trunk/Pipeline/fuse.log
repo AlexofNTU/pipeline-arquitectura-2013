@@ -15,6 +15,7 @@ Analyzing Verilog file \"D:/Facultad/Arquitectura de Computadoras 2013/Practico/
 Analyzing Verilog file \"D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/MEM_WB.v\" into library work
 Analyzing Verilog file \"D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/memoriaDeInstrucciones.v\" into library work
 Analyzing Verilog file \"D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/MemoriaDeDatos.v\" into library work
+Analyzing Verilog file \"D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/loadTypes.v\" into library work
 Analyzing Verilog file \"D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/IF_ID.v\" into library work
 Analyzing Verilog file \"D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/ID_EX.v\" into library work
 Analyzing Verilog file \"D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/Hazard.v\" into library work
@@ -34,10 +35,12 @@ Analyzing Verilog file \"C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v\" into li
 Starting static elaboration
 WARNING:HDLCompiler:189 - "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 64: Size mismatch in connection of port <direccion>. Formal port size is 10-bit while actual signal size is 32-bit.
 WARNING:HDLCompiler:189 - "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 85: Size mismatch in connection of port <flush>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 345: Size mismatch in connection of port <direccion>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 355: Size mismatch in connection of port <direccion>. Formal port size is 10-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 363: Size mismatch in connection of port <dataOUT>. Formal port size is 32-bit while actual signal size is 5-bit.
+WARNING:HDLCompiler:189 - "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 386: Size mismatch in connection of port <dataIN>. Formal port size is 32-bit while actual signal size is 5-bit.
 Completed static elaboration
-Fuse Memory Usage: 99396 KB
-Fuse CPU Usage: 545 ms
+Fuse Memory Usage: 98948 KB
+Fuse CPU Usage: 576 ms
 Compiling module SaltosMUX
 Compiling module Pc
 Compiling module memoriaDeInstrucciones
@@ -61,14 +64,15 @@ Compiling module Cortocircuito
 Compiling module ControlALU
 Compiling module EX_MEM
 Compiling module MemoriaDeDatos
+Compiling module loadTypes
 Compiling module MEM_WB
 Compiling module DatosMUX
 Compiling module pipeline
 Compiling module testPipeline
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 25 sub-compilation(s) to finish...
-Compiled 28 Verilog Units
+Waiting for 26 sub-compilation(s) to finish...
+Compiled 29 Verilog Units
 Built simulation executable D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline_isim_beh.exe
-Fuse Memory Usage: 103988 KB
-Fuse CPU Usage: 826 ms
+Fuse Memory Usage: 103540 KB
+Fuse CPU Usage: 904 ms

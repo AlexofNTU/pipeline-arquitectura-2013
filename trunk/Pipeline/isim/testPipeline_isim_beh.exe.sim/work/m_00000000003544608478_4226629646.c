@@ -24,7 +24,7 @@
 static const char *ng0 = "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/MemoriaDeDatos.v";
 static int ng1[] = {0, 0};
 static int ng2[] = {1024, 0};
-static unsigned int ng3[] = {4U, 0U};
+static unsigned int ng3[] = {511U, 0U};
 static int ng4[] = {1, 0};
 
 

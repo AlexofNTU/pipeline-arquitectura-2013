@@ -39,9 +39,23 @@ always @*
 				ALUctl <= 4'b0000;
 		else if((ALUOp[1] == 1) && (instruccion[5:0] == 6'b100101)) //OR
 				ALUctl <= 4'b0001;
+		else if((ALUOp[1] == 1) && (instruccion[5:0] == 6'b100111)) //NOR
+				ALUctl <= 4'b0011;
+		else if((ALUOp[1] == 1) && (instruccion[5:0] == 6'b100110)) //XOR
+				ALUctl <= 4'b1000;
 		else if((ALUOp[1] == 1) && (instruccion[5:0] == 6'b101010)) //SLT
 				ALUctl <= 4'b0111;
 		else if((ALUOp[1] == 1) && (instruccion[5:0] == 6'b000000)) //SLL
+				ALUctl <= 4'b0100;
+		else if((ALUOp[1] == 1) && (instruccion[5:0] == 6'b000010)) //SRL
+				ALUctl <= 4'b0101;
+		else if((ALUOp[1] == 1) && (instruccion[5:0] == 6'b000011)) //SRA
+				ALUctl <= 4'b1010;
+		else if((ALUOp[1] == 1) && (instruccion[5:0] == 6'b000110)) //SRLV
+				ALUctl <= 4'b1001;
+		else if((ALUOp[1] == 1) && (instruccion[5:0] == 6'b000111)) //SRAV
+				ALUctl <= 4'b1010;
+		else if((ALUOp[1] == 1) && (instruccion[5:0] == 6'b000100)) //SLLV
 				ALUctl <= 4'b0100;
 		else
 				ALUctl <= 4'b0000;

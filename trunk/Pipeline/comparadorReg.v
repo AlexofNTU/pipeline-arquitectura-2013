@@ -35,7 +35,7 @@ begin
 					else
 						salto <= 0;
 				end
-			6'b000101: //instruccion BEQ
+			6'b000101: //instruccion BNE
 				begin 
 					if(A != B)
 						salto <= 1;

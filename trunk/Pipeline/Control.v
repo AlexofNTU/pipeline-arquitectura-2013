@@ -21,7 +21,7 @@
 module Control(
 			input [5:0] instruccion,funcion,
 			input enable,
-			output reg RegDst,Branch,MemRead,MemtoReg,MemWrite,ALUSrc,RegWrite,jump,
+			output reg RegDst,Branch,MemRead,MemtoReg,MemWrite,ALUSrc,RegWrite,jump,shiftC,
 			output reg [1:0] ALUOp
     );
 
@@ -41,6 +41,10 @@ always @*
 								RegWrite = 1;
 								jump = 0;
 								ALUOp = 2'b10;
+									if((funcion == 6'b000000) || (funcion == 6'b000010) || (funcion == 6'b000011) )
+										shiftC=1;
+									else
+										shiftC=0;
 							end
 						6'b100011: //instruccion LW
 							begin
@@ -53,6 +57,20 @@ always @*
 								RegWrite = 1;
 								ALUOp = 2'b00;
 								jump = 0;
+								shiftC=0;
+							end
+						6'b100000: //instruccion LB
+							begin
+								RegDst = 0;
+								Branch = 0;
+								MemRead = 1;
+								MemtoReg = 1;
+								MemWrite = 0;
+								ALUSrc = 1;
+								RegWrite = 1;
+								ALUOp = 2'b00;
+								jump = 0;
+								shiftC=0;
 							end
 						6'b101011: //instruccion SW
 							begin
@@ -65,6 +83,7 @@ always @*
 								RegWrite = 0;
 								ALUOp = 2'b00;
 								jump = 0;
+								shiftC=0;
 							end
 						6'b000100: //instruccion BEQ
 							begin
@@ -77,8 +96,9 @@ always @*
 								RegWrite = 0;
 								ALUOp = 2'b01;
 								jump = 0;
+								shiftC=0;
 							end
-						6'b000101: //instruccion BEQ
+						6'b000101: //instruccion BNE
 							begin
 								RegDst = 0;
 								Branch = 1;
@@ -89,6 +109,7 @@ always @*
 								RegWrite = 0;
 								ALUOp = 2'b01;
 								jump = 0;
+								shiftC=0;
 							end
 						6'b000010: //instruccion J
 							begin
@@ -101,7 +122,9 @@ always @*
 								RegWrite = 0;
 								jump = 1;
 								ALUOp = 2'b00;
+								shiftC=0;
 							end
+						
 						default: 
 							begin
 								RegDst = 0;
@@ -113,6 +136,7 @@ always @*
 								RegWrite = 0;
 								ALUOp = 2'b00;
 								jump = 0;
+								shiftC=0;
 							end				
 					endcase
 			end
@@ -127,6 +151,7 @@ always @*
 								RegWrite = 0;
 								ALUOp = 2'b00;
 								jump = 0;
+								shiftC=0;
 			end
 
 	end
