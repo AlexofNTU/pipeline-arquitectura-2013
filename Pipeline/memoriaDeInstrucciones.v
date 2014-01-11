@@ -59,7 +59,9 @@ initial begin
 		rom[2] = 32'h14440007; // BNE 2,4,32 nose si es 32, salta a esa dir  
 		rom[32] = 32'h08000000; // J 0 poner dps del for		
 		*/
-		for (i=3; i < 1024; i = i + 1)  // llenamos la memoria con 0
+		rom[0] = 32'h000208C0;
+		//00010 00001 00011 
+		for (i=1; i < 1024; i = i + 1)  // llenamos la memoria con 0
 			begin
 				rom[i] = 32'h00000000; //HLT				
 			end

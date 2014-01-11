@@ -41,7 +41,6 @@ always @*
 								RegWrite = 1;
 								jump = 0;
 								ALUOp = 2'b10;
-								
 							end
 						6'b100011: //instruccion LW
 							begin
