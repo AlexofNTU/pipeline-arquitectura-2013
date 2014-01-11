@@ -41,6 +41,8 @@ always @*
 				ALUctl <= 4'b0001;
 		else if((ALUOp[1] == 1) && (instruccion[5:0] == 6'b101010)) //SLT
 				ALUctl <= 4'b0111;
+		else if((ALUOp[1] == 1) && (instruccion[5:0] == 6'b000000)) //SLL
+				ALUctl <= 4'b0100;
 		else
 				ALUctl <= 4'b0000;
 	end

@@ -10,13 +10,13 @@
          <ClosedNode>/pipeline D:|Facultad|Arquitectura de Computadoras 2013|Practico|TPF|Pipeline Simple|Pipeline|pipeline.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>controlALU - ControlALU (D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/ControlALU.v)</SelectedItem>
+         <SelectedItem>ID_EX - ID_EX (D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/ID_EX.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >18</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >12</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000019a000000020000000000000000000000000200000064ffffffff0000008100000003000000020000019a0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>controlALU - ControlALU (D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/ControlALU.v)</CurrentItem>
+      <CurrentItem>ID_EX - ID_EX (D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/ID_EX.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -85,13 +85,13 @@
          <ClosedNode>/testP D:|Mariano|Universidad|Ing. en Comp|Arquitectura de Computadoras|2013|Practico|TPF|pipeline-arquitectura-2013|Pipeline|testP.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>testPipeline (D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline.v)</SelectedItem>
+         <SelectedItem>RAM - MemoriaDeDatos (D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/MemoriaDeDatos.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >32</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001ae000000020000000000000000000000000200000064ffffffff000000810000000300000002000001ae0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>testPipeline (D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline.v)</CurrentItem>
+      <CurrentItem>RAM - MemoriaDeDatos (D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/MemoriaDeDatos.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
