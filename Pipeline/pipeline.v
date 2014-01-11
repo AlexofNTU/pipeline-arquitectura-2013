@@ -27,14 +27,14 @@ wire [31:0] w1, w2, w3, w4, w5, w6,
 				w7, w8, w10, w11, w12,
 				w15, w17, w18, w20, w21, 
 				w22, w23, w26, w27, w28, w29,w30,w31,w32,w33,w34;
-wire [4:0] w13, w14, w19, w24, w25,w9;
+wire [4:0] w13, w14, w19, w24, w25,w9,w35,w38;
 wire [3:0] c27;
 wire [1:0] c8, c15,c28,c29;
 wire c1, c2, c3, c4, c5, c6,
 	  c7, c9, c10, c11, c12, c13,
 	  c14, c16, c17, c18, c19, c20, 
-	  c21, c22, c23, c24, c25, c26, c30, c31, c32,c33,c34,c35,c36,c37;
-
+	  c21, c22, c23, c24, c25, c26, c30, c31, c32,c33,c34,c35,c36,c37,c38,c39;
+wire [5:0] w36,w37;
 //***** ETAPA 1 *****
 //assign c33=0;
 SaltosMUX saltosMUX(
@@ -120,7 +120,8 @@ Control control(
 			.ALUSrc(c6),
 			.RegWrite(c7),
 			.ALUOp(c8),
-			.jump(c33)
+			.jump(c33),
+			.shiftC(c38)
     );
 SaltosALU saltosALU(
 							.ShiftLeft(w8), 
@@ -186,6 +187,7 @@ ID_EX ID_EX(
 				.MemWriteIN(c5),
 				.ALUSrcIN(c6),
 				.RegWriteIN(c7),
+				.ShiftIN(c38),
 				.ALUOpIN(c8),
 				//REGISTROS
 				.readData1IN(w6),
@@ -198,6 +200,8 @@ ID_EX ID_EX(
 				.ins15_11IN(w5[15:11]),
 				// instruccion[25-21]
 				.ins25_21IN(w5[25:21]),
+				.ins10_6IN(w5[10:6]),
+				.ins31_26IN(w5[31:26]),
 				//
 				//****SALIDAS*****
 				//
@@ -209,6 +213,7 @@ ID_EX ID_EX(
 				.MemWriteOUT(c13),
 				.ALUSrcOUT(c16),
 				.RegWriteOUT(c10),
+				.ShiftOUT(c39),
 				.ALUOpOUT(c15),
 				//REGISTROS
 				.readData1OUT(w10),
@@ -220,8 +225,9 @@ ID_EX ID_EX(
 				// instruccion[15-11]
 				.ins15_11OUT(w14),
 				// instruccion[25-21]
-				.ins25_21OUT(w9)
-				
+				.ins25_21OUT(w9),
+				.ins10_6OUT(w35),
+				.ins31_26OUT(w36)
 				);
 
 //***** ETAPA 3 *****
@@ -245,7 +251,9 @@ ALU alu(
 			.A(w30), //poner salida de forA
 			.B(w15), 
 			.ALUOut(w18),
-			.zero(c17)
+			.zero(c17),
+			.shiftC(c39),
+			.shiftV(w35)
     );
 	 
 mux3a1 forA(
@@ -301,6 +309,7 @@ EX_MEM EX_MEM(
 				.MemtoRegIN(c9),
 				.MemWriteIN(c13),
 				.RegWriteIN(c10),
+				.tipoLoadIN(w36),
 				// Salida ALU Salto
 				// Salida ALU
 				.zeroIN(c17),
@@ -325,7 +334,8 @@ EX_MEM EX_MEM(
 				// Dato 2
 				.readData2OUT(w22),
 				// Registro Destino
-				.DestinoOUT(w24)
+				.DestinoOUT(w24),
+				.tipoLoadOUT(w37)
 				);
 
 //***** ETAPA 4 *****
@@ -347,6 +357,13 @@ MemoriaDeDatos RAM(
 						);
 
 
+loadTypes tipoLoad(
+						.instruccion(w37),
+						.dataIN(w23),
+						.dataOUT(w38)
+
+					);
+
 /*RAM memoriaDatos (
 					  .clka(clk), // input clka
 					  .wea(c22), // input [0 : 0] wea
@@ -366,7 +383,7 @@ MEM_WB MEM_WB(
 				.MemtoRegIN(c18),
 				.RegWriteIN(c19),
 				// Salida Dato MEM
-				.dataIN(w23),
+				.dataIN(w38),
 				// Salida ALU
 				.ALU_IN(w21),
 				// Registro Destino

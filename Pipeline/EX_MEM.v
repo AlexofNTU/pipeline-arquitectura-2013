@@ -23,9 +23,11 @@ module EX_MEM(
 			input BranchIN, MemReadIN, MemtoRegIN, MemWriteIN, RegWriteIN, zeroIN,
 			input [31:0] /*ALUsaltoIN,*/ ALU_IN, readData2IN,
 			input [4:0] DestinoIN,
+			input [5:0] tipoLoadIN,
 			output reg BranchOUT, MemReadOUT, MemtoRegOUT, MemWriteOUT, RegWriteOUT, zeroOUT,		
 			output reg [31:0] /*ALUsaltoOUT,*/ ALU_OUT, readData2OUT,
-			output reg [4:0] DestinoOUT
+			output reg [4:0] DestinoOUT,
+			output reg [5:0] tipoLoadOUT
     );
 
 always @ (posedge clk)
@@ -40,6 +42,7 @@ begin
 	ALU_OUT <= ALU_IN;
 	readData2OUT <= readData2IN;
 	DestinoOUT <= DestinoIN;
+	tipoLoadOUT <= tipoLoadIN;
 end
 
 endmodule

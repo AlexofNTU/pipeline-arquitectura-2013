@@ -1,5 +1,5 @@
 ISim log file
-Running: D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\testPipeline_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/MemoriaDeDatos_isim_beh.wdb 
+Running: D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\testPipeline_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline_isim_beh.wdb 
 ISim O.61xd (signature 0x6dd86d03)
 ----------------------------------------------------------------------
 WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
@@ -10,6 +10,8 @@ This is a Full version of ISim.
 WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 26.  For instance uut/ROM/, width 10 of formal port direccion is not equal to width 32 of actual signal w2.
 WARNING:  For instance uut/IF_ID/, width 1 of formal port flush is not equal to width 32 of actual constant.
 WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 28.  For instance uut/RAM/, width 10 of formal port direccion is not equal to width 32 of actual signal w21.
+WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 30.  For instance uut/tipoLoad/, width 32 of formal port dataOUT is not equal to width 5 of actual signal w38.
+WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 30.  For instance uut/MEM_WB/, width 32 of formal port dataIN is not equal to width 5 of actual signal w38.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
@@ -26,6 +28,8 @@ This is a Full version of ISim.
 WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 26.  For instance uut/ROM/, width 10 of formal port direccion is not equal to width 32 of actual signal w2.
 WARNING:  For instance uut/IF_ID/, width 1 of formal port flush is not equal to width 32 of actual constant.
 WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 28.  For instance uut/RAM/, width 10 of formal port direccion is not equal to width 32 of actual signal w21.
+WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 30.  For instance uut/tipoLoad/, width 32 of formal port dataOUT is not equal to width 5 of actual signal w38.
+WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 30.  For instance uut/MEM_WB/, width 32 of formal port dataIN is not equal to width 5 of actual signal w38.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
@@ -39,6 +43,8 @@ This is a Full version of ISim.
 WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 26.  For instance uut/ROM/, width 10 of formal port direccion is not equal to width 32 of actual signal w2.
 WARNING:  For instance uut/IF_ID/, width 1 of formal port flush is not equal to width 32 of actual constant.
 WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 28.  For instance uut/RAM/, width 10 of formal port direccion is not equal to width 32 of actual signal w21.
+WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 30.  For instance uut/tipoLoad/, width 32 of formal port dataOUT is not equal to width 5 of actual signal w38.
+WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 30.  For instance uut/MEM_WB/, width 32 of formal port dataIN is not equal to width 5 of actual signal w38.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
@@ -52,6 +58,8 @@ This is a Full version of ISim.
 WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 26.  For instance uut/ROM/, width 10 of formal port direccion is not equal to width 32 of actual signal w2.
 WARNING:  For instance uut/IF_ID/, width 1 of formal port flush is not equal to width 32 of actual constant.
 WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 28.  For instance uut/RAM/, width 10 of formal port direccion is not equal to width 32 of actual signal w21.
+WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 30.  For instance uut/tipoLoad/, width 32 of formal port dataOUT is not equal to width 5 of actual signal w38.
+WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 30.  For instance uut/MEM_WB/, width 32 of formal port dataIN is not equal to width 5 of actual signal w38.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
@@ -65,6 +73,8 @@ This is a Full version of ISim.
 WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 26.  For instance uut/ROM/, width 10 of formal port direccion is not equal to width 32 of actual signal w2.
 WARNING:  For instance uut/IF_ID/, width 1 of formal port flush is not equal to width 32 of actual constant.
 WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 28.  For instance uut/RAM/, width 10 of formal port direccion is not equal to width 32 of actual signal w21.
+WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 30.  For instance uut/tipoLoad/, width 32 of formal port dataOUT is not equal to width 5 of actual signal w38.
+WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 30.  For instance uut/MEM_WB/, width 32 of formal port dataIN is not equal to width 5 of actual signal w38.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
@@ -78,6 +88,8 @@ This is a Full version of ISim.
 WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 26.  For instance uut/ROM/, width 10 of formal port direccion is not equal to width 32 of actual signal w2.
 WARNING:  For instance uut/IF_ID/, width 1 of formal port flush is not equal to width 32 of actual constant.
 WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 28.  For instance uut/RAM/, width 10 of formal port direccion is not equal to width 32 of actual signal w21.
+WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 30.  For instance uut/tipoLoad/, width 32 of formal port dataOUT is not equal to width 5 of actual signal w38.
+WARNING: File "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 30.  For instance uut/MEM_WB/, width 32 of formal port dataIN is not equal to width 5 of actual signal w38.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.

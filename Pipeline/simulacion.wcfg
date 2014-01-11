@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="31" />
+   <WVObjectSize size="32" />
    <wave_markers>
       <marker time="590000000" label="" />
       <marker time="570000000" label="" />
@@ -187,6 +187,11 @@
          <obj_property name="ElementShortName">instruccion[5:0]</obj_property>
          <obj_property name="ObjectShortName">instruccion[5:0]</obj_property>
       </wvobject>
+      <wvobject fp_name="/testPipeline/uut/control/funcion" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">funcion[5:0]</obj_property>
+         <obj_property name="ObjectShortName">funcion[5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
       <wvobject fp_name="/testPipeline/uut/control/RegDst" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">RegDst</obj_property>
          <obj_property name="ObjectShortName">RegDst</obj_property>
@@ -218,6 +223,10 @@
       <wvobject fp_name="/testPipeline/uut/control/jump" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">jump</obj_property>
          <obj_property name="ObjectShortName">jump</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testPipeline/uut/control/shiftC" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">shiftC</obj_property>
+         <obj_property name="ObjectShortName">shiftC</obj_property>
       </wvobject>
       <wvobject fp_name="/testPipeline/uut/control/ALUOp" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">ALUOp[1:0]</obj_property>
@@ -364,6 +373,15 @@
          <obj_property name="ObjectShortName">w18[31:0]</obj_property>
          <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
          <obj_property name="label">Salida ALU</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testPipeline/uut/alu/shiftC" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">shiftC</obj_property>
+         <obj_property name="ObjectShortName">shiftC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testPipeline/uut/alu/shiftV" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">shiftV[4:0]</obj_property>
+         <obj_property name="ObjectShortName">shiftV[4:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group59" type="group">
@@ -699,6 +717,10 @@
          <obj_property name="ElementShortName">ins25_21OUT[4:0]</obj_property>
          <obj_property name="ObjectShortName">ins25_21OUT[4:0]</obj_property>
       </wvobject>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/tipoLoad/dataOUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dataOUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dataOUT[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="group127" type="group">
       <obj_property name="label">RAM</obj_property>
