@@ -67,6 +67,8 @@ always @*
 				ALUctl <= 4'b1000;
 		else if((ALUOp[1] == 1) && (instruccion[31:26] == 6'b001010)) //SLTI
 				ALUctl <= 4'b0111;
+		else if((ALUOp[1] == 1) && (instruccion[31:26] == 6'b001111)) //SLTI
+				ALUctl <= 4'b1111;
 		else
 				ALUctl <= 4'b0000;
 	end

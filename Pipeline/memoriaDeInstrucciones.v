@@ -73,10 +73,8 @@ initial begin
 		rom[1] = 32'h3042000C;	//ANDI
 		rom[2] = 32'h34420000;	//ORI
 		*/
-		rom[0] = 32'h20420020;
-		rom[1] = 32'h20630001;
-		rom[2] = 32'h00432006; 
-		for (i=3; i < 1024; i = i + 1)  // llenamos la memoria con 0
+		rom[0]=32'h3C0280FF;
+		for (i=1; i < 1024; i = i + 1)  // llenamos la memoria con 0
 			begin
 				rom[i] = 32'h00000000; //HLT				
 			end

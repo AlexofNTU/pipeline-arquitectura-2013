@@ -31,8 +31,8 @@ always @(ALUctl, A, B,shiftC,shiftV)
 		begin
 			 case (ALUctl)
 				4'b0100: ALUOut <= B <<< shiftV ;  	//SLL        
-				 4'b0101: ALUOut <= B >>> shiftV ; 		//SRL
-				 4'b1010: ALUOut <= B >> shiftV;  		//SRA 
+				 4'b0101: ALUOut <= B >>> shiftV ; 	//SRL
+				 4'b1010: ALUOut <= B >> shiftV;  	//SRA 
 				 default: ALUOut <= 0;
 			 endcase
 		end
@@ -40,11 +40,11 @@ always @(ALUctl, A, B,shiftC,shiftV)
 		begin
 			case (ALUctl)
 				 4'b0000: ALUOut <= A & B;			//ADD
-				 4'b0001: ALUOut <= A | B;		//OR
+				 4'b0001: ALUOut <= A | B;			//OR
 				 4'b0010: ALUOut <= A + B; 		//ADD
 				 4'b0011: ALUOut <= ~(A | B); 	//NOR
 				 4'b0100: ALUOut <= B >>> A;  	//SLLV        
-				 //4'b0101: ALUOut <= B >> A; 	//SRL
+				 4'b1111: ALUOut <= B <<< 16 ;  	//SLL		
 				 4'b0110: ALUOut <= A - B; 		//SUB
 				 4'b0111: ALUOut <= A < B ? 1:0; //SLT
 				 4'b1000: ALUOut <= A ^ B; 		//XOR

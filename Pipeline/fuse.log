@@ -43,7 +43,7 @@ WARNING:HDLCompiler:189 - "D:/Facultad/Arquitectura de Computadoras 2013/Practic
 WARNING:HDLCompiler:189 - "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 388: Size mismatch in connection of port <dataIN>. Formal port size is 32-bit while actual signal size is 5-bit.
 Completed static elaboration
 Fuse Memory Usage: 98500 KB
-Fuse CPU Usage: 514 ms
+Fuse CPU Usage: 529 ms
 Compiling module SaltosMUX
 Compiling module Pc
 Compiling module memoriaDeInstrucciones
@@ -75,8 +75,8 @@ Compiling module pipeline
 Compiling module testPipeline
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 26 sub-compilation(s) to finish...
+Waiting for 25 sub-compilation(s) to finish...
 Compiled 30 Verilog Units
 Built simulation executable D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline_isim_beh.exe
 Fuse Memory Usage: 104116 KB
-Fuse CPU Usage: 920 ms
+Fuse CPU Usage: 857 ms
