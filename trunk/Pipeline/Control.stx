@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Parameter xsthdpdir set to D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Reading design: Control.prj
 
@@ -44,11 +44,11 @@ Parsing module <Control>.
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.13 secs
+Total CPU time to Xst completion: 4.40 secs
  
 --> 
 
-Total memory usage is 133828 kilobytes
+Total memory usage is 133316 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

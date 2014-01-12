@@ -26,7 +26,7 @@ module AluMUX(
 
 always @*
 	begin
-		if(ALUSrc)
+		if(ALUSrc==1)
 			resultado = sigExt;
 		else
 			resultado = ReadData2;
