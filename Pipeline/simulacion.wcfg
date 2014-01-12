@@ -367,6 +367,10 @@
          <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
          <obj_property name="label">Entrada B</obj_property>
       </wvobject>
+      <wvobject fp_name="/testPipeline/uut/alu/ALUctl" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ALUctl[3:0]</obj_property>
+         <obj_property name="ObjectShortName">ALUctl[3:0]</obj_property>
+      </wvobject>
       <wvobject fp_name="/testPipeline/uut/w18" type="array" db_ref_id="1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">w18[31:0]</obj_property>
@@ -458,10 +462,12 @@
       <wvobject fp_name="/testPipeline/uut/aluMux/sigExt" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">sigExt[31:0]</obj_property>
          <obj_property name="ObjectShortName">sigExt[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testPipeline/uut/aluMux/ReadData2" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">ReadData2[31:0]</obj_property>
          <obj_property name="ObjectShortName">ReadData2[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testPipeline/uut/aluMux/ALUSrc" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">ALUSrc</obj_property>
@@ -470,6 +476,7 @@
       <wvobject fp_name="/testPipeline/uut/aluMux/resultado" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">resultado[31:0]</obj_property>
          <obj_property name="ObjectShortName">resultado[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group86" type="group">
@@ -478,17 +485,17 @@
       <wvobject fp_name="/testPipeline/uut/controlALU/instruccion" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">instruccion[5:0]</obj_property>
          <obj_property name="ObjectShortName">instruccion[5:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testPipeline/uut/controlALU/ALUOp" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">ALUOp[1:0]</obj_property>
          <obj_property name="ObjectShortName">ALUOp[1:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testPipeline/uut/controlALU/ALUctl" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">ALUctl[3:0]</obj_property>
          <obj_property name="ObjectShortName">ALUctl[3:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group162" type="group">
@@ -566,10 +573,12 @@
       <wvobject fp_name="/testPipeline/uut/registrosMUX/rt" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">rt[4:0]</obj_property>
          <obj_property name="ObjectShortName">rt[4:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testPipeline/uut/registrosMUX/rd" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">rd[4:0]</obj_property>
          <obj_property name="ObjectShortName">rd[4:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/testPipeline/uut/registrosMUX/RegDst" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">RegDst</obj_property>
@@ -578,6 +587,7 @@
       <wvobject fp_name="/testPipeline/uut/registrosMUX/wReg" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">wReg[4:0]</obj_property>
          <obj_property name="ObjectShortName">wReg[4:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="divider170" type="divider">

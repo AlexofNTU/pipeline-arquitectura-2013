@@ -27,11 +27,20 @@ module ALU( input [3:0] ALUctl,
     );
 
 always @(ALUctl, A, B,shiftC,shiftV) 
-	if(shiftC != 1)
+	if(shiftC == 1)
 		begin
 			 case (ALUctl)
+				4'b0100: ALUOut <= B <<< shiftV ;  	//SLL        
+				 4'b0101: ALUOut <= B >>> shiftV ; 		//SRL
+				 4'b1010: ALUOut <= B >> shiftV;  		//SRA 
+				 default: ALUOut <= 0;
+			 endcase
+		end
+	else
+		begin
+			case (ALUctl)
 				 4'b0000: ALUOut <= A & B;			//ADD
-					4'b0001: ALUOut <= A | B;		//OR
+				 4'b0001: ALUOut <= A | B;		//OR
 				 4'b0010: ALUOut <= A + B; 		//ADD
 				 4'b0011: ALUOut <= ~(A | B); 	//NOR
 				 4'b0100: ALUOut <= B >>> A;  	//SLLV        
@@ -41,15 +50,6 @@ always @(ALUctl, A, B,shiftC,shiftV)
 				 4'b1000: ALUOut <= A ^ B; 		//XOR
 				 4'b1001: ALUOut <= A >>> B; 		//SRLV         
 				 4'b1010: ALUOut <= A >> B;  		//SRAV 
-				 default: ALUOut <= 0;
-			 endcase
-		end
-	else
-		begin
-			case (ALUctl)
-				 4'b0100: ALUOut <= B <<< shiftV ;  	//SLL        
-				 4'b0101: ALUOut <= B >>> shiftV ; 		//SRL
-				 4'b1010: ALUOut <= B >> shiftV;  		//SRA 
 				 default: ALUOut <= 0;
 			 endcase
 		end

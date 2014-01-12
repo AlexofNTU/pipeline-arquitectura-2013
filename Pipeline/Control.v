@@ -46,7 +46,7 @@ always @*
 									else
 										shiftC=0;
 							end
-						6'b100011: //instruccion LW
+						6'b100011,6'b100000,6'b100001,6'b100111,6'b100100,6'b100101: //instruccion LW,LB,LH,LWU,LBU,LHU
 							begin
 								RegDst = 0;
 								Branch = 0;
@@ -59,7 +59,7 @@ always @*
 								jump = 0;
 								shiftC=0;
 							end
-						6'b100000: //instruccion LB
+					/*	6'b100000: //instruccion LB
 							begin
 								RegDst = 0;
 								Branch = 0;
@@ -71,8 +71,8 @@ always @*
 								ALUOp = 2'b00;
 								jump = 0;
 								shiftC=0;
-							end
-						6'b101011: //instruccion SW
+							end*/
+						6'b101011 , 6'b101001 , 6'b101000: //instruccion SW,SH,SB,
 							begin
 								RegDst = 0;
 								Branch = 0;
@@ -83,6 +83,19 @@ always @*
 								RegWrite = 0;
 								ALUOp = 2'b00;
 								jump = 0;
+								shiftC=0;
+							end
+						6'b001100,6'b001101,6'b001110,6'b001000 : //instruccion tipo ANDI,ORI,XORI,ADDI
+							begin
+								RegDst = 0;
+								Branch = 0;
+								MemRead = 0;
+								MemtoReg = 0;
+								MemWrite = 0;
+								ALUSrc = 1;
+								RegWrite = 1;
+								jump = 0;
+								ALUOp = 2'b10;
 								shiftC=0;
 							end
 						6'b000100: //instruccion BEQ

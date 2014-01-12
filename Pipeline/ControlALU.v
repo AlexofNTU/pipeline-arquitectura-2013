@@ -57,6 +57,14 @@ always @*
 				ALUctl <= 4'b1010;
 		else if((ALUOp[1] == 1) && (instruccion[5:0] == 6'b000100)) //SLLV
 				ALUctl <= 4'b0100;
+		/*else if((ALUOp[1] == 1) && (instruccion[5:0] == 6'b001000)) //ADDI
+				ALUctl <= 4'b0010;
+		else if((ALUOp[1] == 1) && (instruccion[5:0] == 6'b001100)) //ANDI
+				ALUctl <= 4'b0000;
+		else if((ALUOp[1] == 1) && (instruccion[5:0] == 6'b001101)) //ORI
+				ALUctl <= 4'b0001;
+		else if((ALUOp[1] == 1) && (instruccion[5:0] == 6'b001110)) //XORI
+				ALUctl <= 4'b1000;*/
 		else
 				ALUctl <= 4'b0000;
 	end

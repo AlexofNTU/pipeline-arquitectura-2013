@@ -1072,7 +1072,7 @@ LAB330:    t104 = (t72 + 4);
     if (t109 > 0)
         goto LAB342;
 
-LAB343:    xsi_set_current_line(61, ng0);
+LAB343:    xsi_set_current_line(69, ng0);
     t2 = ((char*)((ng8)));
     t3 = (t0 + 920);
     xsi_vlogvar_wait_assign_value(t3, t2, 0, 0, 4, 0LL);

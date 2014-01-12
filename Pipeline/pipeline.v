@@ -27,7 +27,7 @@ wire [31:0] w1, w2, w3, w4, w5, w6,
 				w7, w8, w10, w11, w12,
 				w15, w17, w18, w20, w21, 
 				w22, w23, w26, w27, w28, w29,w30,w31,w32,w33,w34;
-wire [4:0] w13, w14, w19, w24, w25,w9,w35,w38;
+wire [4:0] w13, w14, w19, w24, w25,w9,w35,w38,w39;
 wire [3:0] c27;
 wire [1:0] c8, c15,c28,c29;
 wire c1, c2, c3, c4, c5, c6,
@@ -238,7 +238,15 @@ RegistrosMUX registrosMUX(
 									.RegDst(c14),
 									.wReg(w19)
 						 );
-
+						 
+mux3a1 forB(
+		.registro(w11),
+		.forMem(w21),
+		.forWb(w26),
+		.selector(c29),
+		.valor(w17)
+		);	
+		
 AluMUX aluMux(	
 					.sigExt(w12),
 					.ReadData2(w17),
@@ -264,13 +272,7 @@ mux3a1 forA(
 		.valor(w30)
 		);	 
 		
-mux3a1 forB(
-		.registro(w11),
-		.forMem(w21),
-		.forWb(w26),
-		.selector(c29),
-		.valor(w17)
-		);	 
+ 
 
 Cortocircuito SCU(
 				.Rt(w13),
@@ -340,22 +342,20 @@ EX_MEM EX_MEM(
 
 //***** ETAPA 4 *****
 
-/*Branch branch(
-		.Branch(c20),
-		.Zero(c23),
-		.salida(c24)
-    );
-*/
-
 MemoriaDeDatos RAM(
 						.clk(clk),
 						.read(c21),
 						.write(c22),
-						.din(w22),
+						.din(w39),//w39
 						.direccion(w21),
 						.dout(w23)
 						);
 
+storeTypes tipoStore(
+						.instruccion(w37),
+						.dataIN(w22),
+						.dataOUT(w39)
+					);
 
 loadTypes tipoLoad(
 						.instruccion(w37),
