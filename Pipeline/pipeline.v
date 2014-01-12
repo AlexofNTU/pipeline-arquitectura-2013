@@ -26,7 +26,7 @@ module pipeline(
 wire [31:0] w1, w2, w3, w4, w5, w6, 
 				w7, w8, w10, w11, w12,
 				w15, w17, w18, w20, w21, 
-				w22, w23, w26, w27, w28, w29,w30,w31,w32,w33,w34;
+				w22, w23, w26, w27, w28, w29,w30,w31,w32,w33,w34,w40;
 wire [4:0] w13, w14, w19, w24, w25,w9,w35,w38,w39;
 wire [3:0] c27;
 wire [1:0] c8, c15,c28,c29;
@@ -202,6 +202,7 @@ ID_EX ID_EX(
 				.ins25_21IN(w5[25:21]),
 				.ins10_6IN(w5[10:6]),
 				.ins31_26IN(w5[31:26]),
+				.ins31_0IN(w5),
 				//
 				//****SALIDAS*****
 				//
@@ -227,7 +228,8 @@ ID_EX ID_EX(
 				// instruccion[25-21]
 				.ins25_21OUT(w9),
 				.ins10_6OUT(w35),
-				.ins31_26OUT(w36)
+				.ins31_26OUT(w36),
+				.ins31_0OUT(w40)
 				);
 
 //***** ETAPA 3 *****
@@ -294,7 +296,7 @@ Cortocircuito SCU(
     );
 
 ControlALU controlALU(
-			.instruccion(w12[5:0]),
+			.instruccion(w40),
 			.ALUOp(c15),
 			.ALUctl(c27)
     );

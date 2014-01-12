@@ -3,14 +3,14 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> Reading design: pipeline.prj
 
@@ -41,6 +41,8 @@ TABLE OF CONTENTS
 =========================================================================
 Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\SumadorPC.v\" into library work
 Parsing module <SumadorPC>.
+Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\storeTypes.v\" into library work
+Parsing module <storeTypes>.
 Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\ShiftSalto.v\" into library work
 Parsing module <ShiftSalto>.
 Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\SaltosMUX.v\" into library work
@@ -63,6 +65,8 @@ Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\
 Parsing module <memoriaDeInstrucciones>.
 Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\MemoriaDeDatos.v\" into library work
 Parsing module <MemoriaDeDatos>.
+Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\loadTypes.v\" into library work
+Parsing module <loadTypes>.
 Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\IF_ID.v\" into library work
 Parsing module <IF_ID>.
 Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\TPF\pipeline-arquitectura-2013\Pipeline\ID_EX.v\" into library work
@@ -93,8 +97,8 @@ Analyzing Verilog file \"D:\Facultad\Arquitectura de Computadoras 2013\Practico\
 Parsing module <pipeline>.
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.25 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.22 secs
  
 --> 
 

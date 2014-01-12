@@ -85,7 +85,7 @@ always @*
 								jump = 0;
 								shiftC=0;
 							end
-						6'b001100,6'b001101,6'b001110,6'b001000 : //instruccion tipo ANDI,ORI,XORI,ADDI
+						6'b001100,6'b001101,6'b001110,6'b001000,6'b001010 : //instruccion tipo ANDI,ORI,XORI,ADDI,SLTI
 							begin
 								RegDst = 0;
 								Branch = 0;

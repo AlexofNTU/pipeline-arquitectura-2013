@@ -43,7 +43,7 @@ begin
 						else
 								dataOUT = dataIN[15:0] + 32'hFFFFFF00;
 					end
-			default:
+			default: //SW
 					begin
 						dataOUT = dataIN;
 					end

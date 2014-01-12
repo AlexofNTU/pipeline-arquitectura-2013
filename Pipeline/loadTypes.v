@@ -52,8 +52,9 @@ begin
 					end
 			6'b100101: //LHU
 					begin
+						dataOUT = dataIN[15:0];
 					end
-			default:
+			default: //LW
 					begin
 						dataOUT = dataIN;
 					end
