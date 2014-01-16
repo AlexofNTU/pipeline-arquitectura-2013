@@ -38,13 +38,17 @@ initial begin
 		*/
 		
 		//codigo para probar la SCU y J
-		/*
+		
 		rom[0] = 32'h00210820; // ADD 1,1,1  
 		rom[1] = 32'h00210820; // ADD 1,1,1  
 		rom[2] = 32'h00210820; // ADD 1,1,1  
 		rom[3] = 32'h00210820; // ADD 1,1,1  
-		rom[4] = 32'h08000000; // J 0
-		*/
+		//rom[4] = 32'h0C00000F; // J 0
+		rom[4] = 32'h0C000008;
+		rom[5] = 32'h00210820; // ADD 1,1,1  
+		rom[6] = 32'h00210820; // ADD 1,1,1  
+		rom[7] = 32'h00210820; // ADD 1,1,1  
+		rom[8] = 32'h00210820; // ADD 1,1,1  
 		
 		//el mismo codigo de arriba pero echo con jump 
 		/*
@@ -73,12 +77,16 @@ initial begin
 		rom[1] = 32'h3042000C;	//ANDI
 		rom[2] = 32'h34420000;	//ORI
 		*/
-		rom[0]=32'h3C0280FF;
-		for (i=1; i < 1024; i = i + 1)  // llenamos la memoria con 0
+		//rom[0]=32'h3C0280FF; SRLV
+		/*rom[0] = 32'h00421020;
+		rom[1] = 32'h00421026;
+		rom[2] = 32'h00421822;*/
+		
+		for (i=6; i < 1024; i = i + 1)  // llenamos la memoria con 0
 			begin
 				rom[i] = 32'h00000000; //HLT				
 			end
-					
+		rom[56] = 32'h03E00008;		
 		
 end
 

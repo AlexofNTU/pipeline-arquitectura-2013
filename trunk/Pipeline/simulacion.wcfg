@@ -10,82 +10,32 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="15" />
-   <wave_markers>
-      <marker time="590000000" label="" />
-      <marker time="570000000" label="" />
-   </wave_markers>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/testPipeline/salida" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">salida</obj_property>
+      <obj_property name="ObjectShortName">salida</obj_property>
+   </wvobject>
    <wvobject fp_name="/testPipeline/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="divider72" type="divider">
-      <obj_property name="label">Etapa de Busqueda</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="BkColor">128 128 255</obj_property>
-      <obj_property name="TextColor">230 230 230</obj_property>
-   </wvobject>
-   <wvobject fp_name="group159" type="group">
-      <obj_property name="label">ssaltos Mux</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/testPipeline/uut/saltosMUX/pc" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">pc[31:0]</obj_property>
-         <obj_property name="ObjectShortName">pc[31:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testPipeline/uut/saltosMUX/ALUResult" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">ALUResult[31:0]</obj_property>
-         <obj_property name="ObjectShortName">ALUResult[31:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testPipeline/uut/saltosMUX/Branch" type="logic" db_ref_id="1">
-         <obj_property name="ElementShortName">Branch</obj_property>
-         <obj_property name="ObjectShortName">Branch</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testPipeline/uut/saltosMUX/resultado" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">resultado[31:0]</obj_property>
-         <obj_property name="ObjectShortName">resultado[31:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject fp_name="/testPipeline/uut/w1" type="array" db_ref_id="1">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">w1[31:0]</obj_property>
-      <obj_property name="ObjectShortName">w1[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="label">PC</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testPipeline/uut/w2" type="array" db_ref_id="1">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">w2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">w2[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="label">nextPC</obj_property>
-   </wvobject>
-   <wvobject fp_name="divider105" type="divider">
-      <obj_property name="label">Etapa de Decodificacion</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="BkColor">128 128 255</obj_property>
-      <obj_property name="TextColor">230 230 230</obj_property>
-   </wvobject>
-   <wvobject fp_name="divider48" type="divider">
-      <obj_property name="label">Etapa de Ejecucion</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="BkColor">128 128 255</obj_property>
-      <obj_property name="TextColor">230 230 230</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testPipeline/uut/alu/ALUctl" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">ALUctl[3:0]</obj_property>
-      <obj_property name="ObjectShortName">ALUctl[3:0]</obj_property>
+   <wvobject fp_name="/testPipeline/uut/pc/dirEntrada" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dirEntrada[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dirEntrada[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/testPipeline/uut/alu/shiftC" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">shiftC</obj_property>
-      <obj_property name="ObjectShortName">shiftC</obj_property>
+   <wvobject fp_name="/testPipeline/uut/pc/dirSalida" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dirSalida[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dirSalida[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/testPipeline/uut/alu/shiftV" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">shiftV[4:0]</obj_property>
-      <obj_property name="ObjectShortName">shiftV[4:0]</obj_property>
+   <wvobject fp_name="/testPipeline/uut/control/EscJal" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">EscJal</obj_property>
+      <obj_property name="ObjectShortName">EscJal</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/alu/B" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/alu/A" type="array" db_ref_id="1">
@@ -93,24 +43,26 @@
       <obj_property name="ObjectShortName">A[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/testPipeline/uut/alu/B" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">B[31:0]</obj_property>
-      <obj_property name="ObjectShortName">B[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testPipeline/uut/alu/zero" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">zero</obj_property>
-      <obj_property name="ObjectShortName">zero</obj_property>
-   </wvobject>
    <wvobject fp_name="/testPipeline/uut/alu/ALUOut" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">ALUOut[31:0]</obj_property>
       <obj_property name="ObjectShortName">ALUOut[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="divider170" type="divider">
-      <obj_property name="label">Etapa de Memoria</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="BkColor">128 128 255</obj_property>
-      <obj_property name="TextColor">230 230 230</obj_property>
+   <wvobject fp_name="/testPipeline/uut/jump/resultado" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">resultado[31:0]</obj_property>
+      <obj_property name="ObjectShortName">resultado[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/HDU/EscRegEx" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">EscRegEx</obj_property>
+      <obj_property name="ObjectShortName">EscRegEx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/HDU/EscRegMem" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">EscRegMem</obj_property>
+      <obj_property name="ObjectShortName">EscRegMem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/HDU/EscRegWb" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">EscRegWb</obj_property>
+      <obj_property name="ObjectShortName">EscRegWb</obj_property>
    </wvobject>
 </wave_config>

@@ -26,17 +26,17 @@ module pipeline(
 wire [31:0] w1, w2, w3, w4, w5, w6, 
 				w7, w8, w10, w11, w12,
 				w15, w17, w18, w20, w21, 
-				w22, w23, w26, w27, w28, w29,w30,w31,w32,w33,w34,w40;
-wire [4:0] w13, w14, w19, w24, w25,w9,w35,w38,w39;
+				w22, w23, w26, w27, w28, w29,w30,w31,w32,w33,w34,w40,w41,w43;
+wire [4:0] w13, w14, w19, w24, w25,w9,w35,w38,w39,w42;
 wire [3:0] c27;
 wire [1:0] c8, c15,c28,c29;
 wire c1, c2, c3, c4, c5, c6,
 	  c7, c9, c10, c11, c12, c13,
 	  c14, c16, c17, c18, c19, c20, 
-	  c21, c22, c23, c24, c25, c26, c30, c31, c32,c33,c34,c35,c36,c37,c38,c39;
+	  c21, c22, c23, c24, c25, c26, c30, c31, c32,c33,c34,c35,c36,c37,c38,c39,c40,c41;
 wire [5:0] w36,w37;
 //***** ETAPA 1 *****
-//assign c33=0;
+
 SaltosMUX saltosMUX(
 						  .pc(w29), 
 						  .ALUResult(w20),
@@ -47,7 +47,7 @@ SaltosMUX saltosMUX(
 
 SaltosMUX jump(
 						  .pc(w1),  //branch ==0 Salida del mux anterior
-						  .ALUResult(w31), //branch==1 jump Address
+						  .ALUResult(w41), //branch==1 jump Address
 						  .Branch(c33), //señal de control jump
 						  .resultado(w32) //entra al pc
 						);
@@ -82,7 +82,7 @@ SumadorPC sumadorPC(
 IF_ID IF_ID(
 				.clk(clk),
 				.enable(c31),
-				.flush(24),
+				.flush(c24), //VVERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRr habia solo un 24
 				.nextPcIN(w29),
 				.instruccionIN(w3), 
 				.nextPcOUT(w4),
@@ -90,17 +90,38 @@ IF_ID IF_ID(
 				);
 
 //***** ETAPA 2 *****	
-					  
+
+
+muxJumpReg muxJumpReg(
+				.sel(c41),
+				.pc(w5[4:0]),
+				.registro(w25),///--------
+				.resultado(w42)
+    );
+
+
+muxRegData muxRegdata(
+				.sel(c41),
+				.pc(w4),
+				.registro(w26),//----------------
+				.resultado(w43)
+    ); 
 Registros registros(
 							.clk(clk),
-							.regWrite(c25),
+							.regWrite(c40),
 							.read1(w5[25:21]), 
 							.read2(w5[20:16]), 
-							.writeReg(w25),
-							.writeData(w26),
+							.writeReg(w42),
+							.writeData(w43),
 							.data1(w6),
 							.data2(w7)
 						);
+
+EscRegMux muxEscReg(
+							.sel(c41),
+							.senial(c25),//----------
+							.salida(c40)
+							);
 
 ExtensionSigno extension( 
 								 .valEntrada(w5[15:0]),
@@ -121,7 +142,8 @@ Control control(
 			.RegWrite(c7),
 			.ALUOp(c8),
 			.jump(c33),
-			.shiftC(c38)
+			.shiftC(c38),
+			.EscJal(c41)
     );
 SaltosALU saltosALU(
 							.ShiftLeft(w8), 
@@ -135,9 +157,20 @@ Hazard HDU(
 				.Rt(w5[20:16]),	//rt actual
 				.Rs(w5[25:21]), //rs actual
 				.RtEx(w13),		//registro donde cargo el load
-				.isLoad(c12) //indica si voy a leer de la memoria
+				.isLoad(c12), //indica si voy a leer de la memoria
+				.opCode(w5[31:26]),
+				.EscRegEx(c7),
+				.EscRegMem(c19),
+				.EscRegWb(c25)
     );
 	 
+
+jrMux jrmux(
+			.opCode(w5[31:0]),
+			.dirReg(w33),
+			.dirJump(w31),
+			.dir(w41)
+    );
 
 ShiftSalto shiftSalto(
 				.instruccion(w5[25:0]),
