@@ -26,8 +26,8 @@ module pipeline(
 wire [31:0] w1, w2, w3, w4, w5, w6, 
 				w7, w8, w10, w11, w12,
 				w15, w17, w18, w20, w21, 
-				w22, w23, w26, w27, w28, w29,w30,w31,w32,w33,w34,w40,w41,w43;
-wire [4:0] w13, w14, w19, w24, w25,w9,w35,w38,w39,w42;
+				w22, w23, w26, w27, w28, w29,w30,w31,w32,w33,w34,w38,w39,w40,w41,w43;
+wire [4:0] w13, w14, w19, w24, w25,w9,w35,w42;
 wire [3:0] c27;
 wire [1:0] c8, c15,c28,c29;
 wire c1, c2, c3, c4, c5, c6,
@@ -82,7 +82,7 @@ SumadorPC sumadorPC(
 IF_ID IF_ID(
 				.clk(clk),
 				.enable(c31),
-				.flush(c24), //VVERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRr habia solo un 24
+				.flush((c33|c24)), //c24 valor real
 				.nextPcIN(w29),
 				.instruccionIN(w3), 
 				.nextPcOUT(w4),
@@ -158,7 +158,7 @@ Hazard HDU(
 				.Rs(w5[25:21]), //rs actual
 				.RtEx(w13),		//registro donde cargo el load
 				.isLoad(c12), //indica si voy a leer de la memoria
-				.opCode(w5[31:26]),
+				.opCode(w5[31:0]),
 				.EscRegEx(c7),
 				.EscRegMem(c19),
 				.EscRegWb(c25)

@@ -38,15 +38,12 @@ Analyzing Verilog file \"D:/Facultad/Arquitectura de Computadoras 2013/Practico/
 Analyzing Verilog file \"D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline.v\" into library work
 Analyzing Verilog file \"C:/Xilinx/13.2/ISE_DS/ISE//verilog/src/glbl.v\" into library work
 Starting static elaboration
+WARNING:HDLCompiler:1016 - "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 95: Port inst is not connected to this instance
 WARNING:HDLCompiler:189 - "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 64: Size mismatch in connection of port <direccion>. Formal port size is 10-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 384: Size mismatch in connection of port <din>. Formal port size is 32-bit while actual signal size is 5-bit.
 WARNING:HDLCompiler:189 - "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 385: Size mismatch in connection of port <direccion>. Formal port size is 10-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 392: Size mismatch in connection of port <dataOUT>. Formal port size is 32-bit while actual signal size is 5-bit.
-WARNING:HDLCompiler:189 - "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 398: Size mismatch in connection of port <dataOUT>. Formal port size is 32-bit while actual signal size is 5-bit.
-WARNING:HDLCompiler:189 - "D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/pipeline.v" Line 421: Size mismatch in connection of port <dataIN>. Formal port size is 32-bit while actual signal size is 5-bit.
 Completed static elaboration
 Fuse Memory Usage: 98500 KB
-Fuse CPU Usage: 467 ms
+Fuse CPU Usage: 483 ms
 Compiling module SaltosMUX
 Compiling module Pc
 Compiling module memoriaDeInstrucciones
@@ -82,7 +79,7 @@ Compiling module pipeline
 Compiling module testPipeline
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 30 sub-compilation(s) to finish...
+Waiting for 31 sub-compilation(s) to finish...
 Compiled 34 Verilog Units
 Built simulation executable D:/Facultad/Arquitectura de Computadoras 2013/Practico/TPF/pipeline-arquitectura-2013/Pipeline/testPipeline_isim_beh.exe
 Fuse Memory Usage: 104116 KB

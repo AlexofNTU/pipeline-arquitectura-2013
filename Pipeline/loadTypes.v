@@ -45,6 +45,7 @@ begin
 					end
 			6'b100111: //LWU
 					begin
+						dataOUT = dataIN;
 					end
 			6'b100100: //LBU
 					begin
