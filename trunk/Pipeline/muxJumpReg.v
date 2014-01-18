@@ -20,13 +20,17 @@
 //////////////////////////////////////////////////////////////////////////////////
 module muxJumpReg(
 				input sel,
+				input [31:0] inst,
 				input [4:0] pc,registro,
 				output reg [4:0] resultado
     );
 always @*
 	begin
 		if(sel)
-			resultado = 6'b011111; //31
+				if((inst[31:26]==6'b000000)&&(inst[5:0]==6'b001001))
+						resultado= inst[15:11];
+				else
+						resultado = 6'b011111; //31
 		else
 			resultado = registro;
 		end

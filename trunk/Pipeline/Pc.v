@@ -29,7 +29,7 @@ initial begin
 aux=1;
 end
 
-always @ (negedge clk)
+always @ (negedge clk)//beg
 	begin
 		if(aux)
 			begin

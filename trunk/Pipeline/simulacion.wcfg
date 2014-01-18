@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="12" />
+   <WVObjectSize size="20" />
    <wvobject fp_name="/testPipeline/salida" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">salida</obj_property>
       <obj_property name="ObjectShortName">salida</obj_property>
@@ -28,6 +28,11 @@
       <obj_property name="ElementShortName">dirSalida[31:0]</obj_property>
       <obj_property name="ObjectShortName">dirSalida[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/w3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">w3[31:0]</obj_property>
+      <obj_property name="ObjectShortName">w3[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/control/EscJal" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">EscJal</obj_property>
@@ -48,10 +53,10 @@
       <obj_property name="ObjectShortName">ALUOut[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/testPipeline/uut/jump/resultado" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">resultado[31:0]</obj_property>
-      <obj_property name="ObjectShortName">resultado[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/testPipeline/uut/IF_ID/instruccionOUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">instruccionOUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">instruccionOUT[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testPipeline/uut/HDU/EscRegEx" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">EscRegEx</obj_property>
@@ -64,5 +69,40 @@
    <wvobject fp_name="/testPipeline/uut/HDU/EscRegWb" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">EscRegWb</obj_property>
       <obj_property name="ObjectShortName">EscRegWb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/registros/writeData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">writeData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">writeData[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/registros/writeReg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">writeReg[4:0]</obj_property>
+      <obj_property name="ObjectShortName">writeReg[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/RAM/direccion" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">direccion[9:0]</obj_property>
+      <obj_property name="ObjectShortName">direccion[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/RAM/din" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">din[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/tipoStore/dataOUT" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dataOUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dataOUT[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/tipoStore/dataIN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dataIN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dataIN[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPipeline/uut/tipoStore/instruccion" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">instruccion[5:0]</obj_property>
+      <obj_property name="ObjectShortName">instruccion[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>

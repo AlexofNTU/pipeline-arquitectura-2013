@@ -60,6 +60,20 @@ always @*
 								shiftC=0;
 								EscJal=0;
 									end
+							if(funcion==6'b001001)
+								begin
+								RegDst = 0;
+								Branch = 0;
+								MemRead = 0;
+								MemtoReg = 0;
+								MemWrite = 0;
+								ALUSrc = 0;
+								RegWrite = 0;
+								jump = 1;
+								ALUOp = 2'b00;
+								shiftC=0;
+								EscJal=1;
+							end
 							end
 						6'b100011,6'b100000,6'b100001,6'b100111,6'b100100,6'b100101: //instruccion LW,LB,LH,LWU,LBU,LHU
 							begin
@@ -158,7 +172,7 @@ always @*
 								shiftC=0;
 								EscJal=0;
 							end
-						6'b000011: //instruccion J
+						6'b000011: //instruccion JAL
 							begin
 								RegDst = 0;
 								Branch = 0;
