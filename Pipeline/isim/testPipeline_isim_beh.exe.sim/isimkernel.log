@@ -2,27 +2,27 @@ Command line:
    testPipeline_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  50079
+     -socket  5544
 
-Sat Jan 18 10:50:45 2014
+Fri Jan 24 19:30:56 2014
 
 
- Elaboration Time: 0.249602 sec
+ Elaboration Time: 0.1092 sec
 
- Current Memory Usage: 521.29 Meg
+ Current Memory Usage: 499.761 Meg
 
- Total Signals          : 245
- Total Nets             : 1171
- Total Signal Drivers   : 90
- Total Blocks           : 37
- Total Primitive Blocks : 35
- Total Processes        : 132
- Total Traceable Variables  : 106
- Total Scalar Nets and Variables : 68999
+ Total Signals          : 272
+ Total Nets             : 1294
+ Total Signal Drivers   : 102
+ Total Blocks           : 39
+ Total Primitive Blocks : 37
+ Total Processes        : 151
+ Total Traceable Variables  : 126
+ Total Scalar Nets and Variables : 71479
 
- Total Simulation Time: 0.249602 sec
+ Total Simulation Time: 1.15441 sec
 
- Current Memory Usage: 521.29 Meg
+ Current Memory Usage: 499.761 Meg
 
-Sat Jan 18 10:52:51 2014
+Fri Jan 24 19:31:42 2014
 

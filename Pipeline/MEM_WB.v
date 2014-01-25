@@ -20,10 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 module MEM_WB(
 			input clk,
-			input MemtoRegIN, RegWriteIN,
+			input MemtoRegIN, RegWriteIN, finIN,
 			input [31:0] dataIN, ALU_IN,
 			input [4:0] DestinoIN,
-			output reg MemtoRegOUT, RegWriteOUT,		
+			output reg MemtoRegOUT, RegWriteOUT, finOUT,		
 			output reg [31:0] dataOUT, ALU_OUT,
 			output reg [4:0] DestinoOUT
     );
@@ -35,6 +35,7 @@ begin
 	dataOUT <= dataIN;
 	ALU_OUT <= ALU_IN;
 	DestinoOUT <= DestinoIN;
+	finOUT <= finIN;
 end
 
 endmodule

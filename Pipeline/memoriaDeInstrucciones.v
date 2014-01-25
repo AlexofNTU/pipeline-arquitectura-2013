@@ -97,9 +97,10 @@ rom[12] = 32'hA0030000;
 rom[13] = 32'h8C050000;
 rom[14] = 32'h00432020;
 rom[15] = 32'h00432020;
-		for (i=16; i < 1024; i = i + 1)  // llenamos la memoria con 0
+rom[16] = 32'h00000001;
+		for (i=17; i < 1024; i = i + 1)  // llenamos la memoria con 0
 			begin
-				rom[i] = 32'h00000000; //HLT				
+				rom[i] = 32'h00000001; //HLT				
 			end
 		//rom[56] = 32'h08000000;		
 		
