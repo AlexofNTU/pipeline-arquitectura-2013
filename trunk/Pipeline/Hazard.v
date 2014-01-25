@@ -22,7 +22,7 @@ module Hazard(
 				output reg pcEnable,controlEnable,ifEnable,
 				input [4:0] Rt,Rs,RtEx,
 				input [31:0] opCode,
-				input isLoad,EscRegEx,EscRegMem,EscRegWb
+				input isLoad,EscRegEx,EscRegMem,EscRegWb, fin
     );
 
 initial begin
@@ -54,6 +54,13 @@ begin
 				ifEnable <= 0;
 				
 			end
+	else if(fin)
+		begin
+			pcEnable <= 0;
+			controlEnable <= 0;
+			ifEnable <= 0;
+			
+		end
 	else
 		begin
 			pcEnable <= 1;

@@ -19,21 +19,27 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module pipeline(
-			input clk,
-			output salida
+			input clk, rx,
+			output salida, tx
     );
 
 wire [31:0] w1, w2, w3, w4, w5, w6, 
 				w7, w8, w10, w11, w12,
 				w15, w17, w18, w20, w21, 
-				w22, w23, w26, w27, w28, w29,w30,w31,w32,w33,w34,w38,w39,w40,w41,w43;
-wire [4:0] w13, w14, w19, w24, w25,w9,w35,w42;
+				w22, w23, w26, w27, w28, 
+				w29,w30,w31,w32,w33,w34,
+				w38,w39,w40,w41,w43,w45,
+				w46, w47;
+wire [4:0] w13, w14, w19, w24, w25,w9,w35,w42,w44;
 wire [3:0] c27;
 wire [1:0] c8, c15,c28,c29;
 wire c1, c2, c3, c4, c5, c6,
 	  c7, c9, c10, c11, c12, c13,
 	  c14, c16, c17, c18, c19, c20, 
-	  c21, c22, c23, c24, c25, c26, c30, c31, c32,c33,c34,c35,c36,c37,c38,c39,c40,c41;
+	  c21, c22, c23, c24, c25, c26, 
+	  c30, c31, c32,c33,c34,c35,c36,
+	  c37,c38,c39,c40,c41,c42,c43,
+	  c44,c45,c46;
 wire [5:0] w36,w37;
 //***** ETAPA 1 *****
 
@@ -110,11 +116,13 @@ Registros registros(
 							.clk(clk),
 							.regWrite(c40),
 							.read1(w5[25:21]), 
-							.read2(w5[20:16]), 
+							.read2(w5[20:16]),
+							.read3(w44),
 							.writeReg(w42),
 							.writeData(w43),
 							.data1(w6),
-							.data2(w7)
+							.data2(w7),
+							.data3(w45)
 						);
 
 EscRegMux muxEscReg(
@@ -143,7 +151,8 @@ Control control(
 			.ALUOp(c8),
 			.jump(c33),
 			.shiftC(c38),
-			.EscJal(c41)
+			.EscJal(c41),
+			.fin(c43)
     );
 SaltosALU saltosALU(
 							.ShiftLeft(w8), 
@@ -161,7 +170,8 @@ Hazard HDU(
 				.opCode(w5[31:0]),
 				.EscRegEx(c7),
 				.EscRegMem(c19),
-				.EscRegWb(c25)
+				.EscRegWb(c25),
+				.fin(c46)
     );
 	 
 
@@ -236,6 +246,7 @@ ID_EX ID_EX(
 				.ins10_6IN(w5[10:6]),
 				.ins31_26IN(w5[31:26]),
 				.ins31_0IN(w5),
+				.finIN(c43),
 				//
 				//****SALIDAS*****
 				//
@@ -262,7 +273,8 @@ ID_EX ID_EX(
 				.ins25_21OUT(w9),
 				.ins10_6OUT(w35),
 				.ins31_26OUT(w36),
-				.ins31_0OUT(w40)
+				.ins31_0OUT(w40),
+				.finOUT(c44)
 				);
 
 //***** ETAPA 3 *****
@@ -355,6 +367,7 @@ EX_MEM EX_MEM(
 				.readData2IN(w17),
 				// Registro Destino
 				.DestinoIN(w19),
+				.finIN(c44),
 				//
 				//****SALIDAS*****
 				//
@@ -372,7 +385,8 @@ EX_MEM EX_MEM(
 				.readData2OUT(w22),
 				// Registro Destino
 				.DestinoOUT(w24),
-				.tipoLoadOUT(w37)
+				.tipoLoadOUT(w37),
+				.finOUT(c45)
 				);
 
 //***** ETAPA 4 *****
@@ -383,7 +397,9 @@ MemoriaDeDatos RAM(
 						.write(c22),
 						.din(w39),//w39
 						.direccion(w21),
-						.dout(w23)
+						.direccion_dbg(w46),
+						.dout(w23),
+						.dout_dbg(w47)
 						);
 
 storeTypes tipoStore(
@@ -423,6 +439,7 @@ MEM_WB MEM_WB(
 				.ALU_IN(w21),
 				// Registro Destino
 				.DestinoIN(w24),
+				.finIN(c45),
 				//
 				//****SALIDAS*****
 				//
@@ -434,7 +451,8 @@ MEM_WB MEM_WB(
 				// Salida ALU
 				.ALU_OUT(w27),
 				// Registro Destino
-				.DestinoOUT(w25)				
+				.DestinoOUT(w25),
+				.finOUT(c46)
 				);
 
 
@@ -446,8 +464,21 @@ DatosMUX datosMux(
 						.MemtoReg(c26),
 						.resultado(w26)
 			);
-
+			
+// DEBUG 
+						
+debug debug_unit(
+						.clk(clk),
+						.datoFR(w45),
+						.datoRAM(w47),
+						.fin(c46),
+						.db_mode(1'b1),
+						.rx(rx),
+						.direccionFR(w44),
+						.direccionRAM(w46),
+						.tx(tx)
+					);
+				
 assign salida = w26;
-
 
 endmodule
